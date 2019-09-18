@@ -41,11 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationModels\MainForm\IServiceDesktopModel.cs" />
+    <Compile Include="ApplicationModels\MainForm\ServiceDesktopModel.cs" />
     <Compile Include="ComponentsAbstraction\ComponentsValidator.cs" />
     <Compile Include="ComponentsAbstraction\TwoComponentBlocksModel.cs" />
     <Compile Include="ComponentsAbstraction\IComponentModel.cs" />
     <Compile Include="ComponentsAbstraction\OneComponentBlocksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{F96AEDA9-CAE9-4676-A922-8E11014427B4}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
