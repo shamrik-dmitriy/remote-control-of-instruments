@@ -13,7 +13,7 @@ namespace Core.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
-    internal sealed partial class Device : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Device : global::System.Configuration.ApplicationSettingsBase {
         
         private static Device defaultInstance = ((Device)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Device())));
         
@@ -62,9 +62,9 @@ namespace Core.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5025")]
-        public string PORT_POWER_SUP {
+        public int PORT_POWER_SUP {
             get {
-                return ((string)(this["PORT_POWER_SUP"]));
+                return ((int)(this["PORT_POWER_SUP"]));
             }
             set {
                 this["PORT_POWER_SUP"] = value;

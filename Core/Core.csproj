@@ -84,7 +84,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Device.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Device.Designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\Directory.settings">
