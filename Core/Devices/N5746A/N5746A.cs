@@ -39,7 +39,7 @@ namespace Core.Devices.N5746A
             }
             catch (Exception n5746AException)
             {
-                throw new N5746AException("Failed to initialize LAN exchange for power supply:" +
+                throw new N5746AException("Failed to initialize LAN exchange for power supply: " +
                                           n5746AException.Message + "\n");
             }
         }
@@ -75,14 +75,12 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Power supply identification");
                 var result = _deviceExchanger.SendRequestDataString("*IDN?;");
-                ApplicationModel.Logger.Debug("Power Source Identified: " + result);
                 return result;
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to identify power source:" + n5746AException.Message);
+                throw new N5746AException("Failed to identify power source: " + n5746AException.Message);
             }
         }
 
@@ -99,7 +97,7 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to reset the parameter to the power source of the power source:" +
+                throw new N5746AException("Failed to reset the parameter to the power source of the power source: " +
                                           n5746AException.Message);
             }
         }
@@ -117,7 +115,7 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to check the status of the power supply output:" +
+                throw new N5746AException("Failed to check the status of the power supply output: " +
                                           n5746AException.Message);
             }
         }
@@ -135,7 +133,7 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to enable power supply output:" +
+                throw new N5746AException("Failed to enable power supply output: " +
                                           n5746AException.Message);
             }
         }
@@ -153,7 +151,7 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to turn off power supply output:" +
+                throw new N5746AException("Failed to turn off power supply output: " +
                                           n5746AException.Message);
             }
         }
@@ -171,7 +169,7 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                throw new N5746AException("Failed to test power supply:" +
+                throw new N5746AException("Failed to test power supply: " +
                                           n5746AException.Message);
             }
         }
