@@ -1,3 +1,2 @@
 language: csharp
 solution: "RemoteDesktop.sln"
-mono: none
