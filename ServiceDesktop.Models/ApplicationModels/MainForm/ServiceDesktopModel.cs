@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Core;
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
+using Core.Properties;
 using ServiceDesktop.Models.ComponentsAbstraction;
 
 namespace ServiceDesktop.Models.ApplicationModels.MainForm
@@ -316,8 +318,7 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
 
         public void CreateInstancePowerSupply()
         {
-            PowerSupply = new N5746A(Core.Properties.Device.Default.IP_ADDR_POWER_SUP,
-                Core.Properties.Device.Default.PORT_POWER_SUP);
+            PowerSupply = new N5746A(Device.Default.IP_ADDR_POWER_SUP, Device.Default.PORT_POWER_SUP);
         }
 
         public void DestroyOutputThreadPowerSupply()
@@ -355,9 +356,7 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
 
         public void CreateInstanceSignalGenerator()
         {
-            SignalGenerator = new Smb100A(
-                Core.Properties.Device.Default.IP_ADDR_SIGNAL_GEN,
-                Core.Properties.Device.Default.PORT_SIGNAL_GEN);
+            SignalGenerator = new Smb100A(Device.Default.IP_ADDR_SIGNAL_GEN, Device.Default.PORT_SIGNAL_GEN);
         }
 
         public void DestroyOutputThreadSignalGenerator()
