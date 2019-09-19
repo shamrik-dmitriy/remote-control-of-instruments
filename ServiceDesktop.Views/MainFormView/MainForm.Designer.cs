@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.buttonSetPulsePeriod = new System.Windows.Forms.Button();
             this.comboBoxPulsePeriodValue = new System.Windows.Forms.ComboBox();
@@ -108,7 +109,7 @@
             this.groupBox7.Controls.Add(this.comboBoxPulsePeriodValue);
             this.groupBox7.Controls.Add(this.OutputPulsePeriod);
             this.groupBox7.Controls.Add(this.InputPulsePeriod);
-            this.groupBox7.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox7.Location = new System.Drawing.Point(6, 186);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(424, 55);
@@ -119,7 +120,7 @@
             // buttonSetPulsePeriod
             // 
             this.buttonSetPulsePeriod.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulsePeriod.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetPulsePeriod.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulsePeriod.Name = "buttonSetPulsePeriod";
             this.buttonSetPulsePeriod.Size = new System.Drawing.Size(96, 30);
@@ -139,7 +140,7 @@
             "мкс"});
             this.comboBoxPulsePeriodValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxPulsePeriodValue.Name = "comboBoxPulsePeriodValue";
-            this.comboBoxPulsePeriodValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxPulsePeriodValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxPulsePeriodValue.TabIndex = 145;
             this.comboBoxPulsePeriodValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxRepeatFrequencyValue_SelectedIndexChanged);
             // 
@@ -147,12 +148,12 @@
             // 
             this.OutputPulsePeriod.BackColor = System.Drawing.Color.Black;
             this.OutputPulsePeriod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulsePeriod.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputPulsePeriod.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulsePeriod.Location = new System.Drawing.Point(10, 21);
             this.OutputPulsePeriod.Name = "OutputPulsePeriod";
             this.OutputPulsePeriod.ReadOnly = true;
-            this.OutputPulsePeriod.Size = new System.Drawing.Size(119, 20);
+            this.OutputPulsePeriod.Size = new System.Drawing.Size(119, 19);
             this.OutputPulsePeriod.TabIndex = 24;
             this.OutputPulsePeriod.TabStop = false;
             this.OutputPulsePeriod.Text = "0";
@@ -161,17 +162,17 @@
             // InputPulsePeriod
             // 
             this.InputPulsePeriod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulsePeriod.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputPulsePeriod.Location = new System.Drawing.Point(135, 18);
             this.InputPulsePeriod.Name = "InputPulsePeriod";
-            this.InputPulsePeriod.Size = new System.Drawing.Size(100, 27);
+            this.InputPulsePeriod.Size = new System.Drawing.Size(100, 26);
             this.InputPulsePeriod.TabIndex = 144;
             this.InputPulsePeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorRfOut
             // 
             this.ControlSignalGeneratorRfOut.BackColor = System.Drawing.Color.Transparent;
-            this.ControlSignalGeneratorRfOut.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorRfOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ControlSignalGeneratorRfOut.Location = new System.Drawing.Point(436, 26);
             this.ControlSignalGeneratorRfOut.Name = "ControlSignalGeneratorRfOut";
             this.ControlSignalGeneratorRfOut.Size = new System.Drawing.Size(104, 104);
@@ -186,7 +187,7 @@
             this.groupBox6.Controls.Add(this.comboBoxPulseWidthValue);
             this.groupBox6.Controls.Add(this.OutputPulseWidth);
             this.groupBox6.Controls.Add(this.InputPulseWidth);
-            this.groupBox6.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox6.Location = new System.Drawing.Point(6, 131);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(424, 55);
@@ -197,7 +198,7 @@
             // buttonSetPulseWidth
             // 
             this.buttonSetPulseWidth.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseWidth.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetPulseWidth.Location = new System.Drawing.Point(318, 20);
             this.buttonSetPulseWidth.Name = "buttonSetPulseWidth";
             this.buttonSetPulseWidth.Size = new System.Drawing.Size(96, 30);
@@ -217,7 +218,7 @@
             "мкс"});
             this.comboBoxPulseWidthValue.Location = new System.Drawing.Point(241, 20);
             this.comboBoxPulseWidthValue.Name = "comboBoxPulseWidthValue";
-            this.comboBoxPulseWidthValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxPulseWidthValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxPulseWidthValue.TabIndex = 145;
             this.comboBoxPulseWidthValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPulseWidthValue_SelectedIndexChanged);
             // 
@@ -225,12 +226,12 @@
             // 
             this.OutputPulseWidth.BackColor = System.Drawing.Color.Black;
             this.OutputPulseWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulseWidth.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputPulseWidth.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulseWidth.Location = new System.Drawing.Point(10, 21);
             this.OutputPulseWidth.Name = "OutputPulseWidth";
             this.OutputPulseWidth.ReadOnly = true;
-            this.OutputPulseWidth.Size = new System.Drawing.Size(119, 20);
+            this.OutputPulseWidth.Size = new System.Drawing.Size(119, 19);
             this.OutputPulseWidth.TabIndex = 24;
             this.OutputPulseWidth.TabStop = false;
             this.OutputPulseWidth.Text = "0";
@@ -239,10 +240,10 @@
             // InputPulseWidth
             // 
             this.InputPulseWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulseWidth.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputPulseWidth.Location = new System.Drawing.Point(135, 20);
             this.InputPulseWidth.Name = "InputPulseWidth";
-            this.InputPulseWidth.Size = new System.Drawing.Size(100, 27);
+            this.InputPulseWidth.Size = new System.Drawing.Size(100, 26);
             this.InputPulseWidth.TabIndex = 144;
             this.InputPulseWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -252,7 +253,7 @@
             this.groupBox5.Controls.Add(this.comboBoxPowValue);
             this.groupBox5.Controls.Add(this.OutputPow);
             this.groupBox5.Controls.Add(this.InputPow);
-            this.groupBox5.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox5.Location = new System.Drawing.Point(6, 75);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(424, 55);
@@ -263,7 +264,7 @@
             // buttonSetPow
             // 
             this.buttonSetPow.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPow.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetPow.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPow.Name = "buttonSetPow";
             this.buttonSetPow.Size = new System.Drawing.Size(96, 30);
@@ -281,7 +282,7 @@
             "дБмкВ"});
             this.comboBoxPowValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxPowValue.Name = "comboBoxPowValue";
-            this.comboBoxPowValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxPowValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxPowValue.TabIndex = 145;
             this.comboBoxPowValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPowValue_SelectedIndexChanged);
             // 
@@ -289,13 +290,13 @@
             // 
             this.OutputPow.BackColor = System.Drawing.Color.Black;
             this.OutputPow.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPow.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputPow.ForeColor = System.Drawing.Color.Lime;
             this.OutputPow.Location = new System.Drawing.Point(10, 21);
             this.OutputPow.MaxLength = 5;
             this.OutputPow.Name = "OutputPow";
             this.OutputPow.ReadOnly = true;
-            this.OutputPow.Size = new System.Drawing.Size(119, 20);
+            this.OutputPow.Size = new System.Drawing.Size(119, 19);
             this.OutputPow.TabIndex = 24;
             this.OutputPow.TabStop = false;
             this.OutputPow.Text = "0";
@@ -304,10 +305,10 @@
             // InputPow
             // 
             this.InputPow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPow.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputPow.Location = new System.Drawing.Point(135, 18);
             this.InputPow.Name = "InputPow";
-            this.InputPow.Size = new System.Drawing.Size(100, 27);
+            this.InputPow.Size = new System.Drawing.Size(100, 26);
             this.InputPow.TabIndex = 144;
             this.InputPow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -323,7 +324,7 @@
             this.groupBox4.Controls.Add(this.comboBoxFrequencyValue);
             this.groupBox4.Controls.Add(this.OutputFrequency);
             this.groupBox4.Controls.Add(this.InputFrequency);
-            this.groupBox4.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.Location = new System.Drawing.Point(6, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(424, 55);
@@ -334,7 +335,7 @@
             // buttonSetFrequency
             // 
             this.buttonSetFrequency.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetFrequency.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetFrequency.Location = new System.Drawing.Point(318, 18);
             this.buttonSetFrequency.Name = "buttonSetFrequency";
             this.buttonSetFrequency.Size = new System.Drawing.Size(96, 30);
@@ -354,7 +355,7 @@
             "Ггц"});
             this.comboBoxFrequencyValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxFrequencyValue.Name = "comboBoxFrequencyValue";
-            this.comboBoxFrequencyValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxFrequencyValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxFrequencyValue.TabIndex = 145;
             this.comboBoxFrequencyValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxFrequencyValue_SelectedIndexChanged);
             // 
@@ -362,12 +363,12 @@
             // 
             this.OutputFrequency.BackColor = System.Drawing.Color.Black;
             this.OutputFrequency.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputFrequency.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputFrequency.ForeColor = System.Drawing.Color.Lime;
             this.OutputFrequency.Location = new System.Drawing.Point(10, 21);
             this.OutputFrequency.Name = "OutputFrequency";
             this.OutputFrequency.ReadOnly = true;
-            this.OutputFrequency.Size = new System.Drawing.Size(119, 20);
+            this.OutputFrequency.Size = new System.Drawing.Size(119, 19);
             this.OutputFrequency.TabIndex = 24;
             this.OutputFrequency.TabStop = false;
             this.OutputFrequency.Text = "0";
@@ -376,10 +377,10 @@
             // InputFrequency
             // 
             this.InputFrequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputFrequency.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputFrequency.Location = new System.Drawing.Point(135, 18);
             this.InputFrequency.Name = "InputFrequency";
-            this.InputFrequency.Size = new System.Drawing.Size(100, 27);
+            this.InputFrequency.Size = new System.Drawing.Size(100, 26);
             this.InputFrequency.TabIndex = 144;
             this.InputFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -467,12 +468,12 @@
             // 
             this.OutputVoltageConstAmperage.BackColor = System.Drawing.Color.Black;
             this.OutputVoltageConstAmperage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputVoltageConstAmperage.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputVoltageConstAmperage.ForeColor = System.Drawing.Color.Lime;
             this.OutputVoltageConstAmperage.Location = new System.Drawing.Point(10, 23);
             this.OutputVoltageConstAmperage.Name = "OutputVoltageConstAmperage";
             this.OutputVoltageConstAmperage.ReadOnly = true;
-            this.OutputVoltageConstAmperage.Size = new System.Drawing.Size(172, 20);
+            this.OutputVoltageConstAmperage.Size = new System.Drawing.Size(172, 19);
             this.OutputVoltageConstAmperage.TabIndex = 24;
             this.OutputVoltageConstAmperage.TabStop = false;
             this.OutputVoltageConstAmperage.Text = "0";
@@ -481,7 +482,7 @@
             // ControlPowerSupplyOut
             // 
             this.ControlPowerSupplyOut.BackColor = System.Drawing.Color.Transparent;
-            this.ControlPowerSupplyOut.Font = new System.Drawing.Font("GOST type B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlPowerSupplyOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ControlPowerSupplyOut.Location = new System.Drawing.Point(436, 26);
             this.ControlPowerSupplyOut.Name = "ControlPowerSupplyOut";
             this.ControlPowerSupplyOut.Size = new System.Drawing.Size(104, 160);
@@ -498,7 +499,7 @@
             this.groupBoxPowerSupply.Controls.Add(this.groupBox1);
             this.groupBoxPowerSupply.Controls.Add(this.ControlPowerSupplyOut);
             this.groupBoxPowerSupply.Enabled = false;
-            this.groupBoxPowerSupply.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxPowerSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxPowerSupply.Location = new System.Drawing.Point(9, 27);
             this.groupBoxPowerSupply.Name = "groupBoxPowerSupply";
             this.groupBoxPowerSupply.Size = new System.Drawing.Size(552, 190);
@@ -512,7 +513,7 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.OutputMaxAmperageConsumption);
             this.groupBox3.Controls.Add(this.InputMaxAmperageConsumption);
-            this.groupBox3.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox3.Location = new System.Drawing.Point(6, 131);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(424, 55);
@@ -523,7 +524,7 @@
             // buttonSetAmperage
             // 
             this.buttonSetAmperage.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetAmperage.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetAmperage.Location = new System.Drawing.Point(318, 15);
             this.buttonSetAmperage.Name = "buttonSetAmperage";
             this.buttonSetAmperage.Size = new System.Drawing.Size(96, 30);
@@ -537,7 +538,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(288, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 19);
+            this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 146;
             this.label2.Text = "А";
             // 
@@ -545,12 +546,12 @@
             // 
             this.OutputMaxAmperageConsumption.BackColor = System.Drawing.Color.Black;
             this.OutputMaxAmperageConsumption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputMaxAmperageConsumption.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputMaxAmperageConsumption.ForeColor = System.Drawing.Color.Lime;
             this.OutputMaxAmperageConsumption.Location = new System.Drawing.Point(10, 23);
             this.OutputMaxAmperageConsumption.Name = "OutputMaxAmperageConsumption";
             this.OutputMaxAmperageConsumption.ReadOnly = true;
-            this.OutputMaxAmperageConsumption.Size = new System.Drawing.Size(172, 20);
+            this.OutputMaxAmperageConsumption.Size = new System.Drawing.Size(172, 19);
             this.OutputMaxAmperageConsumption.TabIndex = 24;
             this.OutputMaxAmperageConsumption.TabStop = false;
             this.OutputMaxAmperageConsumption.Text = "0";
@@ -559,10 +560,10 @@
             // InputMaxAmperageConsumption
             // 
             this.InputMaxAmperageConsumption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputMaxAmperageConsumption.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputMaxAmperageConsumption.Location = new System.Drawing.Point(188, 19);
             this.InputMaxAmperageConsumption.Name = "InputMaxAmperageConsumption";
-            this.InputMaxAmperageConsumption.Size = new System.Drawing.Size(94, 27);
+            this.InputMaxAmperageConsumption.Size = new System.Drawing.Size(94, 26);
             this.InputMaxAmperageConsumption.TabIndex = 144;
             this.InputMaxAmperageConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -570,7 +571,7 @@
             // 
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.OutputAmperage);
-            this.groupBox2.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox2.Location = new System.Drawing.Point(6, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(424, 55);
@@ -583,7 +584,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(395, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 19);
+            this.label3.Size = new System.Drawing.Size(20, 20);
             this.label3.TabIndex = 146;
             this.label3.Text = "А";
             // 
@@ -591,12 +592,12 @@
             // 
             this.OutputAmperage.BackColor = System.Drawing.Color.Black;
             this.OutputAmperage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputAmperage.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputAmperage.ForeColor = System.Drawing.Color.Lime;
             this.OutputAmperage.Location = new System.Drawing.Point(10, 24);
             this.OutputAmperage.Name = "OutputAmperage";
             this.OutputAmperage.ReadOnly = true;
-            this.OutputAmperage.Size = new System.Drawing.Size(379, 20);
+            this.OutputAmperage.Size = new System.Drawing.Size(379, 19);
             this.OutputAmperage.TabIndex = 24;
             this.OutputAmperage.TabStop = false;
             this.OutputAmperage.Text = "0";
@@ -608,7 +609,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.OutputVoltageConstAmperage);
             this.groupBox1.Controls.Add(this.InputVoltageConstAmperage);
-            this.groupBox1.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox1.Location = new System.Drawing.Point(6, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(424, 55);
@@ -619,7 +620,7 @@
             // buttonSetVoltage
             // 
             this.buttonSetVoltage.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetVoltage.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetVoltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetVoltage.Location = new System.Drawing.Point(318, 16);
             this.buttonSetVoltage.Name = "buttonSetVoltage";
             this.buttonSetVoltage.Size = new System.Drawing.Size(96, 30);
@@ -633,35 +634,35 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(288, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 19);
+            this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 145;
             this.label1.Text = "В";
             // 
             // InputVoltageConstAmperage
             // 
             this.InputVoltageConstAmperage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputVoltageConstAmperage.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputVoltageConstAmperage.ForeColor = System.Drawing.Color.Black;
             this.InputVoltageConstAmperage.Location = new System.Drawing.Point(188, 19);
             this.InputVoltageConstAmperage.Name = "InputVoltageConstAmperage";
-            this.InputVoltageConstAmperage.Size = new System.Drawing.Size(94, 27);
+            this.InputVoltageConstAmperage.Size = new System.Drawing.Size(94, 26);
             this.InputVoltageConstAmperage.TabIndex = 144;
             this.InputVoltageConstAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InputDeviation
             // 
             this.InputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputDeviation.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputDeviation.Location = new System.Drawing.Point(135, 18);
             this.InputDeviation.Name = "InputDeviation";
-            this.InputDeviation.Size = new System.Drawing.Size(100, 27);
+            this.InputDeviation.Size = new System.Drawing.Size(100, 26);
             this.InputDeviation.TabIndex = 144;
             this.InputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorReset
             // 
             this.ControlSignalGeneratorReset.BackColor = System.Drawing.Color.Transparent;
-            this.ControlSignalGeneratorReset.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ControlSignalGeneratorReset.Location = new System.Drawing.Point(436, 241);
             this.ControlSignalGeneratorReset.Name = "ControlSignalGeneratorReset";
             this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(104, 110);
@@ -676,7 +677,7 @@
             this.groupBox9.Controls.Add(this.comboBoxPulseDelayValue);
             this.groupBox9.Controls.Add(this.OutputPulseDelay);
             this.groupBox9.Controls.Add(this.InputPulseDelay);
-            this.groupBox9.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox9.Location = new System.Drawing.Point(6, 296);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(424, 55);
@@ -687,7 +688,7 @@
             // buttonSetPulseDelay
             // 
             this.buttonSetPulseDelay.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseDelay.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetPulseDelay.Location = new System.Drawing.Point(318, 19);
             this.buttonSetPulseDelay.Name = "buttonSetPulseDelay";
             this.buttonSetPulseDelay.Size = new System.Drawing.Size(96, 30);
@@ -707,7 +708,7 @@
             "мкс"});
             this.comboBoxPulseDelayValue.Location = new System.Drawing.Point(241, 19);
             this.comboBoxPulseDelayValue.Name = "comboBoxPulseDelayValue";
-            this.comboBoxPulseDelayValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxPulseDelayValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxPulseDelayValue.TabIndex = 145;
             this.comboBoxPulseDelayValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPulseDelayValue_SelectedIndexChanged);
             // 
@@ -715,12 +716,12 @@
             // 
             this.OutputPulseDelay.BackColor = System.Drawing.Color.Black;
             this.OutputPulseDelay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulseDelay.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputPulseDelay.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulseDelay.Location = new System.Drawing.Point(10, 21);
             this.OutputPulseDelay.Name = "OutputPulseDelay";
             this.OutputPulseDelay.ReadOnly = true;
-            this.OutputPulseDelay.Size = new System.Drawing.Size(119, 20);
+            this.OutputPulseDelay.Size = new System.Drawing.Size(119, 19);
             this.OutputPulseDelay.TabIndex = 24;
             this.OutputPulseDelay.TabStop = false;
             this.OutputPulseDelay.Text = "0";
@@ -729,16 +730,16 @@
             // InputPulseDelay
             // 
             this.InputPulseDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulseDelay.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.InputPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.InputPulseDelay.Location = new System.Drawing.Point(135, 19);
             this.InputPulseDelay.Name = "InputPulseDelay";
-            this.InputPulseDelay.Size = new System.Drawing.Size(100, 27);
+            this.InputPulseDelay.Size = new System.Drawing.Size(100, 26);
             this.InputPulseDelay.TabIndex = 144;
             this.InputPulseDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorModulationOut
             // 
-            this.ControlSignalGeneratorModulationOut.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorModulationOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ControlSignalGeneratorModulationOut.Location = new System.Drawing.Point(436, 136);
             this.ControlSignalGeneratorModulationOut.Name = "ControlSignalGeneratorModulationOut";
             this.ControlSignalGeneratorModulationOut.Size = new System.Drawing.Size(104, 99);
@@ -753,7 +754,7 @@
             this.groupBox8.Controls.Add(this.comboBoxDeviationValue);
             this.groupBox8.Controls.Add(this.OutputDeviation);
             this.groupBox8.Controls.Add(this.InputDeviation);
-            this.groupBox8.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.groupBox8.Location = new System.Drawing.Point(6, 241);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(424, 55);
@@ -764,7 +765,7 @@
             // buttonSetPulseDeviation
             // 
             this.buttonSetPulseDeviation.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseDeviation.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetPulseDeviation.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulseDeviation.Name = "buttonSetPulseDeviation";
             this.buttonSetPulseDeviation.Size = new System.Drawing.Size(96, 30);
@@ -783,7 +784,7 @@
             "мГц"});
             this.comboBoxDeviationValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxDeviationValue.Name = "comboBoxDeviationValue";
-            this.comboBoxDeviationValue.Size = new System.Drawing.Size(65, 27);
+            this.comboBoxDeviationValue.Size = new System.Drawing.Size(65, 28);
             this.comboBoxDeviationValue.TabIndex = 145;
             this.comboBoxDeviationValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeviationValue_SelectedIndexChanged);
             // 
@@ -791,12 +792,12 @@
             // 
             this.OutputDeviation.BackColor = System.Drawing.Color.Black;
             this.OutputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputDeviation.Font = new System.Drawing.Font("GOST Type BU", 12F);
+            this.OutputDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.OutputDeviation.ForeColor = System.Drawing.Color.Lime;
             this.OutputDeviation.Location = new System.Drawing.Point(10, 21);
             this.OutputDeviation.Name = "OutputDeviation";
             this.OutputDeviation.ReadOnly = true;
-            this.OutputDeviation.Size = new System.Drawing.Size(119, 20);
+            this.OutputDeviation.Size = new System.Drawing.Size(119, 19);
             this.OutputDeviation.TabIndex = 24;
             this.OutputDeviation.TabStop = false;
             this.OutputDeviation.Text = "0";
@@ -814,7 +815,7 @@
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox5);
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox4);
             this.groupBoxSignalGenerator.Enabled = false;
-            this.groupBoxSignalGenerator.Font = new System.Drawing.Font("GOST Type BU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxSignalGenerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxSignalGenerator.Location = new System.Drawing.Point(9, 219);
             this.groupBoxSignalGenerator.Name = "groupBoxSignalGenerator";
             this.groupBoxSignalGenerator.Size = new System.Drawing.Size(552, 359);
@@ -832,8 +833,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxPowerSupply);
             this.Controls.Add(this.groupBoxSignalGenerator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Удалённое управление генератором сигналов и источникм питания";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.groupBox7.ResumeLayout(false);
