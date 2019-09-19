@@ -98,6 +98,10 @@ namespace Core.Exchange.LanExchange
                     Socket.Connect(EndPoint);
                 }
             }
+            catch (PingException exception)
+            {
+                throw new Exception(exception.Message);
+            }
             catch (Exception exception)
             {
                 throw new Exception("Connection failed due to: " + exception.Message);

@@ -95,7 +95,7 @@ namespace Core
             }
             catch (Exception exception)
             {
-                throw new Exception("Failed to connect to power source: \n" + exception.Message);
+                throw new N5746AException("Failed to connect to power source: \n" + exception.Message);
             }
         }
 
@@ -116,7 +116,7 @@ namespace Core
             }
             catch (Exception exception)
             {
-                throw new Exception("Failed to connect to the signal generator: \n" + exception.Message);
+                throw new Smb100AException("Failed to connect to the signal generator: \n" + exception.Message);
             }
         }
 

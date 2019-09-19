@@ -49,7 +49,7 @@ namespace Core.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.11")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.111")]
         public string IP_ADDR_POWER_SUP {
             get {
                 return ((string)(this["IP_ADDR_POWER_SUP"]));
