@@ -2,13 +2,13 @@
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
 using ServiceDesktop.Models.ApplicationModels.MainForm;
+using ServiceDesktop.Presenter.Common;
+using ServiceDesktop.Presenter.Views;
 using ServiceDesktop.Services.MessageServices;
-using ServiceDesktop.Views;
-using ServiceDesktop.Views.DeviceInitialization;
 
-namespace ServiceDesktop.Presenter
+namespace ServiceDesktop.Presenter.Presenters
 {
-    public class ServiceDesktopPresenter
+    public class ServiceDesktopPresenter : IServiceDesktopPresenter
     {
         #region Private Properties
 
@@ -100,9 +100,10 @@ namespace ServiceDesktop.Presenter
         /// <returns>True - power supply is connection, False - power supply is not connection</returns>
         private bool ServiceDesktopModelOnGetStateConnectionPowerSupply()
         {
-            var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.SignalGenerator);
+          /*  var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.SignalGenerator);
             deviceInit.ShowDialog();
-            return deviceInit.StatusSignalGenerator;
+            return deviceInit.StatusSignalGenerator;*/
+            return true;
         }
 
         /// <summary>
@@ -111,9 +112,10 @@ namespace ServiceDesktop.Presenter
         /// <returns>True - signal generator is connection, False - signal generator is not connection</returns>
         private bool ServiceDesktopModelOnGetStateConnectionSignalGenerator()
         {
-            var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.PowerSupply);
-            deviceInit.ShowDialog();
-            return deviceInit.StatusPowerSupply;
+            return true;
+            /*  var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.PowerSupply);
+              deviceInit.ShowDialog();
+              return deviceInit.StatusPowerSupply;*/
         }
 
         /// <summary>
@@ -547,6 +549,18 @@ namespace ServiceDesktop.Presenter
         #endregion
 
         #endregion
+
+        #endregion
+
+        #region Public Methods
+        
+        /// <summary>
+        ///     
+        /// </summary>
+        public void Run()
+        {
+            ServiceDesktopMainForm.Show();
+        }
 
         #endregion
     }
