@@ -2,7 +2,7 @@
 
 namespace ServiceDesktop.Services.MessageServices
 {
-    public class MessageService
+    public class MessageService : IMessageService
     {
         public void ShowMessage(string message)
         {
