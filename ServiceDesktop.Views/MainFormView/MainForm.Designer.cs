@@ -51,8 +51,15 @@
             this.OutputFrequency = new System.Windows.Forms.TextBox();
             this.InputFrequency = new System.Windows.Forms.TextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.ToolStripBottomPowerSupply = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ToolStripCheckConnectionPowerSupply = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripBottomSignalGenerator = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ToolStripCheckConnectionSignalGenerator = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OutputVoltageConstAmperage = new System.Windows.Forms.TextBox();
             this.ControlPowerSupplyOut = new System.Windows.Forms.Button();
             this.groupBoxPowerSupply = new System.Windows.Forms.GroupBox();
@@ -81,13 +88,6 @@
             this.comboBoxDeviationValue = new System.Windows.Forms.ComboBox();
             this.OutputDeviation = new System.Windows.Forms.TextBox();
             this.groupBoxSignalGenerator = new System.Windows.Forms.GroupBox();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.проверкаПодключенияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.проверкаПодключенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -386,9 +386,9 @@
             // 
             this.statusStrip.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
+            this.ToolStripBottomPowerSupply,
             this.toolStripStatusLabel1,
-            this.toolStripDropDownButton1});
+            this.ToolStripBottomSignalGenerator});
             this.statusStrip.Location = new System.Drawing.Point(0, 579);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -397,12 +397,56 @@
             this.statusStrip.TabIndex = 104;
             this.statusStrip.Text = "StatusStrip";
             // 
+            // ToolStripBottomPowerSupply
+            // 
+            this.ToolStripBottomPowerSupply.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.ToolStripBottomPowerSupply.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripCheckConnectionPowerSupply});
+            this.ToolStripBottomPowerSupply.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripBottomPowerSupply.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
+            this.ToolStripBottomPowerSupply.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ToolStripBottomPowerSupply.Name = "ToolStripBottomPowerSupply";
+            this.ToolStripBottomPowerSupply.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ToolStripBottomPowerSupply.Size = new System.Drawing.Size(176, 24);
+            this.ToolStripBottomPowerSupply.Text = "Источник питания";
+            this.ToolStripBottomPowerSupply.ToolTipText = "Состояние источника питания";
+            // 
+            // ToolStripCheckConnectionPowerSupply
+            // 
+            this.ToolStripCheckConnectionPowerSupply.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripCheckConnectionPowerSupply.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.ToolStripCheckConnectionPowerSupply.Name = "ToolStripCheckConnectionPowerSupply";
+            this.ToolStripCheckConnectionPowerSupply.Size = new System.Drawing.Size(262, 24);
+            this.ToolStripCheckConnectionPowerSupply.Text = "Проверка подключения";
+            this.ToolStripCheckConnectionPowerSupply.Click += new System.EventHandler(this.ToolStripCheckConnectionPowerSupply_Click);
+            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(13, 21);
             this.toolStripStatusLabel1.Text = "|";
+            // 
+            // ToolStripBottomSignalGenerator
+            // 
+            this.ToolStripBottomSignalGenerator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripCheckConnectionSignalGenerator});
+            this.ToolStripBottomSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripBottomSignalGenerator.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
+            this.ToolStripBottomSignalGenerator.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ToolStripBottomSignalGenerator.Name = "ToolStripBottomSignalGenerator";
+            this.ToolStripBottomSignalGenerator.Size = new System.Drawing.Size(192, 24);
+            this.ToolStripBottomSignalGenerator.Text = "Генератор сигналов";
+            this.ToolStripBottomSignalGenerator.ToolTipText = "Состояние генератора сигналов";
+            // 
+            // ToolStripCheckConnectionSignalGenerator
+            // 
+            this.ToolStripCheckConnectionSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripCheckConnectionSignalGenerator.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.ToolStripCheckConnectionSignalGenerator.Name = "ToolStripCheckConnectionSignalGenerator";
+            this.ToolStripCheckConnectionSignalGenerator.Size = new System.Drawing.Size(262, 24);
+            this.ToolStripCheckConnectionSignalGenerator.Text = "Проверка подключения";
+            this.ToolStripCheckConnectionSignalGenerator.Click += new System.EventHandler(this.ToolStripCheckConnectionSignalGenerator_Click);
             // 
             // menuStrip1
             // 
@@ -415,6 +459,34 @@
             this.menuStrip1.Size = new System.Drawing.Size(571, 28);
             this.menuStrip1.TabIndex = 105;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиToolStripMenuItem,
+            this.AboutSoftwareToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.app;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(93, 24);
+            this.toolStripMenuItem1.Text = "Сервис";
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.настройкиToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // AboutSoftwareToolStripMenuItem
+            // 
+            this.AboutSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutSoftwareToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.info;
+            this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
+            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.AboutSoftwareToolStripMenuItem.Text = "О программе";
+            this.AboutSoftwareToolStripMenuItem.Click += new System.EventHandler(this.AboutSoftwareToolStripMenuItem_Click);
             // 
             // OutputVoltageConstAmperage
             // 
@@ -780,75 +852,6 @@
             this.groupBoxSignalGenerator.TabStop = false;
             this.groupBoxSignalGenerator.Text = "Генератор сигналов";
             // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.проверкаПодключенияToolStripMenuItem1});
-            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton2.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(176, 24);
-            this.toolStripDropDownButton2.Text = "Источник питания";
-            this.toolStripDropDownButton2.ToolTipText = "Состояние источника питания";
-            // 
-            // проверкаПодключенияToolStripMenuItem1
-            // 
-            this.проверкаПодключенияToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.проверкаПодключенияToolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
-            this.проверкаПодключенияToolStripMenuItem1.Name = "проверкаПодключенияToolStripMenuItem1";
-            this.проверкаПодключенияToolStripMenuItem1.Size = new System.Drawing.Size(262, 24);
-            this.проверкаПодключенияToolStripMenuItem1.Text = "Проверка подключения";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.проверкаПодключенияToolStripMenuItem});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton1.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(192, 24);
-            this.toolStripDropDownButton1.Text = "Генератор сигналов";
-            this.toolStripDropDownButton1.ToolTipText = "Состояние генератора сигналов";
-            // 
-            // проверкаПодключенияToolStripMenuItem
-            // 
-            this.проверкаПодключенияToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.проверкаПодключенияToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
-            this.проверкаПодключенияToolStripMenuItem.Name = "проверкаПодключенияToolStripMenuItem";
-            this.проверкаПодключенияToolStripMenuItem.Size = new System.Drawing.Size(262, 24);
-            this.проверкаПодключенияToolStripMenuItem.Text = "Проверка подключения";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
-            this.AboutSoftwareToolStripMenuItem});
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.app;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(93, 24);
-            this.toolStripMenuItem1.Text = "Сервис";
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.настройкиToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // AboutSoftwareToolStripMenuItem
-            // 
-            this.AboutSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutSoftwareToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.info;
-            this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
-            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.AboutSoftwareToolStripMenuItem.Text = "О программе";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -920,11 +923,11 @@
         private System.Windows.Forms.TextBox OutputFrequency;
         private System.Windows.Forms.TextBox InputFrequency;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripMenuItem проверкаПодключенияToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripDropDownButton ToolStripBottomPowerSupply;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripCheckConnectionPowerSupply;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem проверкаПодключенияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton ToolStripBottomSignalGenerator;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripCheckConnectionSignalGenerator;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem AboutSoftwareToolStripMenuItem;

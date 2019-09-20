@@ -249,7 +249,36 @@ namespace ServiceDesktop.Views.MainFormView
             }
         }
 
+        /// <summary>
+        ///     Set Enabled / Disabled Power Supply ToolStrip button
+        /// </summary>
+        private bool ToolStripDropDownButtonPowerSupplyState
+        {
+            set => ToolStripBottomPowerSupply.Enabled = value;
+        }
+
+        /// <summary>
+        ///     Set Enabled / Disabled Signal Generator ToolStrip button
+        /// </summary>
+        private bool ToolStripDropDownButtonSignalGeneratorState
+        {
+            set => ToolStripBottomSignalGenerator.Enabled = value;
+        }
+
         #endregion
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        ///     Title Text Form
+        /// </summary>
+        public sealed override string Text
+        {
+            get => base.Text;
+            set => base.Text = value;
+        }
 
         #endregion
 
@@ -280,6 +309,9 @@ namespace ServiceDesktop.Views.MainFormView
         public event Action<Smb100A.PulseWidth> SelectPulseWidthSignalGenerator;
         public event Action<Smb100A.SelectMode> SelectModeSignalGenerator;
 
+        public event Action CheckConnectionPowerSupply;
+        public event Action CheckConnectionSignalGenerator;
+
         #endregion
 
         #region Constructor
@@ -292,6 +324,8 @@ namespace ServiceDesktop.Views.MainFormView
             try
             {
                 InitializeComponent();
+                Icon = Properties.Resources.monitor;
+                Text = Program.Title;
             }
             catch (Exception exception)
             {
@@ -327,6 +361,20 @@ namespace ServiceDesktop.Views.MainFormView
         public void SetEnabledGroupBoxPowerSupply(bool isEnabled)
         {
             groupBoxPowerSupply.Enabled = isEnabled;
+        }
+
+        #endregion
+
+        #region ToolBox Actions
+
+        public void SetStateButtonCheckPowerSupply(bool statePowerSupply)
+        {
+            ToolStripDropDownButtonPowerSupplyState = statePowerSupply;
+        }
+
+        public void SetStateButtonCheckSignalGenerator(bool stateSignalGenerator)
+        {
+            ToolStripDropDownButtonSignalGeneratorState = stateSignalGenerator;
         }
 
         #endregion
@@ -494,6 +542,16 @@ namespace ServiceDesktop.Views.MainFormView
         private void buttonControlSignalGeneratorReset_Click(object sender, EventArgs e)
         {
             //   GetSignalGeneratorReset?.Invoke(sender, e);
+        }
+
+        private void ToolStripCheckConnectionPowerSupply_Click(object sender, EventArgs e)
+        {
+            CheckConnectionPowerSupply?.Invoke();
+        }
+
+        private void ToolStripCheckConnectionSignalGenerator_Click(object sender, EventArgs e)
+        {
+            CheckConnectionSignalGenerator?.Invoke();
         }
 
         #endregion

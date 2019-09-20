@@ -92,6 +92,10 @@ namespace ServiceDesktop.Presenter.Presenters
             ServiceDesktopModel.GetStateConnectionSignalGenerator +=
                 ServiceDesktopModelOnGetStateConnectionSignalGenerator;
             ServiceDesktopModel.GetStateConnectionPowerSupply += ServiceDesktopModelOnGetStateConnectionPowerSupply;
+
+            ServiceDesktopMainForm.CheckConnectionPowerSupply += ServiceDesktopMainFormOnCheckConnectionPowerSupply;
+            ServiceDesktopMainForm.CheckConnectionSignalGenerator +=
+                ServiceDesktopMainFormOnCheckConnectionSignalGenerator;
         }
 
         /// <summary>
@@ -100,9 +104,9 @@ namespace ServiceDesktop.Presenter.Presenters
         /// <returns>True - power supply is connection, False - power supply is not connection</returns>
         private bool ServiceDesktopModelOnGetStateConnectionPowerSupply()
         {
-          /*  var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.SignalGenerator);
-            deviceInit.ShowDialog();
-            return deviceInit.StatusSignalGenerator;*/
+            /*  var deviceInit = new DevicesInitialization(DevicesInitialization.Devices.SignalGenerator);
+              deviceInit.ShowDialog();
+              return deviceInit.StatusSignalGenerator;*/
             return true;
         }
 
@@ -205,43 +209,9 @@ namespace ServiceDesktop.Presenter.Presenters
             ServiceDesktopMainForm.SetAllCombobox(0);
             try
             {
-                try
-                {
-                    if (ServiceDesktopModel.GetStateSignalGenerator())
-                    {
-                        ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(true);
-                        ServiceDesktopModel.CreateInstanceSignalGenerator();
-                        ServiceDesktopModel.CreateOutputThreadSignalGenerator();
-                    }
-                    else
-                    {
-                        ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(false);
-                    }
-                }
-                catch (Smb100AException smb100AException)
-                {
-                    MessageService.ShowError(smb100AException.Message,
-                        "Error to work with signal generator");
-                }
+                SetUiSignalGenerator(ServiceDesktopModel.GetStateSignalGenerator());
 
-                try
-                {
-                    if (ServiceDesktopModel.GetStatePowerSupply())
-                    {
-                        ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(true);
-                        ServiceDesktopModel.CreateInstancePowerSupply();
-                        ServiceDesktopModel.CreateOutputThreadPowerSupply();
-                    }
-                    else
-                    {
-                        ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(false);
-                    }
-                }
-                catch (N5746AException n5746AException)
-                {
-                    MessageService.ShowError(n5746AException.Message,
-                        "Error to work with power supply");
-                }
+                SetUiPowerSupply(ServiceDesktopModel.GetStatePowerSupply());
             }
             catch (Exception exception)
             {
@@ -389,6 +359,14 @@ namespace ServiceDesktop.Presenter.Presenters
             }
         }
 
+        /// <summary>
+        ///     Checked connection with signal generator
+        /// </summary>
+        private void ServiceDesktopMainFormOnCheckConnectionSignalGenerator()
+        {
+            SetUiSignalGenerator(ServiceDesktopModelOnGetStateConnectionSignalGenerator());
+        }
+
         #endregion
 
         #region Comboboxes
@@ -526,6 +504,14 @@ namespace ServiceDesktop.Presenter.Presenters
             }
         }
 
+        /// <summary>
+        ///     Checked connection with power supply
+        /// </summary>
+        private void ServiceDesktopMainFormOnCheckConnectionPowerSupply()
+        {
+            SetUiPowerSupply(ServiceDesktopModelOnGetStateConnectionPowerSupply());
+        }
+
         #endregion
 
         #endregion
@@ -550,12 +536,73 @@ namespace ServiceDesktop.Presenter.Presenters
 
         #endregion
 
+        #region Helper UI Methods
+
+        /// <summary>
+        ///     Set UI Signal Generator elements on active/unactive
+        /// </summary>
+        /// <param name="stateSignalGenerator">State Signal Generator</param>
+        private void SetUiSignalGenerator(bool stateSignalGenerator)
+        {
+            try
+
+            {
+                if (stateSignalGenerator)
+                {
+                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(false);
+                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(true);
+                    ServiceDesktopModel.CreateInstanceSignalGenerator();
+                    ServiceDesktopModel.CreateOutputThreadSignalGenerator();
+                }
+                else
+                {
+                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(true);
+                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(false);
+                }
+            }
+            catch (Smb100AException smb100AException)
+            {
+                MessageService.ShowError(smb100AException.Message,
+                    "Error to work with signal generator");
+            }
+        }
+
+        /// <summary>
+        ///     Set UI Power Supply elements on active/unactive
+        /// </summary>
+        /// <param name="statePowerSupply">State Power Supply</param>
+        private void SetUiPowerSupply(bool statePowerSupply)
+        {
+            try
+            {
+                if (statePowerSupply)
+                {
+                    ServiceDesktopMainForm.SetStateButtonCheckPowerSupply(false);
+                    ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(true);
+                    ServiceDesktopModel.CreateInstancePowerSupply();
+                    ServiceDesktopModel.CreateOutputThreadPowerSupply();
+                }
+                else
+                {
+                    ServiceDesktopMainForm.SetStateButtonCheckPowerSupply(true);
+                    ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(false);
+                }
+            }
+            catch (N5746AException n5746AException)
+            {
+                MessageService.ShowError(n5746AException.Message,
+                    "Error to work with power supply");
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Public Methods
-        
+
         /// <summary>
-        ///     
+        ///     Running Software
         /// </summary>
         public void Run()
         {
