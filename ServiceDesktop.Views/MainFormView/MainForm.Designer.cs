@@ -51,11 +51,7 @@
             this.OutputFrequency = new System.Windows.Forms.TextBox();
             this.InputFrequency = new System.Windows.Forms.TextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.проверкаПодключенияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.проверкаПодключенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.OutputVoltageConstAmperage = new System.Windows.Forms.TextBox();
             this.ControlPowerSupplyOut = new System.Windows.Forms.Button();
@@ -85,6 +81,10 @@
             this.comboBoxDeviationValue = new System.Windows.Forms.ComboBox();
             this.OutputDeviation = new System.Windows.Forms.TextBox();
             this.groupBoxSignalGenerator = new System.Windows.Forms.GroupBox();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.проверкаПодключенияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.проверкаПодключенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -397,54 +397,12 @@
             this.statusStrip.TabIndex = 104;
             this.statusStrip.Text = "StatusStrip";
             // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.проверкаПодключенияToolStripMenuItem1});
-            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton2.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(176, 24);
-            this.toolStripDropDownButton2.Text = "Источник питания";
-            this.toolStripDropDownButton2.ToolTipText = "Состояние источника питания";
-            // 
-            // проверкаПодключенияToolStripMenuItem1
-            // 
-            this.проверкаПодключенияToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.проверкаПодключенияToolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
-            this.проверкаПодключенияToolStripMenuItem1.Name = "проверкаПодключенияToolStripMenuItem1";
-            this.проверкаПодключенияToolStripMenuItem1.Size = new System.Drawing.Size(262, 24);
-            this.проверкаПодключенияToolStripMenuItem1.Text = "Проверка подключения";
-            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(13, 21);
             this.toolStripStatusLabel1.Text = "|";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.проверкаПодключенияToolStripMenuItem});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton1.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(192, 24);
-            this.toolStripDropDownButton1.Text = "Генератор сигналов";
-            this.toolStripDropDownButton1.ToolTipText = "Состояние генератора сигналов";
-            // 
-            // проверкаПодключенияToolStripMenuItem
-            // 
-            this.проверкаПодключенияToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.проверкаПодключенияToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
-            this.проверкаПодключенияToolStripMenuItem.Name = "проверкаПодключенияToolStripMenuItem";
-            this.проверкаПодключенияToolStripMenuItem.Size = new System.Drawing.Size(262, 24);
-            this.проверкаПодключенияToolStripMenuItem.Text = "Проверка подключения";
             // 
             // menuStrip1
             // 
@@ -822,6 +780,48 @@
             this.groupBoxSignalGenerator.TabStop = false;
             this.groupBoxSignalGenerator.Text = "Генератор сигналов";
             // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.проверкаПодключенияToolStripMenuItem1});
+            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton2.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(176, 24);
+            this.toolStripDropDownButton2.Text = "Источник питания";
+            this.toolStripDropDownButton2.ToolTipText = "Состояние источника питания";
+            // 
+            // проверкаПодключенияToolStripMenuItem1
+            // 
+            this.проверкаПодключенияToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.проверкаПодключенияToolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.проверкаПодключенияToolStripMenuItem1.Name = "проверкаПодключенияToolStripMenuItem1";
+            this.проверкаПодключенияToolStripMenuItem1.Size = new System.Drawing.Size(262, 24);
+            this.проверкаПодключенияToolStripMenuItem1.Text = "Проверка подключения";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.проверкаПодключенияToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(192, 24);
+            this.toolStripDropDownButton1.Text = "Генератор сигналов";
+            this.toolStripDropDownButton1.ToolTipText = "Состояние генератора сигналов";
+            // 
+            // проверкаПодключенияToolStripMenuItem
+            // 
+            this.проверкаПодключенияToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.проверкаПодключенияToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.проверкаПодключенияToolStripMenuItem.Name = "проверкаПодключенияToolStripMenuItem";
+            this.проверкаПодключенияToolStripMenuItem.Size = new System.Drawing.Size(262, 24);
+            this.проверкаПодключенияToolStripMenuItem.Text = "Проверка подключения";
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -859,6 +859,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxPowerSupply);
             this.Controls.Add(this.groupBoxSignalGenerator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

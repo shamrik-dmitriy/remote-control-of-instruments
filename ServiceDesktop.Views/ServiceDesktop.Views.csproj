@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutSoftware\AboutSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutSoftware\AboutSoftware.Designer.cs">
+      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainFormView\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutSoftware\AboutSoftware.resx">
+      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainFormView\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +147,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\share-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GitHub-Mark-32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
