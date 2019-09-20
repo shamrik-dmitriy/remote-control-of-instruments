@@ -45,7 +45,6 @@
             this.comboBoxPowValue = new System.Windows.Forms.ComboBox();
             this.OutputPow = new System.Windows.Forms.TextBox();
             this.InputPow = new System.Windows.Forms.TextBox();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonSetFrequency = new System.Windows.Forms.Button();
             this.comboBoxFrequencyValue = new System.Windows.Forms.ComboBox();
@@ -58,8 +57,6 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.проверкаПодключенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OutputVoltageConstAmperage = new System.Windows.Forms.TextBox();
             this.ControlPowerSupplyOut = new System.Windows.Forms.Button();
             this.groupBoxPowerSupply = new System.Windows.Forms.GroupBox();
@@ -88,6 +85,9 @@
             this.comboBoxDeviationValue = new System.Windows.Forms.ComboBox();
             this.OutputDeviation = new System.Windows.Forms.TextBox();
             this.groupBoxSignalGenerator = new System.Windows.Forms.GroupBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -109,7 +109,7 @@
             this.groupBox7.Controls.Add(this.comboBoxPulsePeriodValue);
             this.groupBox7.Controls.Add(this.OutputPulsePeriod);
             this.groupBox7.Controls.Add(this.InputPulsePeriod);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(6, 186);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(424, 55);
@@ -120,7 +120,7 @@
             // buttonSetPulsePeriod
             // 
             this.buttonSetPulsePeriod.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulsePeriod.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetPulsePeriod.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulsePeriod.Name = "buttonSetPulsePeriod";
             this.buttonSetPulsePeriod.Size = new System.Drawing.Size(96, 30);
@@ -132,6 +132,7 @@
             // comboBoxPulsePeriodValue
             // 
             this.comboBoxPulsePeriodValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPulsePeriodValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPulsePeriodValue.FormattingEnabled = true;
             this.comboBoxPulsePeriodValue.Items.AddRange(new object[] {
             "с",
@@ -148,12 +149,12 @@
             // 
             this.OutputPulsePeriod.BackColor = System.Drawing.Color.Black;
             this.OutputPulsePeriod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputPulsePeriod.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputPulsePeriod.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulsePeriod.Location = new System.Drawing.Point(10, 21);
             this.OutputPulsePeriod.Name = "OutputPulsePeriod";
             this.OutputPulsePeriod.ReadOnly = true;
-            this.OutputPulsePeriod.Size = new System.Drawing.Size(119, 19);
+            this.OutputPulsePeriod.Size = new System.Drawing.Size(119, 22);
             this.OutputPulsePeriod.TabIndex = 24;
             this.OutputPulsePeriod.TabStop = false;
             this.OutputPulsePeriod.Text = "0";
@@ -162,20 +163,20 @@
             // InputPulsePeriod
             // 
             this.InputPulsePeriod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulsePeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputPulsePeriod.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputPulsePeriod.Location = new System.Drawing.Point(135, 18);
             this.InputPulsePeriod.Name = "InputPulsePeriod";
-            this.InputPulsePeriod.Size = new System.Drawing.Size(100, 26);
+            this.InputPulsePeriod.Size = new System.Drawing.Size(100, 29);
             this.InputPulsePeriod.TabIndex = 144;
             this.InputPulsePeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorRfOut
             // 
             this.ControlSignalGeneratorRfOut.BackColor = System.Drawing.Color.Transparent;
-            this.ControlSignalGeneratorRfOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorRfOut.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlSignalGeneratorRfOut.Location = new System.Drawing.Point(436, 26);
             this.ControlSignalGeneratorRfOut.Name = "ControlSignalGeneratorRfOut";
-            this.ControlSignalGeneratorRfOut.Size = new System.Drawing.Size(104, 104);
+            this.ControlSignalGeneratorRfOut.Size = new System.Drawing.Size(110, 104);
             this.ControlSignalGeneratorRfOut.TabIndex = 150;
             this.ControlSignalGeneratorRfOut.Text = "Включить RF";
             this.ControlSignalGeneratorRfOut.UseVisualStyleBackColor = false;
@@ -187,7 +188,7 @@
             this.groupBox6.Controls.Add(this.comboBoxPulseWidthValue);
             this.groupBox6.Controls.Add(this.OutputPulseWidth);
             this.groupBox6.Controls.Add(this.InputPulseWidth);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(6, 131);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(424, 55);
@@ -198,7 +199,7 @@
             // buttonSetPulseWidth
             // 
             this.buttonSetPulseWidth.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseWidth.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetPulseWidth.Location = new System.Drawing.Point(318, 20);
             this.buttonSetPulseWidth.Name = "buttonSetPulseWidth";
             this.buttonSetPulseWidth.Size = new System.Drawing.Size(96, 30);
@@ -210,6 +211,7 @@
             // comboBoxPulseWidthValue
             // 
             this.comboBoxPulseWidthValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPulseWidthValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPulseWidthValue.FormattingEnabled = true;
             this.comboBoxPulseWidthValue.Items.AddRange(new object[] {
             "с",
@@ -226,12 +228,12 @@
             // 
             this.OutputPulseWidth.BackColor = System.Drawing.Color.Black;
             this.OutputPulseWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputPulseWidth.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputPulseWidth.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulseWidth.Location = new System.Drawing.Point(10, 21);
             this.OutputPulseWidth.Name = "OutputPulseWidth";
             this.OutputPulseWidth.ReadOnly = true;
-            this.OutputPulseWidth.Size = new System.Drawing.Size(119, 19);
+            this.OutputPulseWidth.Size = new System.Drawing.Size(119, 22);
             this.OutputPulseWidth.TabIndex = 24;
             this.OutputPulseWidth.TabStop = false;
             this.OutputPulseWidth.Text = "0";
@@ -240,10 +242,10 @@
             // InputPulseWidth
             // 
             this.InputPulseWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulseWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputPulseWidth.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputPulseWidth.Location = new System.Drawing.Point(135, 20);
             this.InputPulseWidth.Name = "InputPulseWidth";
-            this.InputPulseWidth.Size = new System.Drawing.Size(100, 26);
+            this.InputPulseWidth.Size = new System.Drawing.Size(100, 29);
             this.InputPulseWidth.TabIndex = 144;
             this.InputPulseWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -253,7 +255,7 @@
             this.groupBox5.Controls.Add(this.comboBoxPowValue);
             this.groupBox5.Controls.Add(this.OutputPow);
             this.groupBox5.Controls.Add(this.InputPow);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(6, 75);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(424, 55);
@@ -264,7 +266,7 @@
             // buttonSetPow
             // 
             this.buttonSetPow.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPow.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetPow.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPow.Name = "buttonSetPow";
             this.buttonSetPow.Size = new System.Drawing.Size(96, 30);
@@ -276,6 +278,7 @@
             // comboBoxPowValue
             // 
             this.comboBoxPowValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPowValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPowValue.FormattingEnabled = true;
             this.comboBoxPowValue.Items.AddRange(new object[] {
             "дБм",
@@ -290,13 +293,13 @@
             // 
             this.OutputPow.BackColor = System.Drawing.Color.Black;
             this.OutputPow.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputPow.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputPow.ForeColor = System.Drawing.Color.Lime;
             this.OutputPow.Location = new System.Drawing.Point(10, 21);
             this.OutputPow.MaxLength = 5;
             this.OutputPow.Name = "OutputPow";
             this.OutputPow.ReadOnly = true;
-            this.OutputPow.Size = new System.Drawing.Size(119, 19);
+            this.OutputPow.Size = new System.Drawing.Size(119, 22);
             this.OutputPow.TabIndex = 24;
             this.OutputPow.TabStop = false;
             this.OutputPow.Text = "0";
@@ -305,18 +308,12 @@
             // InputPow
             // 
             this.InputPow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputPow.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputPow.Location = new System.Drawing.Point(135, 18);
             this.InputPow.Name = "InputPow";
-            this.InputPow.Size = new System.Drawing.Size(100, 26);
+            this.InputPow.Size = new System.Drawing.Size(100, 29);
             this.InputPow.TabIndex = 144;
             this.InputPow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // groupBox4
             // 
@@ -324,7 +321,7 @@
             this.groupBox4.Controls.Add(this.comboBoxFrequencyValue);
             this.groupBox4.Controls.Add(this.OutputFrequency);
             this.groupBox4.Controls.Add(this.InputFrequency);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(424, 55);
@@ -335,7 +332,7 @@
             // buttonSetFrequency
             // 
             this.buttonSetFrequency.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetFrequency.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetFrequency.Location = new System.Drawing.Point(318, 18);
             this.buttonSetFrequency.Name = "buttonSetFrequency";
             this.buttonSetFrequency.Size = new System.Drawing.Size(96, 30);
@@ -347,6 +344,7 @@
             // comboBoxFrequencyValue
             // 
             this.comboBoxFrequencyValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFrequencyValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFrequencyValue.FormattingEnabled = true;
             this.comboBoxFrequencyValue.Items.AddRange(new object[] {
             "Гц",
@@ -363,12 +361,12 @@
             // 
             this.OutputFrequency.BackColor = System.Drawing.Color.Black;
             this.OutputFrequency.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputFrequency.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputFrequency.ForeColor = System.Drawing.Color.Lime;
             this.OutputFrequency.Location = new System.Drawing.Point(10, 21);
             this.OutputFrequency.Name = "OutputFrequency";
             this.OutputFrequency.ReadOnly = true;
-            this.OutputFrequency.Size = new System.Drawing.Size(119, 19);
+            this.OutputFrequency.Size = new System.Drawing.Size(119, 22);
             this.OutputFrequency.TabIndex = 24;
             this.OutputFrequency.TabStop = false;
             this.OutputFrequency.Text = "0";
@@ -377,23 +375,24 @@
             // InputFrequency
             // 
             this.InputFrequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputFrequency.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputFrequency.Location = new System.Drawing.Point(135, 18);
             this.InputFrequency.Name = "InputFrequency";
-            this.InputFrequency.Size = new System.Drawing.Size(100, 26);
+            this.InputFrequency.Size = new System.Drawing.Size(100, 29);
             this.InputFrequency.TabIndex = 144;
             this.InputFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // statusStrip
             // 
+            this.statusStrip.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton2,
             this.toolStripStatusLabel1,
             this.toolStripDropDownButton1});
-            this.statusStrip.Location = new System.Drawing.Point(0, 583);
+            this.statusStrip.Location = new System.Drawing.Point(0, 579);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip.Size = new System.Drawing.Size(571, 22);
+            this.statusStrip.Size = new System.Drawing.Size(571, 26);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 104;
             this.statusStrip.Text = "StatusStrip";
@@ -403,77 +402,72 @@
             this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проверкаПодключенияToolStripMenuItem1});
+            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton2.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(122, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(176, 24);
             this.toolStripDropDownButton2.Text = "Источник питания";
             this.toolStripDropDownButton2.ToolTipText = "Состояние источника питания";
             // 
             // проверкаПодключенияToolStripMenuItem1
             // 
+            this.проверкаПодключенияToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.проверкаПодключенияToolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
             this.проверкаПодключенияToolStripMenuItem1.Name = "проверкаПодключенияToolStripMenuItem1";
-            this.проверкаПодключенияToolStripMenuItem1.Size = new System.Drawing.Size(207, 22);
+            this.проверкаПодключенияToolStripMenuItem1.Size = new System.Drawing.Size(262, 24);
             this.проверкаПодключенияToolStripMenuItem1.Text = "Проверка подключения";
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(13, 21);
             this.toolStripStatusLabel1.Text = "|";
             // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проверкаПодключенияToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(131, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(192, 24);
             this.toolStripDropDownButton1.Text = "Генератор сигналов";
             this.toolStripDropDownButton1.ToolTipText = "Состояние генератора сигналов";
             // 
             // проверкаПодключенияToolStripMenuItem
             // 
+            this.проверкаПодключенияToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.проверкаПодключенияToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
             this.проверкаПодключенияToolStripMenuItem.Name = "проверкаПодключенияToolStripMenuItem";
-            this.проверкаПодключенияToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.проверкаПодключенияToolStripMenuItem.Size = new System.Drawing.Size(262, 24);
             this.проверкаПодключенияToolStripMenuItem.Text = "Проверка подключения";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(571, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(571, 28);
             this.menuStrip1.TabIndex = 105;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
-            this.AboutSoftwareToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
-            this.toolStripMenuItem1.Text = "Сервис";
-            // 
-            // AboutSoftwareToolStripMenuItem
-            // 
-            this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
-            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.AboutSoftwareToolStripMenuItem.Text = "О программе";
             // 
             // OutputVoltageConstAmperage
             // 
             this.OutputVoltageConstAmperage.BackColor = System.Drawing.Color.Black;
             this.OutputVoltageConstAmperage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputVoltageConstAmperage.ForeColor = System.Drawing.Color.Lime;
             this.OutputVoltageConstAmperage.Location = new System.Drawing.Point(10, 23);
             this.OutputVoltageConstAmperage.Name = "OutputVoltageConstAmperage";
             this.OutputVoltageConstAmperage.ReadOnly = true;
-            this.OutputVoltageConstAmperage.Size = new System.Drawing.Size(172, 19);
+            this.OutputVoltageConstAmperage.Size = new System.Drawing.Size(172, 22);
             this.OutputVoltageConstAmperage.TabIndex = 24;
             this.OutputVoltageConstAmperage.TabStop = false;
             this.OutputVoltageConstAmperage.Text = "0";
@@ -482,10 +476,10 @@
             // ControlPowerSupplyOut
             // 
             this.ControlPowerSupplyOut.BackColor = System.Drawing.Color.Transparent;
-            this.ControlPowerSupplyOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlPowerSupplyOut.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlPowerSupplyOut.Location = new System.Drawing.Point(436, 26);
             this.ControlPowerSupplyOut.Name = "ControlPowerSupplyOut";
-            this.ControlPowerSupplyOut.Size = new System.Drawing.Size(104, 160);
+            this.ControlPowerSupplyOut.Size = new System.Drawing.Size(110, 160);
             this.ControlPowerSupplyOut.TabIndex = 86;
             this.ControlPowerSupplyOut.Text = "Включить выход источника";
             this.ControlPowerSupplyOut.UseVisualStyleBackColor = false;
@@ -499,7 +493,7 @@
             this.groupBoxPowerSupply.Controls.Add(this.groupBox1);
             this.groupBoxPowerSupply.Controls.Add(this.ControlPowerSupplyOut);
             this.groupBoxPowerSupply.Enabled = false;
-            this.groupBoxPowerSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxPowerSupply.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxPowerSupply.Location = new System.Drawing.Point(9, 27);
             this.groupBoxPowerSupply.Name = "groupBoxPowerSupply";
             this.groupBoxPowerSupply.Size = new System.Drawing.Size(552, 190);
@@ -513,7 +507,7 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.OutputMaxAmperageConsumption);
             this.groupBox3.Controls.Add(this.InputMaxAmperageConsumption);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(6, 131);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(424, 55);
@@ -524,7 +518,7 @@
             // buttonSetAmperage
             // 
             this.buttonSetAmperage.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetAmperage.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetAmperage.Location = new System.Drawing.Point(318, 15);
             this.buttonSetAmperage.Name = "buttonSetAmperage";
             this.buttonSetAmperage.Size = new System.Drawing.Size(96, 30);
@@ -536,6 +530,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(288, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 20);
@@ -546,12 +541,12 @@
             // 
             this.OutputMaxAmperageConsumption.BackColor = System.Drawing.Color.Black;
             this.OutputMaxAmperageConsumption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputMaxAmperageConsumption.ForeColor = System.Drawing.Color.Lime;
             this.OutputMaxAmperageConsumption.Location = new System.Drawing.Point(10, 23);
             this.OutputMaxAmperageConsumption.Name = "OutputMaxAmperageConsumption";
             this.OutputMaxAmperageConsumption.ReadOnly = true;
-            this.OutputMaxAmperageConsumption.Size = new System.Drawing.Size(172, 19);
+            this.OutputMaxAmperageConsumption.Size = new System.Drawing.Size(172, 22);
             this.OutputMaxAmperageConsumption.TabIndex = 24;
             this.OutputMaxAmperageConsumption.TabStop = false;
             this.OutputMaxAmperageConsumption.Text = "0";
@@ -560,10 +555,10 @@
             // InputMaxAmperageConsumption
             // 
             this.InputMaxAmperageConsumption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputMaxAmperageConsumption.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputMaxAmperageConsumption.Location = new System.Drawing.Point(188, 19);
             this.InputMaxAmperageConsumption.Name = "InputMaxAmperageConsumption";
-            this.InputMaxAmperageConsumption.Size = new System.Drawing.Size(94, 26);
+            this.InputMaxAmperageConsumption.Size = new System.Drawing.Size(94, 29);
             this.InputMaxAmperageConsumption.TabIndex = 144;
             this.InputMaxAmperageConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -571,7 +566,7 @@
             // 
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.OutputAmperage);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(424, 55);
@@ -582,6 +577,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(395, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 20);
@@ -592,12 +588,12 @@
             // 
             this.OutputAmperage.BackColor = System.Drawing.Color.Black;
             this.OutputAmperage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputAmperage.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputAmperage.ForeColor = System.Drawing.Color.Lime;
             this.OutputAmperage.Location = new System.Drawing.Point(10, 24);
             this.OutputAmperage.Name = "OutputAmperage";
             this.OutputAmperage.ReadOnly = true;
-            this.OutputAmperage.Size = new System.Drawing.Size(379, 19);
+            this.OutputAmperage.Size = new System.Drawing.Size(379, 22);
             this.OutputAmperage.TabIndex = 24;
             this.OutputAmperage.TabStop = false;
             this.OutputAmperage.Text = "0";
@@ -609,7 +605,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.OutputVoltageConstAmperage);
             this.groupBox1.Controls.Add(this.InputVoltageConstAmperage);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(424, 55);
@@ -620,7 +616,7 @@
             // buttonSetVoltage
             // 
             this.buttonSetVoltage.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetVoltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetVoltage.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetVoltage.Location = new System.Drawing.Point(318, 16);
             this.buttonSetVoltage.Name = "buttonSetVoltage";
             this.buttonSetVoltage.Size = new System.Drawing.Size(96, 30);
@@ -632,40 +628,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(288, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.Size = new System.Drawing.Size(18, 20);
             this.label1.TabIndex = 145;
             this.label1.Text = "В";
             // 
             // InputVoltageConstAmperage
             // 
             this.InputVoltageConstAmperage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputVoltageConstAmperage.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputVoltageConstAmperage.ForeColor = System.Drawing.Color.Black;
             this.InputVoltageConstAmperage.Location = new System.Drawing.Point(188, 19);
             this.InputVoltageConstAmperage.Name = "InputVoltageConstAmperage";
-            this.InputVoltageConstAmperage.Size = new System.Drawing.Size(94, 26);
+            this.InputVoltageConstAmperage.Size = new System.Drawing.Size(94, 29);
             this.InputVoltageConstAmperage.TabIndex = 144;
             this.InputVoltageConstAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InputDeviation
             // 
             this.InputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputDeviation.Location = new System.Drawing.Point(135, 18);
             this.InputDeviation.Name = "InputDeviation";
-            this.InputDeviation.Size = new System.Drawing.Size(100, 26);
+            this.InputDeviation.Size = new System.Drawing.Size(100, 29);
             this.InputDeviation.TabIndex = 144;
             this.InputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorReset
             // 
             this.ControlSignalGeneratorReset.BackColor = System.Drawing.Color.Transparent;
-            this.ControlSignalGeneratorReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorReset.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlSignalGeneratorReset.Location = new System.Drawing.Point(436, 241);
             this.ControlSignalGeneratorReset.Name = "ControlSignalGeneratorReset";
-            this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(104, 110);
+            this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(110, 110);
             this.ControlSignalGeneratorReset.TabIndex = 152;
             this.ControlSignalGeneratorReset.Text = "Сброс параметров";
             this.ControlSignalGeneratorReset.UseVisualStyleBackColor = false;
@@ -677,7 +674,7 @@
             this.groupBox9.Controls.Add(this.comboBoxPulseDelayValue);
             this.groupBox9.Controls.Add(this.OutputPulseDelay);
             this.groupBox9.Controls.Add(this.InputPulseDelay);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(6, 296);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(424, 55);
@@ -688,7 +685,7 @@
             // buttonSetPulseDelay
             // 
             this.buttonSetPulseDelay.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseDelay.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetPulseDelay.Location = new System.Drawing.Point(318, 19);
             this.buttonSetPulseDelay.Name = "buttonSetPulseDelay";
             this.buttonSetPulseDelay.Size = new System.Drawing.Size(96, 30);
@@ -700,6 +697,7 @@
             // comboBoxPulseDelayValue
             // 
             this.comboBoxPulseDelayValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPulseDelayValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPulseDelayValue.FormattingEnabled = true;
             this.comboBoxPulseDelayValue.Items.AddRange(new object[] {
             "с",
@@ -716,12 +714,12 @@
             // 
             this.OutputPulseDelay.BackColor = System.Drawing.Color.Black;
             this.OutputPulseDelay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputPulseDelay.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputPulseDelay.ForeColor = System.Drawing.Color.Lime;
             this.OutputPulseDelay.Location = new System.Drawing.Point(10, 21);
             this.OutputPulseDelay.Name = "OutputPulseDelay";
             this.OutputPulseDelay.ReadOnly = true;
-            this.OutputPulseDelay.Size = new System.Drawing.Size(119, 19);
+            this.OutputPulseDelay.Size = new System.Drawing.Size(119, 22);
             this.OutputPulseDelay.TabIndex = 24;
             this.OutputPulseDelay.TabStop = false;
             this.OutputPulseDelay.Text = "0";
@@ -730,19 +728,19 @@
             // InputPulseDelay
             // 
             this.InputPulseDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputPulseDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InputPulseDelay.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputPulseDelay.Location = new System.Drawing.Point(135, 19);
             this.InputPulseDelay.Name = "InputPulseDelay";
-            this.InputPulseDelay.Size = new System.Drawing.Size(100, 26);
+            this.InputPulseDelay.Size = new System.Drawing.Size(100, 29);
             this.InputPulseDelay.TabIndex = 144;
             this.InputPulseDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorModulationOut
             // 
-            this.ControlSignalGeneratorModulationOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ControlSignalGeneratorModulationOut.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlSignalGeneratorModulationOut.Location = new System.Drawing.Point(436, 136);
             this.ControlSignalGeneratorModulationOut.Name = "ControlSignalGeneratorModulationOut";
-            this.ControlSignalGeneratorModulationOut.Size = new System.Drawing.Size(104, 99);
+            this.ControlSignalGeneratorModulationOut.Size = new System.Drawing.Size(110, 99);
             this.ControlSignalGeneratorModulationOut.TabIndex = 151;
             this.ControlSignalGeneratorModulationOut.Text = "Включить модуляцию";
             this.ControlSignalGeneratorModulationOut.UseVisualStyleBackColor = true;
@@ -754,7 +752,7 @@
             this.groupBox8.Controls.Add(this.comboBoxDeviationValue);
             this.groupBox8.Controls.Add(this.OutputDeviation);
             this.groupBox8.Controls.Add(this.InputDeviation);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(6, 241);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(424, 55);
@@ -765,7 +763,7 @@
             // buttonSetPulseDeviation
             // 
             this.buttonSetPulseDeviation.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSetPulseDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetPulseDeviation.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulseDeviation.Name = "buttonSetPulseDeviation";
             this.buttonSetPulseDeviation.Size = new System.Drawing.Size(96, 30);
@@ -777,6 +775,7 @@
             // comboBoxDeviationValue
             // 
             this.comboBoxDeviationValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDeviationValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDeviationValue.FormattingEnabled = true;
             this.comboBoxDeviationValue.Items.AddRange(new object[] {
             "Гц",
@@ -792,12 +791,12 @@
             // 
             this.OutputDeviation.BackColor = System.Drawing.Color.Black;
             this.OutputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OutputDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputDeviation.ForeColor = System.Drawing.Color.Lime;
             this.OutputDeviation.Location = new System.Drawing.Point(10, 21);
             this.OutputDeviation.Name = "OutputDeviation";
             this.OutputDeviation.ReadOnly = true;
-            this.OutputDeviation.Size = new System.Drawing.Size(119, 19);
+            this.OutputDeviation.Size = new System.Drawing.Size(119, 22);
             this.OutputDeviation.TabIndex = 24;
             this.OutputDeviation.TabStop = false;
             this.OutputDeviation.Text = "0";
@@ -815,13 +814,40 @@
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox5);
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox4);
             this.groupBoxSignalGenerator.Enabled = false;
-            this.groupBoxSignalGenerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSignalGenerator.Location = new System.Drawing.Point(9, 219);
             this.groupBoxSignalGenerator.Name = "groupBoxSignalGenerator";
             this.groupBoxSignalGenerator.Size = new System.Drawing.Size(552, 359);
             this.groupBoxSignalGenerator.TabIndex = 103;
             this.groupBoxSignalGenerator.TabStop = false;
             this.groupBoxSignalGenerator.Text = "Генератор сигналов";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиToolStripMenuItem,
+            this.AboutSoftwareToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.app;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(93, 24);
+            this.toolStripMenuItem1.Text = "Сервис";
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.настройкиToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // AboutSoftwareToolStripMenuItem
+            // 
+            this.AboutSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutSoftwareToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.info;
+            this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
+            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.AboutSoftwareToolStripMenuItem.Text = "О программе";
             // 
             // MainForm
             // 
