@@ -1,9 +1,10 @@
 ﻿using System;
 using Core.Devices.SMB100A;
+using ServiceDesktop.Presenter.Common.Interfaces.BaseInterfaces;
 
 namespace ServiceDesktop.Presenter.Views
 {
-    public interface IServiceDesktopMainForm
+    public interface IServiceDesktopMainForm : IView
     {
         /// <summary>
         ///     Override show event form
@@ -14,6 +15,8 @@ namespace ServiceDesktop.Presenter.Views
         ///     Override closing event form
         /// </summary>
         event EventHandler ClosingForm;
+
+        event Action CallAboutSoftware;
 
         /// <summary>
         ///     Event for set voltage
