@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftwareSettingsView\SoftwareSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoftwareSettingsView\SoftwareSettings.Designer.cs">
+      <DependentUpon>SoftwareSettings.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutSoftwareView\AboutSoftware.resx">
       <DependentUpon>AboutSoftware.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SoftwareSettingsView\SoftwareSettings.resx">
+      <DependentUpon>SoftwareSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,5 +167,6 @@
   <ItemGroup>
     <None Include="Resources\GitHub-Mark-32px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

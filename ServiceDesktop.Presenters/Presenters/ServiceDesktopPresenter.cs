@@ -10,7 +10,7 @@ using ServiceDesktop.Services.MessageServices;
 
 namespace ServiceDesktop.Presenter.Presenters
 {
-    public class ServiceDesktopPresenter : BasePresenter<IServiceDesktopMainForm>
+    public class ServiceDesktopPresenter : BasePresenter<IServiceDesktopView>
     {
         #region Private Properties
 
@@ -36,7 +36,7 @@ namespace ServiceDesktop.Presenter.Presenters
         /// <param name="serviceDesktopModel">Instance of interface model</param>
         /// <param name="messageService">Instance of interface message services</param>
         public ServiceDesktopPresenter(IApplicationController applicationController,
-            IServiceDesktopMainForm serviceDesktopMainForm, IServiceDesktopModel serviceDesktopModel,
+            IServiceDesktopView serviceDesktopMainForm, IServiceDesktopModel serviceDesktopModel,
             IMessageService messageService) : base(applicationController, serviceDesktopMainForm)
         {
             ServiceDesktopModel = serviceDesktopModel;
@@ -96,11 +96,7 @@ namespace ServiceDesktop.Presenter.Presenters
                 ViewOnCheckConnectionSignalGenerator;
 
             View.CallAboutSoftware += ViewOnCallAboutSoftware;
-        }
-
-        private void ViewOnCallAboutSoftware()
-        {
-            Controller.Run<AboutSoftwarePresenter>();
+            View.CallSoftwareSettings += ViewOnCallSoftwareSettings;
         }
 
         /// <summary>
@@ -163,6 +159,16 @@ namespace ServiceDesktop.Presenter.Presenters
 
             ServiceDesktopModel.GetDataPowerSupplyComplete -= ServiceDesktopModelOnGetDataPowerSupplyComplete;
             ServiceDesktopModel.GetDataSignalGeneratorComplete -= ServiceDesktopModelOnGetDataSignalGeneratorComplete;
+            ServiceDesktopModel.GetStateConnectionSignalGenerator -=
+                ServiceDesktopModelOnGetStateConnectionSignalGenerator;
+            ServiceDesktopModel.GetStateConnectionPowerSupply -= ServiceDesktopModelOnGetStateConnectionPowerSupply;
+
+            View.CheckConnectionPowerSupply -= ViewOnCheckConnectionPowerSupply;
+            View.CheckConnectionSignalGenerator -=
+                ViewOnCheckConnectionSignalGenerator;
+
+            View.CallAboutSoftware -= ViewOnCallAboutSoftware;
+            View.CallSoftwareSettings -= ViewOnCallSoftwareSettings;
         }
 
         #endregion
@@ -222,6 +228,22 @@ namespace ServiceDesktop.Presenter.Presenters
             {
                 MessageService.ShowError(exception.Message);
             }
+        }
+
+        /// <summary>
+        ///     Called form software settings
+        /// </summary>
+        private void ViewOnCallSoftwareSettings()
+        {
+            Controller.Run<SoftwareSettingsPresenter>();
+        }
+
+        /// <summary>
+        ///     Called form about software
+        /// </summary>
+        private void ViewOnCallAboutSoftware()
+        {
+            Controller.Run<AboutSoftwarePresenter>();
         }
 
         #endregion

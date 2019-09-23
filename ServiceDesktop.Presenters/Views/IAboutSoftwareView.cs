@@ -9,9 +9,5 @@ namespace ServiceDesktop.Presenter.Views
 {
     public interface IAboutSoftwareView : IView
     {
-        /// <summary>
-        ///     Running software and Show form
-        /// </summary>
-        void Show();
     }
 }

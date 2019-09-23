@@ -4,7 +4,7 @@ using ServiceDesktop.Presenter.Common.Interfaces.BaseInterfaces;
 
 namespace ServiceDesktop.Presenter.Views
 {
-    public interface IServiceDesktopMainForm : IView
+    public interface IServiceDesktopView : IView
     {
         /// <summary>
         ///     Override show event form
@@ -16,7 +16,15 @@ namespace ServiceDesktop.Presenter.Views
         /// </summary>
         event EventHandler ClosingForm;
 
+        /// <summary>
+        ///     Event for called about software form
+        /// </summary>
         event Action CallAboutSoftware;
+
+        /// <summary>
+        ///     Event for called settings software form
+        /// </summary>
+        event Action CallSoftwareSettings;
 
         /// <summary>
         ///     Event for set voltage
