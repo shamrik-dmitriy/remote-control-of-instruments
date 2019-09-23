@@ -60,9 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IServiceDesktopPresenter.cs" />
+    <Compile Include="Common\AbstractClasses\BasePresenter.cs" />
+    <Compile Include="Common\ApplicationController.cs" />
+    <Compile Include="Common\Interfaces\BaseInterfaces\IContainer.cs" />
+    <Compile Include="Common\Interfaces\BaseInterfaces\IPresenter.cs" />
+    <Compile Include="Common\Interfaces\BaseInterfaces\IView.cs" />
+    <Compile Include="Common\Interfaces\IApplicationController.cs" />
+    <Compile Include="Common\Interfaces\IServiceDesktopPresenter.cs" />
+    <Compile Include="Presenters\AboutSoftwarePresenter.cs" />
     <Compile Include="Presenters\ServiceDesktopPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IAboutSoftwareView.cs" />
     <Compile Include="Views\IServiceDesktopMainForm.cs" />
   </ItemGroup>
   <ItemGroup>
