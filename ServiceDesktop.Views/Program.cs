@@ -12,6 +12,7 @@ using ServiceDesktop.Presenter.Views;
 using ServiceDesktop.Services.MessageServices;
 using ServiceDesktop.Views.MainFormView;
 using ServiceDesktop.Views.AboutSoftwareView;
+using ServiceDesktop.Views.SoftwareSettingsView;
 
 namespace ServiceDesktop.Views
 {
@@ -55,8 +56,9 @@ namespace ServiceDesktop.Views
             ApplicationModel.Logger = ApplicationModel.GetApplicationModel.CreateLoggingConfiguration();
 
             var applicationController = new ApplicationController(new LightInjectAdapter())
-                .RegisterView<IServiceDesktopMainForm, MainForm>()
+                .RegisterView<IServiceDesktopView, MainForm>()
                 .RegisterView<IAboutSoftwareView, AboutSoftware>()
+                .RegisterView<ISoftwareSettingsView, SoftwareSettings>()
                 .RegisterService<IServiceDesktopModel, ServiceDesktopModel>()
                 .RegisterService<IMessageService, MessageService>();
 

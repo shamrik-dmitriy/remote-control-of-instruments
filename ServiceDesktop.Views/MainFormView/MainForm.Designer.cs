@@ -58,7 +58,7 @@
             this.ToolStripCheckConnectionSignalGenerator = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OutputVoltageConstAmperage = new System.Windows.Forms.TextBox();
             this.ControlPowerSupplyOut = new System.Windows.Forms.Button();
@@ -124,7 +124,7 @@
             this.buttonSetPulsePeriod.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulsePeriod.Name = "buttonSetPulsePeriod";
             this.buttonSetPulsePeriod.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPulsePeriod.TabIndex = 150;
+            this.buttonSetPulsePeriod.TabIndex = 26;
             this.buttonSetPulsePeriod.Text = "Задать";
             this.buttonSetPulsePeriod.UseVisualStyleBackColor = false;
             this.buttonSetPulsePeriod.Click += new System.EventHandler(this.buttonSetPulsePeriod_Click);
@@ -142,7 +142,7 @@
             this.comboBoxPulsePeriodValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxPulsePeriodValue.Name = "comboBoxPulsePeriodValue";
             this.comboBoxPulsePeriodValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxPulsePeriodValue.TabIndex = 145;
+            this.comboBoxPulsePeriodValue.TabIndex = 25;
             this.comboBoxPulsePeriodValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxRepeatFrequencyValue_SelectedIndexChanged);
             // 
             // OutputPulsePeriod
@@ -155,7 +155,7 @@
             this.OutputPulsePeriod.Name = "OutputPulsePeriod";
             this.OutputPulsePeriod.ReadOnly = true;
             this.OutputPulsePeriod.Size = new System.Drawing.Size(119, 22);
-            this.OutputPulsePeriod.TabIndex = 24;
+            this.OutputPulsePeriod.TabIndex = 7;
             this.OutputPulsePeriod.TabStop = false;
             this.OutputPulsePeriod.Text = "0";
             this.OutputPulsePeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,7 +167,7 @@
             this.InputPulsePeriod.Location = new System.Drawing.Point(135, 18);
             this.InputPulsePeriod.Name = "InputPulsePeriod";
             this.InputPulsePeriod.Size = new System.Drawing.Size(100, 29);
-            this.InputPulsePeriod.TabIndex = 144;
+            this.InputPulsePeriod.TabIndex = 24;
             this.InputPulsePeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorRfOut
@@ -177,7 +177,7 @@
             this.ControlSignalGeneratorRfOut.Location = new System.Drawing.Point(436, 26);
             this.ControlSignalGeneratorRfOut.Name = "ControlSignalGeneratorRfOut";
             this.ControlSignalGeneratorRfOut.Size = new System.Drawing.Size(110, 104);
-            this.ControlSignalGeneratorRfOut.TabIndex = 150;
+            this.ControlSignalGeneratorRfOut.TabIndex = 33;
             this.ControlSignalGeneratorRfOut.Text = "Включить RF";
             this.ControlSignalGeneratorRfOut.UseVisualStyleBackColor = false;
             this.ControlSignalGeneratorRfOut.Click += new System.EventHandler(this.buttonControlSignalGeneratorRFOut_Click);
@@ -203,7 +203,7 @@
             this.buttonSetPulseWidth.Location = new System.Drawing.Point(318, 20);
             this.buttonSetPulseWidth.Name = "buttonSetPulseWidth";
             this.buttonSetPulseWidth.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPulseWidth.TabIndex = 149;
+            this.buttonSetPulseWidth.TabIndex = 23;
             this.buttonSetPulseWidth.Text = "Задать";
             this.buttonSetPulseWidth.UseVisualStyleBackColor = false;
             this.buttonSetPulseWidth.Click += new System.EventHandler(this.buttonSetPulseWidth_Click);
@@ -221,7 +221,7 @@
             this.comboBoxPulseWidthValue.Location = new System.Drawing.Point(241, 20);
             this.comboBoxPulseWidthValue.Name = "comboBoxPulseWidthValue";
             this.comboBoxPulseWidthValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxPulseWidthValue.TabIndex = 145;
+            this.comboBoxPulseWidthValue.TabIndex = 22;
             this.comboBoxPulseWidthValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPulseWidthValue_SelectedIndexChanged);
             // 
             // OutputPulseWidth
@@ -234,7 +234,7 @@
             this.OutputPulseWidth.Name = "OutputPulseWidth";
             this.OutputPulseWidth.ReadOnly = true;
             this.OutputPulseWidth.Size = new System.Drawing.Size(119, 22);
-            this.OutputPulseWidth.TabIndex = 24;
+            this.OutputPulseWidth.TabIndex = 6;
             this.OutputPulseWidth.TabStop = false;
             this.OutputPulseWidth.Text = "0";
             this.OutputPulseWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -246,7 +246,7 @@
             this.InputPulseWidth.Location = new System.Drawing.Point(135, 20);
             this.InputPulseWidth.Name = "InputPulseWidth";
             this.InputPulseWidth.Size = new System.Drawing.Size(100, 29);
-            this.InputPulseWidth.TabIndex = 144;
+            this.InputPulseWidth.TabIndex = 21;
             this.InputPulseWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox5
@@ -270,7 +270,7 @@
             this.buttonSetPow.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPow.Name = "buttonSetPow";
             this.buttonSetPow.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPow.TabIndex = 148;
+            this.buttonSetPow.TabIndex = 20;
             this.buttonSetPow.Text = "Задать";
             this.buttonSetPow.UseVisualStyleBackColor = false;
             this.buttonSetPow.Click += new System.EventHandler(this.buttonSetPow_Click);
@@ -286,7 +286,7 @@
             this.comboBoxPowValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxPowValue.Name = "comboBoxPowValue";
             this.comboBoxPowValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxPowValue.TabIndex = 145;
+            this.comboBoxPowValue.TabIndex = 19;
             this.comboBoxPowValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPowValue_SelectedIndexChanged);
             // 
             // OutputPow
@@ -300,7 +300,7 @@
             this.OutputPow.Name = "OutputPow";
             this.OutputPow.ReadOnly = true;
             this.OutputPow.Size = new System.Drawing.Size(119, 22);
-            this.OutputPow.TabIndex = 24;
+            this.OutputPow.TabIndex = 5;
             this.OutputPow.TabStop = false;
             this.OutputPow.Text = "0";
             this.OutputPow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -312,7 +312,7 @@
             this.InputPow.Location = new System.Drawing.Point(135, 18);
             this.InputPow.Name = "InputPow";
             this.InputPow.Size = new System.Drawing.Size(100, 29);
-            this.InputPow.TabIndex = 144;
+            this.InputPow.TabIndex = 18;
             this.InputPow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox4
@@ -336,7 +336,7 @@
             this.buttonSetFrequency.Location = new System.Drawing.Point(318, 18);
             this.buttonSetFrequency.Name = "buttonSetFrequency";
             this.buttonSetFrequency.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetFrequency.TabIndex = 147;
+            this.buttonSetFrequency.TabIndex = 17;
             this.buttonSetFrequency.Text = "Задать";
             this.buttonSetFrequency.UseVisualStyleBackColor = false;
             this.buttonSetFrequency.Click += new System.EventHandler(this.buttonSetFrequency_Click);
@@ -354,7 +354,7 @@
             this.comboBoxFrequencyValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxFrequencyValue.Name = "comboBoxFrequencyValue";
             this.comboBoxFrequencyValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxFrequencyValue.TabIndex = 145;
+            this.comboBoxFrequencyValue.TabIndex = 16;
             this.comboBoxFrequencyValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxFrequencyValue_SelectedIndexChanged);
             // 
             // OutputFrequency
@@ -367,7 +367,7 @@
             this.OutputFrequency.Name = "OutputFrequency";
             this.OutputFrequency.ReadOnly = true;
             this.OutputFrequency.Size = new System.Drawing.Size(119, 22);
-            this.OutputFrequency.TabIndex = 24;
+            this.OutputFrequency.TabIndex = 4;
             this.OutputFrequency.TabStop = false;
             this.OutputFrequency.Text = "0";
             this.OutputFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,7 +379,7 @@
             this.InputFrequency.Location = new System.Drawing.Point(135, 18);
             this.InputFrequency.Name = "InputFrequency";
             this.InputFrequency.Size = new System.Drawing.Size(100, 29);
-            this.InputFrequency.TabIndex = 144;
+            this.InputFrequency.TabIndex = 15;
             this.InputFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // statusStrip
@@ -463,7 +463,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
+            this.SettingsSoftwareToolStripMenuItem,
             this.AboutSoftwareToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.app;
@@ -471,13 +471,14 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(93, 24);
             this.toolStripMenuItem1.Text = "Сервис";
             // 
-            // настройкиToolStripMenuItem
+            // SettingsSoftwareToolStripMenuItem
             // 
-            this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.настройкиToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
+            this.SettingsSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsSoftwareToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
+            this.SettingsSoftwareToolStripMenuItem.Name = "SettingsSoftwareToolStripMenuItem";
+            this.SettingsSoftwareToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.SettingsSoftwareToolStripMenuItem.Text = "Настройки";
+            this.SettingsSoftwareToolStripMenuItem.Click += new System.EventHandler(this.SettingsSoftwareToolStripMenuItem_Click);
             // 
             // AboutSoftwareToolStripMenuItem
             // 
@@ -498,7 +499,7 @@
             this.OutputVoltageConstAmperage.Name = "OutputVoltageConstAmperage";
             this.OutputVoltageConstAmperage.ReadOnly = true;
             this.OutputVoltageConstAmperage.Size = new System.Drawing.Size(172, 22);
-            this.OutputVoltageConstAmperage.TabIndex = 24;
+            this.OutputVoltageConstAmperage.TabIndex = 1;
             this.OutputVoltageConstAmperage.TabStop = false;
             this.OutputVoltageConstAmperage.Text = "0";
             this.OutputVoltageConstAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -510,7 +511,7 @@
             this.ControlPowerSupplyOut.Location = new System.Drawing.Point(436, 26);
             this.ControlPowerSupplyOut.Name = "ControlPowerSupplyOut";
             this.ControlPowerSupplyOut.Size = new System.Drawing.Size(110, 160);
-            this.ControlPowerSupplyOut.TabIndex = 86;
+            this.ControlPowerSupplyOut.TabIndex = 14;
             this.ControlPowerSupplyOut.Text = "Включить выход источника";
             this.ControlPowerSupplyOut.UseVisualStyleBackColor = false;
             this.ControlPowerSupplyOut.Click += new System.EventHandler(this.buttonControlPowerSupplyOut_Click);
@@ -552,7 +553,7 @@
             this.buttonSetAmperage.Location = new System.Drawing.Point(318, 15);
             this.buttonSetAmperage.Name = "buttonSetAmperage";
             this.buttonSetAmperage.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetAmperage.TabIndex = 148;
+            this.buttonSetAmperage.TabIndex = 13;
             this.buttonSetAmperage.Text = "Задать";
             this.buttonSetAmperage.UseVisualStyleBackColor = false;
             this.buttonSetAmperage.Click += new System.EventHandler(this.buttonSetAmperage_Click);
@@ -577,7 +578,7 @@
             this.OutputMaxAmperageConsumption.Name = "OutputMaxAmperageConsumption";
             this.OutputMaxAmperageConsumption.ReadOnly = true;
             this.OutputMaxAmperageConsumption.Size = new System.Drawing.Size(172, 22);
-            this.OutputMaxAmperageConsumption.TabIndex = 24;
+            this.OutputMaxAmperageConsumption.TabIndex = 3;
             this.OutputMaxAmperageConsumption.TabStop = false;
             this.OutputMaxAmperageConsumption.Text = "0";
             this.OutputMaxAmperageConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -589,7 +590,7 @@
             this.InputMaxAmperageConsumption.Location = new System.Drawing.Point(188, 19);
             this.InputMaxAmperageConsumption.Name = "InputMaxAmperageConsumption";
             this.InputMaxAmperageConsumption.Size = new System.Drawing.Size(94, 29);
-            this.InputMaxAmperageConsumption.TabIndex = 144;
+            this.InputMaxAmperageConsumption.TabIndex = 12;
             this.InputMaxAmperageConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox2
@@ -624,7 +625,7 @@
             this.OutputAmperage.Name = "OutputAmperage";
             this.OutputAmperage.ReadOnly = true;
             this.OutputAmperage.Size = new System.Drawing.Size(379, 22);
-            this.OutputAmperage.TabIndex = 24;
+            this.OutputAmperage.TabIndex = 2;
             this.OutputAmperage.TabStop = false;
             this.OutputAmperage.Text = "0";
             this.OutputAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -650,7 +651,7 @@
             this.buttonSetVoltage.Location = new System.Drawing.Point(318, 16);
             this.buttonSetVoltage.Name = "buttonSetVoltage";
             this.buttonSetVoltage.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetVoltage.TabIndex = 146;
+            this.buttonSetVoltage.TabIndex = 11;
             this.buttonSetVoltage.Text = "Задать";
             this.buttonSetVoltage.UseVisualStyleBackColor = false;
             this.buttonSetVoltage.Click += new System.EventHandler(this.buttonSetVoltage_Click);
@@ -673,7 +674,7 @@
             this.InputVoltageConstAmperage.Location = new System.Drawing.Point(188, 19);
             this.InputVoltageConstAmperage.Name = "InputVoltageConstAmperage";
             this.InputVoltageConstAmperage.Size = new System.Drawing.Size(94, 29);
-            this.InputVoltageConstAmperage.TabIndex = 144;
+            this.InputVoltageConstAmperage.TabIndex = 10;
             this.InputVoltageConstAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InputDeviation
@@ -683,7 +684,7 @@
             this.InputDeviation.Location = new System.Drawing.Point(135, 18);
             this.InputDeviation.Name = "InputDeviation";
             this.InputDeviation.Size = new System.Drawing.Size(100, 29);
-            this.InputDeviation.TabIndex = 144;
+            this.InputDeviation.TabIndex = 27;
             this.InputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorReset
@@ -693,7 +694,7 @@
             this.ControlSignalGeneratorReset.Location = new System.Drawing.Point(436, 241);
             this.ControlSignalGeneratorReset.Name = "ControlSignalGeneratorReset";
             this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(110, 110);
-            this.ControlSignalGeneratorReset.TabIndex = 152;
+            this.ControlSignalGeneratorReset.TabIndex = 35;
             this.ControlSignalGeneratorReset.Text = "Сброс параметров";
             this.ControlSignalGeneratorReset.UseVisualStyleBackColor = false;
             this.ControlSignalGeneratorReset.Click += new System.EventHandler(this.buttonControlSignalGeneratorReset_Click);
@@ -719,7 +720,7 @@
             this.buttonSetPulseDelay.Location = new System.Drawing.Point(318, 19);
             this.buttonSetPulseDelay.Name = "buttonSetPulseDelay";
             this.buttonSetPulseDelay.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPulseDelay.TabIndex = 152;
+            this.buttonSetPulseDelay.TabIndex = 32;
             this.buttonSetPulseDelay.Text = "Задать";
             this.buttonSetPulseDelay.UseVisualStyleBackColor = false;
             this.buttonSetPulseDelay.Click += new System.EventHandler(this.buttonSetPulseDelay_Click);
@@ -737,7 +738,7 @@
             this.comboBoxPulseDelayValue.Location = new System.Drawing.Point(241, 19);
             this.comboBoxPulseDelayValue.Name = "comboBoxPulseDelayValue";
             this.comboBoxPulseDelayValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxPulseDelayValue.TabIndex = 145;
+            this.comboBoxPulseDelayValue.TabIndex = 31;
             this.comboBoxPulseDelayValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxPulseDelayValue_SelectedIndexChanged);
             // 
             // OutputPulseDelay
@@ -750,7 +751,7 @@
             this.OutputPulseDelay.Name = "OutputPulseDelay";
             this.OutputPulseDelay.ReadOnly = true;
             this.OutputPulseDelay.Size = new System.Drawing.Size(119, 22);
-            this.OutputPulseDelay.TabIndex = 24;
+            this.OutputPulseDelay.TabIndex = 9;
             this.OutputPulseDelay.TabStop = false;
             this.OutputPulseDelay.Text = "0";
             this.OutputPulseDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -762,7 +763,7 @@
             this.InputPulseDelay.Location = new System.Drawing.Point(135, 19);
             this.InputPulseDelay.Name = "InputPulseDelay";
             this.InputPulseDelay.Size = new System.Drawing.Size(100, 29);
-            this.InputPulseDelay.TabIndex = 144;
+            this.InputPulseDelay.TabIndex = 30;
             this.InputPulseDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ControlSignalGeneratorModulationOut
@@ -771,7 +772,7 @@
             this.ControlSignalGeneratorModulationOut.Location = new System.Drawing.Point(436, 136);
             this.ControlSignalGeneratorModulationOut.Name = "ControlSignalGeneratorModulationOut";
             this.ControlSignalGeneratorModulationOut.Size = new System.Drawing.Size(110, 99);
-            this.ControlSignalGeneratorModulationOut.TabIndex = 151;
+            this.ControlSignalGeneratorModulationOut.TabIndex = 34;
             this.ControlSignalGeneratorModulationOut.Text = "Включить модуляцию";
             this.ControlSignalGeneratorModulationOut.UseVisualStyleBackColor = true;
             this.ControlSignalGeneratorModulationOut.Click += new System.EventHandler(this.buttonControlSignalGeneratorModulation_Click);
@@ -797,7 +798,7 @@
             this.buttonSetPulseDeviation.Location = new System.Drawing.Point(318, 18);
             this.buttonSetPulseDeviation.Name = "buttonSetPulseDeviation";
             this.buttonSetPulseDeviation.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPulseDeviation.TabIndex = 151;
+            this.buttonSetPulseDeviation.TabIndex = 29;
             this.buttonSetPulseDeviation.Text = "Задать";
             this.buttonSetPulseDeviation.UseVisualStyleBackColor = false;
             this.buttonSetPulseDeviation.Click += new System.EventHandler(this.buttonSetPulseDeviation_Click);
@@ -814,7 +815,7 @@
             this.comboBoxDeviationValue.Location = new System.Drawing.Point(241, 18);
             this.comboBoxDeviationValue.Name = "comboBoxDeviationValue";
             this.comboBoxDeviationValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxDeviationValue.TabIndex = 145;
+            this.comboBoxDeviationValue.TabIndex = 28;
             this.comboBoxDeviationValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeviationValue_SelectedIndexChanged);
             // 
             // OutputDeviation
@@ -827,7 +828,7 @@
             this.OutputDeviation.Name = "OutputDeviation";
             this.OutputDeviation.ReadOnly = true;
             this.OutputDeviation.Size = new System.Drawing.Size(119, 22);
-            this.OutputDeviation.TabIndex = 24;
+            this.OutputDeviation.TabIndex = 8;
             this.OutputDeviation.TabStop = false;
             this.OutputDeviation.Text = "0";
             this.OutputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -916,7 +917,7 @@
         private System.Windows.Forms.ComboBox comboBoxPowValue;
         private System.Windows.Forms.TextBox OutputPow;
         private System.Windows.Forms.TextBox InputPow;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SettingsSoftwareToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonSetFrequency;
         private System.Windows.Forms.ComboBox comboBoxFrequencyValue;

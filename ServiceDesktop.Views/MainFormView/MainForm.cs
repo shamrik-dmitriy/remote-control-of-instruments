@@ -10,7 +10,7 @@ using ServiceDesktop.Presenter.Views;
 
 namespace ServiceDesktop.Views.MainFormView
 {
-    public partial class MainForm : Form, IServiceDesktopMainForm
+    public partial class MainForm : Form, IServiceDesktopView
     {
         #region Private Properties
 
@@ -300,7 +300,9 @@ namespace ServiceDesktop.Views.MainFormView
         public event Action<bool> GetSignalGeneratorRfControl;
         public event Action<bool> GetSignalGeneratorModulationControl;
         public event Action GetSignalGeneratorReset;
+
         public event Action CallAboutSoftware;
+        public event Action CallSoftwareSettings;
 
         public event Action<Smb100A.Frequency> SelectFrequencySignalGenerator;
         public event Action<Smb100A.Pow> SelectPowSignalGenerator;
@@ -462,6 +464,11 @@ namespace ServiceDesktop.Views.MainFormView
         private void AboutSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CallAboutSoftware?.Invoke();
+        }
+        
+        private void SettingsSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CallSoftwareSettings?.Invoke();
         }
 
         #endregion
