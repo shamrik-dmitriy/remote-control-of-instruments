@@ -70,9 +70,9 @@
             // 
             // buttonSaveSelectedDeviceSettings
             // 
-            this.buttonSaveSelectedDeviceSettings.Location = new System.Drawing.Point(181, 42);
+            this.buttonSaveSelectedDeviceSettings.Location = new System.Drawing.Point(12, 142);
             this.buttonSaveSelectedDeviceSettings.Name = "buttonSaveSelectedDeviceSettings";
-            this.buttonSaveSelectedDeviceSettings.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveSelectedDeviceSettings.Size = new System.Drawing.Size(264, 23);
             this.buttonSaveSelectedDeviceSettings.TabIndex = 6;
             this.buttonSaveSelectedDeviceSettings.Text = "Сохранить";
             this.buttonSaveSelectedDeviceSettings.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
             // 
             // textBoxIpPortSelectedDevice
             // 
-            this.textBoxIpPortSelectedDevice.Location = new System.Drawing.Point(126, 44);
+            this.textBoxIpPortSelectedDevice.Location = new System.Drawing.Point(171, 44);
             this.textBoxIpPortSelectedDevice.Name = "textBoxIpPortSelectedDevice";
-            this.textBoxIpPortSelectedDevice.Size = new System.Drawing.Size(49, 20);
+            this.textBoxIpPortSelectedDevice.Size = new System.Drawing.Size(85, 20);
             this.textBoxIpPortSelectedDevice.TabIndex = 5;
             this.textBoxIpPortSelectedDevice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -90,7 +90,7 @@
             // 
             this.textBoxIpAddressSelectedDevice.Location = new System.Drawing.Point(5, 44);
             this.textBoxIpAddressSelectedDevice.Name = "textBoxIpAddressSelectedDevice";
-            this.textBoxIpAddressSelectedDevice.Size = new System.Drawing.Size(115, 20);
+            this.textBoxIpAddressSelectedDevice.Size = new System.Drawing.Size(160, 20);
             this.textBoxIpAddressSelectedDevice.TabIndex = 4;
             this.textBoxIpAddressSelectedDevice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -99,7 +99,6 @@
             this.groupBox1.Controls.Add(this.comboBoxSelectDevices);
             this.groupBox1.Controls.Add(this.textBoxIpAddressSelectedDevice);
             this.groupBox1.Controls.Add(this.textBoxIpPortSelectedDevice);
-            this.groupBox1.Controls.Add(this.buttonSaveSelectedDeviceSettings);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(264, 70);
@@ -121,9 +120,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 142);
+            this.ClientSize = new System.Drawing.Size(284, 172);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonSaveSelectedDeviceSettings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

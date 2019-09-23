@@ -41,7 +41,7 @@ namespace ServiceDesktop.Presenter.Presenters
             View.ShowingForm += ViewOnShowingForm;
             View.ChangeDevice += ViewOnChangeDevice;
             View.ChangeLogLevel += ViewOnChangeLogLevel;
-            View.SaveDeviceSetting += ViewOnSaveDeviceSetting;
+            View.SaveSetting += ViewOnSaveDeviceSetting;
         }
 
         private void ViewOnSaveDeviceSetting(int typeDevice, string ipAddress, string port)

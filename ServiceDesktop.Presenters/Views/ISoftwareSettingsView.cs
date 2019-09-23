@@ -46,7 +46,7 @@ namespace ServiceDesktop.Presenter.Views
         /// <summary>
         ///     Save network settings for device
         /// </summary>
-        event Action<int, string, string> SaveDeviceSetting;
+        event Action<int, string, string> SaveSetting;
 
         #endregion
 
@@ -57,9 +57,9 @@ namespace ServiceDesktop.Presenter.Views
         /// </summary>
         /// <param name="value">Value for select index</param>
         void SetDevicesCombobox(int value);
-        
+
         /// <summary>
-        ///     Method for set device combobox selected index at value
+        ///     Method for set log level combobox selected index at value
         /// </summary>
         /// <param name="value">Value for select index</param>
         void SetLogLevelCombobox(int value);

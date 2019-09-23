@@ -25,7 +25,7 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
 
         public event Action<int> ChangeDevice;
         public event Action<int> ChangeLogLevel;
-        public event Action<int, string, string> SaveDeviceSetting;
+        public event Action<int, string, string> SaveSetting;
 
         #endregion
 
@@ -64,19 +64,12 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
         }
 
 
-        /// <summary>
-        ///     Method for set device combobox selected index at value
-        /// </summary>
-        /// <param name="value">Value for select index</param>
+
         public void SetDevicesCombobox(int value)
         {
             comboBoxSelectDevices.SelectedIndex = value;
         }
 
-        /// <summary>
-        ///     Method for set log level combobox selected index at value
-        /// </summary>
-        /// <param name="value">Value for select index</param>
         public void SetLogLevelCombobox(int value)
         {
             comboBoxLevelLog.SelectedIndex = value;
@@ -113,7 +106,7 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
 
         private void buttonSaveSelectedDeviceSettings_Click(object sender, EventArgs e)
         {
-            SaveDeviceSetting?.Invoke(comboBoxSelectDevices.SelectedIndex, textBoxIpAddressSelectedDevice.Text,
+            SaveSetting?.Invoke(comboBoxSelectDevices.SelectedIndex, textBoxIpAddressSelectedDevice.Text,
                 textBoxIpPortSelectedDevice.Text);
         }
     }

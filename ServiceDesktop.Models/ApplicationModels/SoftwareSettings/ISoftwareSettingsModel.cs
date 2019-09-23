@@ -46,6 +46,10 @@ namespace ServiceDesktop.Models.ApplicationModels.SoftwareSettings
         /// <param name="port">Ip port</param>
         void SaveDeviceSettings(int typeDevice, string ipAddress, string port);
 
+        /// <summary>
+        ///     Gets current log level value
+        /// </summary>
+        /// <returns>Log level value</returns>
         int GetCurrentLogLevel();
     }
 }

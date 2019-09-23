@@ -10,6 +10,11 @@ namespace ServiceDesktop.Models.ApplicationModels.SoftwareSettings
     public class SoftwareSettingsModel : ISoftwareSettingsModel
     {
         /// <summary>
+        ///     Log level auto property
+        /// </summary>
+        private int LogLevel { get; set; }
+
+        /// <summary>
         ///     Devices list
         /// </summary>
         private enum Devices
@@ -18,6 +23,9 @@ namespace ServiceDesktop.Models.ApplicationModels.SoftwareSettings
             [EnumDescription("Power Supply")] PowerSupply
         }
 
+        /// <summary>
+        ///     Log levels list
+        /// </summary>
         private enum LogLevels
         {
             [EnumDescription("All")] LVL1,
@@ -49,8 +57,7 @@ namespace ServiceDesktop.Models.ApplicationModels.SoftwareSettings
 
         public void ChangeLogLevel(int logLevel)
         {
-            Core.Properties.Software.Default.LOG_LEVEL = logLevel;
-            Core.Properties.Software.Default.Save();
+            LogLevel = logLevel;
         }
 
         public void SaveDeviceSettings(int typeDevice, string ipAddress, string port)
@@ -73,6 +80,9 @@ namespace ServiceDesktop.Models.ApplicationModels.SoftwareSettings
                 }
             }
 
+            Core.Properties.Software.Default.LOG_LEVEL = LogLevel;
+
+            Core.Properties.Software.Default.Save();
             Core.Properties.Device.Default.Save();
         }
 
