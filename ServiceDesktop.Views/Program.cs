@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core;
 using ServiceDesktop.Models.ApplicationModels.MainForm;
+using ServiceDesktop.Presenter.Common;
 using ServiceDesktop.Presenter.Presenters;
+using ServiceDesktop.Presenter.Views;
 using ServiceDesktop.Services.MessageServices;
 using ServiceDesktop.Views.MainFormView;
+using ServiceDesktop.Views.AboutSoftwareView;
 
 namespace ServiceDesktop.Views
 {
@@ -51,9 +54,13 @@ namespace ServiceDesktop.Views
 
             ApplicationModel.Logger = ApplicationModel.GetApplicationModel.CreateLoggingConfiguration();
 
-            var presenter =
-                new ServiceDesktopPresenter(new MainForm(), new ServiceDesktopModel(), new MessageService());
-            presenter.Run();
+            var applicationController = new ApplicationController(new LightInjectAdapter())
+                .RegisterView<IServiceDesktopMainForm, MainForm>()
+                .RegisterView<IAboutSoftwareView, AboutSoftware>()
+                .RegisterService<IServiceDesktopModel, ServiceDesktopModel>()
+                .RegisterService<IMessageService, MessageService>();
+
+            applicationController.Run<ServiceDesktopPresenter>();
         }
 
         #endregion

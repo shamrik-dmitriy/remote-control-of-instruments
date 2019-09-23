@@ -67,12 +67,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutSoftware\AboutSoftware.cs">
+    <Compile Include="AboutSoftwareView\AboutSoftware.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutSoftware\AboutSoftware.Designer.cs">
+    <Compile Include="AboutSoftwareView\AboutSoftware.Designer.cs">
       <DependentUpon>AboutSoftware.cs</DependentUpon>
     </Compile>
+    <Compile Include="LightInjectAdapter.cs" />
     <Compile Include="MainFormView\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +82,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutSoftware\AboutSoftware.resx">
+    <EmbeddedResource Include="AboutSoftwareView\AboutSoftware.resx">
       <DependentUpon>AboutSoftware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormView\MainForm.resx">

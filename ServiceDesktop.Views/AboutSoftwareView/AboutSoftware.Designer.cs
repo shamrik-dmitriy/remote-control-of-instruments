@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Views.AboutSoftware
+﻿namespace ServiceDesktop.Views.AboutSoftwareView
 {
     partial class AboutSoftware
     {

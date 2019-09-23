@@ -300,6 +300,7 @@ namespace ServiceDesktop.Views.MainFormView
         public event Action<bool> GetSignalGeneratorRfControl;
         public event Action<bool> GetSignalGeneratorModulationControl;
         public event Action GetSignalGeneratorReset;
+        public event Action CallAboutSoftware;
 
         public event Action<Smb100A.Frequency> SelectFrequencySignalGenerator;
         public event Action<Smb100A.Pow> SelectPowSignalGenerator;
@@ -460,8 +461,7 @@ namespace ServiceDesktop.Views.MainFormView
 
         private void AboutSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //var aboutSoftware = new AboutSoftware();
-            // aboutSoftware.ShowDialog();
+            CallAboutSoftware?.Invoke();
         }
 
         #endregion
