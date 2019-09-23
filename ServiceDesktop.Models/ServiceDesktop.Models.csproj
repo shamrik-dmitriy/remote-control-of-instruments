@@ -61,6 +61,10 @@
   <ItemGroup>
     <Compile Include="ApplicationModels\MainForm\IServiceDesktopModel.cs" />
     <Compile Include="ApplicationModels\MainForm\ServiceDesktopModel.cs" />
+    <Compile Include="ApplicationModels\SoftwareSettings\ISoftwareSettingsModel.cs" />
+    <Compile Include="ApplicationModels\SoftwareSettings\SoftwareSettingsModel.cs" />
+    <Compile Include="Attributes\EnumDescriptionAttribute.cs" />
+    <Compile Include="Attributes\EnumHelper.cs" />
     <Compile Include="ComponentsAbstraction\ComponentsValidator.cs" />
     <Compile Include="ComponentsAbstraction\TwoComponentBlocksModel.cs" />
     <Compile Include="ComponentsAbstraction\IComponentModel.cs" />
