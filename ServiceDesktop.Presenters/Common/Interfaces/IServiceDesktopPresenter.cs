@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Presenter.Common
+﻿namespace ServiceDesktop.Presenter.Common.Interfaces
 {
     public interface IServiceDesktopPresenter
     {
