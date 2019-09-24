@@ -16,12 +16,26 @@ namespace ServiceDesktop.Presenter.Presenters
     {
         #region Private Properties
 
+        /// <summary>
+        ///     Instance of message service
+        /// </summary>
         private IMessageService MessageService { get; set; }
 
+        /// <summary>
+        ///     Instance of model for software settings
+        /// </summary>
         private ISoftwareSettingsModel SoftwareSettingsModel { get; set; }
 
         #endregion
 
+        #region Constructor
+
+        /// <summary>
+        ///     Constructor of Software settings presenter
+        /// </summary>
+        /// <param name="controller">Interface of application controller</param>
+        /// <param name="messageService">Interface of message service</param>
+        /// <param name="view">Interface of software view</param>
         public SoftwareSettingsPresenter(IApplicationController controller, IMessageService messageService,
             ISoftwareSettingsView view) : base(
             controller, view)
@@ -30,10 +44,19 @@ namespace ServiceDesktop.Presenter.Presenters
 
             SoftwareSettingsModel = new SoftwareSettingsModel();
 
-            SubscribeEvenets();
+            SubscribeEvents();
         }
 
-        private void SubscribeEvenets()
+        #endregion
+
+        #region Private Methods
+
+        #region Subscribe / Unsubscribe
+
+        /// <summary>
+        ///     Subscribe events
+        /// </summary>
+        private void SubscribeEvents()
         {
             View.GetDevicesData += ViewOnGetDevicesData;
             View.GeLogLevels += ViewOnGeLogLevels;
@@ -44,16 +67,50 @@ namespace ServiceDesktop.Presenter.Presenters
             View.SaveSetting += ViewOnSaveDeviceSetting;
         }
 
+        /// <summary>
+        ///     Unsubscribe events
+        /// </summary>
+        private void UnSubscribeEvents()
+        {
+            View.GetDevicesData += ViewOnGetDevicesData;
+            View.GeLogLevels += ViewOnGeLogLevels;
+
+            View.ShowingForm -= ViewOnShowingForm;
+            View.ChangeDevice -= ViewOnChangeDevice;
+            View.ChangeLogLevel -= ViewOnChangeLogLevel;
+            View.SaveSetting -= ViewOnSaveDeviceSetting;
+        }
+
+        #endregion
+
+        #region Methods for save data in form
+
+        /// <summary>
+        ///     Save device network parameters
+        /// </summary>
+        /// <param name="typeDevice">Type of devices</param>
+        /// <param name="ipAddress">Ip-address</param>
+        /// <param name="port">Ip port</param>
         private void ViewOnSaveDeviceSetting(int typeDevice, string ipAddress, string port)
         {
             SoftwareSettingsModel.SaveDeviceSettings(typeDevice, ipAddress, port);
+            MessageService.ShowMessage("Settings is save");
+            View.Close();
         }
 
+        /// <summary>
+        ///     Get Data Source for log levels
+        /// </summary>
+        /// <returns>Object, contains log levels</returns>
         private object ViewOnGeLogLevels()
         {
             return SoftwareSettingsModel.GetLogLevels();
         }
 
+        /// <summary>
+        ///     Get Data Source for devices
+        /// </summary>
+        /// <returns>Object, contains devices</returns>
         private object ViewOnGetDevicesData()
         {
             return SoftwareSettingsModel.GetDeviceData();
@@ -68,6 +125,10 @@ namespace ServiceDesktop.Presenter.Presenters
             SoftwareSettingsModel.ChangeLogLevel(logLevelValue);
         }
 
+        #endregion
+
+        #region Form Events
+
         /// <summary>
         ///     Processing changed device
         /// </summary>
@@ -80,15 +141,15 @@ namespace ServiceDesktop.Presenter.Presenters
                 {
                     case 0:
                     {
-                        var settings = SoftwareSettingsModel.GetNetworkParametersForSignalGenerator();
-                        View.SetNetworkParameters(settings.Item1, settings.Item2);
+                        var (ipAddress, ipPort) = SoftwareSettingsModel.GetNetworkParametersForSignalGenerator();
+                        View.SetNetworkParameters(ipAddress, ipPort);
                         break;
                     }
 
                     case 1:
                     {
-                        var settings = SoftwareSettingsModel.GetNetworkParametersForPowerSupply();
-                        View.SetNetworkParameters(settings.Item1, settings.Item2);
+                        var (ipAddress, ipPort) = SoftwareSettingsModel.GetNetworkParametersForPowerSupply();
+                        View.SetNetworkParameters(ipAddress, ipPort);
 
                         break;
                     }
@@ -114,7 +175,7 @@ namespace ServiceDesktop.Presenter.Presenters
             View.SetLogLevelCombobox(SoftwareSettingsModel.GetCurrentLogLevel());
         }
 
-        #region Form Events
+        #endregion
 
         #endregion
     }

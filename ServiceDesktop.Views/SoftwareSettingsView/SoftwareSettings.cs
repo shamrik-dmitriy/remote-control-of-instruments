@@ -53,16 +53,22 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
             ShowDialog();
         }
 
+        /// <summary>
+        ///     Override Close Method
+        /// </summary>
+        public new void Close()
+        {
+        }
+
         #endregion
 
-        #region
+        #region Set Network setting
 
         public void SetNetworkParameters(string ipAddress, int ipPort)
         {
             textBoxIpAddressSelectedDevice.Text = ipAddress;
             textBoxIpPortSelectedDevice.Text = ipPort.ToString();
         }
-
 
 
         public void SetDevicesCombobox(int value)
@@ -81,6 +87,19 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
 
         #region Private Methods
 
+        #region Form Action
+
+        /// <summary>
+        ///     Override load action
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SoftwareSettings_Load(object sender, EventArgs e)
+        {
+            comboBoxSelectDevices.DataSource = GetDevicesData?.Invoke();
+            comboBoxLevelLog.DataSource = GeLogLevels?.Invoke();
+        }
+
         private void SoftwareSettings_Shown(object sender, EventArgs e)
         {
             ShowingForm?.Invoke();
@@ -88,26 +107,41 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
 
         #endregion
 
+        #region Other form action
+
+        /// <summary>
+        ///     Override event for action combobox selected index changed in selected device
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBoxSelectDevices_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeDevice?.Invoke(comboBoxSelectDevices.SelectedIndex);
         }
 
+        /// <summary>
+        ///     Override event for action combobox selected index changed in selected changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBoxLevelLog_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeLogLevel?.Invoke(comboBoxLevelLog.SelectedIndex);
         }
 
-        private void SoftwareSettings_Load(object sender, EventArgs e)
-        {
-            comboBoxSelectDevices.DataSource = GetDevicesData?.Invoke();
-            comboBoxLevelLog.DataSource = GeLogLevels?.Invoke();
-        }
-
+        /// <summary>
+        ///     Save data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSaveSelectedDeviceSettings_Click(object sender, EventArgs e)
         {
             SaveSetting?.Invoke(comboBoxSelectDevices.SelectedIndex, textBoxIpAddressSelectedDevice.Text,
                 textBoxIpPortSelectedDevice.Text);
         }
+
+        #endregion
+
+        #endregion
     }
 }
