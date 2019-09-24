@@ -94,6 +94,8 @@ namespace ServiceDesktop.Presenter.Presenters
         private void ViewOnSaveDeviceSetting(int typeDevice, string ipAddress, string port)
         {
             SoftwareSettingsModel.SaveDeviceSettings(typeDevice, ipAddress, port);
+            MessageService.ShowMessage("Settings is save");
+            View.Close();
         }
 
         /// <summary>

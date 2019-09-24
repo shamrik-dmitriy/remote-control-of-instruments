@@ -53,6 +53,13 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
             ShowDialog();
         }
 
+        /// <summary>
+        ///     Override Close Method
+        /// </summary>
+        public new void Close()
+        {
+        }
+
         #endregion
 
         #region
@@ -62,7 +69,6 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
             textBoxIpAddressSelectedDevice.Text = ipAddress;
             textBoxIpPortSelectedDevice.Text = ipPort.ToString();
         }
-
 
 
         public void SetDevicesCombobox(int value)
