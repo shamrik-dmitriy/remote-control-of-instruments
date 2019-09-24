@@ -141,15 +141,15 @@ namespace ServiceDesktop.Presenter.Presenters
                 {
                     case 0:
                     {
-                        var (ipAddress, ipPort) = SoftwareSettingsModel.GetNetworkParametersForSignalGenerator();
-                        View.SetNetworkParameters(ipAddress, ipPort);
+                        var network = SoftwareSettingsModel.GetNetworkParametersForSignalGenerator();
+                        View.SetNetworkParameters(network.Item1, network.Item2);
                         break;
                     }
 
                     case 1:
                     {
-                        var (ipAddress, ipPort) = SoftwareSettingsModel.GetNetworkParametersForPowerSupply();
-                        View.SetNetworkParameters(ipAddress, ipPort);
+                        var network = SoftwareSettingsModel.GetNetworkParametersForPowerSupply();
+                        View.SetNetworkParameters(network.Item1, network.Item2);
 
                         break;
                     }

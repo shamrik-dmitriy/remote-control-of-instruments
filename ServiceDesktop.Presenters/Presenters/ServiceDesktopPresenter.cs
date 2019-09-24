@@ -287,7 +287,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //     View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -306,7 +306,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -325,7 +325,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -344,7 +344,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -363,7 +363,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -382,7 +382,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -509,7 +509,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 
@@ -527,7 +527,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             else
             {
-                //        View.SetErrorField(nameField);
+                MessageService.ShowWarning(ServiceDesktopModel.ErrorValidatingMessage);
             }
         }
 

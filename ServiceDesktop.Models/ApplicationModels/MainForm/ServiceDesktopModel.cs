@@ -15,6 +15,12 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
     {
         #region Public Enums, Events and Properties
 
+        #region Message
+
+        public string ErrorValidatingMessage { get; set; }
+
+        #endregion
+
         #region Public Enums
 
         /// <summary>
@@ -136,7 +142,7 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
         /// <summary>
         ///     Interface component
         /// </summary>
-        private IComponentModel ComponentModel { get; set; }
+        private AComponentModel AComponentModel { get; set; }
 
         #endregion
 
@@ -414,20 +420,21 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
 
                 if (valueSelector != null)
                 {
-                    ComponentModel = new TwoComponentBlocksModel(NameField, valueField, valueSelector);
+                    AComponentModel = new TwoAComponentBlocksModel(NameField, valueField, valueSelector);
                 }
                 else
                 {
-                    ComponentModel = new OneComponentBlocksModel(NameField, valueField);
+                    AComponentModel = new OneAComponentBlocksModel(NameField, valueField);
                 }
 
-                if (ComponentModel.Validate())
+                if (AComponentModel.Validate())
                 {
                     SetProperty(valueField);
                     return true;
                 }
                 else
                 {
+                    ErrorValidatingMessage = AComponentModel.ErrorMessage;
                     return false;
                 }
             }

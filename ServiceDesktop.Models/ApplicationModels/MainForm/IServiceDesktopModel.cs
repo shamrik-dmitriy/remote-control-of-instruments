@@ -5,6 +5,12 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
 {
     public interface IServiceDesktopModel
     {
+        #region Message
+
+        string ErrorValidatingMessage { get; set; }
+
+        #endregion
+
         #region Signal Generator
 
         #region Events and Properties

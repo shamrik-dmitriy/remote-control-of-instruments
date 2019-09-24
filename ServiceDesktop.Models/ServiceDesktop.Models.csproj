@@ -67,7 +67,7 @@
     <Compile Include="Attributes\EnumHelper.cs" />
     <Compile Include="ComponentsAbstraction\ComponentsValidator.cs" />
     <Compile Include="ComponentsAbstraction\TwoComponentBlocksModel.cs" />
-    <Compile Include="ComponentsAbstraction\IComponentModel.cs" />
+    <Compile Include="ComponentsAbstraction\AComponentModel.cs" />
     <Compile Include="ComponentsAbstraction\OneComponentBlocksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

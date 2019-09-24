@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ServiceDesktop.Models.ComponentsAbstraction
 {
-    public class OneComponentBlocksModel : IComponentModel
+    public class OneAComponentBlocksModel : AComponentModel
     {
         #region Private member variable
 
@@ -49,7 +49,7 @@ namespace ServiceDesktop.Models.ComponentsAbstraction
         /// </summary>
         /// <param name="valueOfName">Value of field name</param>
         /// <param name="valueOfComponent">Value of component</param>
-        public OneComponentBlocksModel(string valueOfName, string valueOfComponent)
+        public OneAComponentBlocksModel(string valueOfName, string valueOfComponent)
         {
             ValueOfName = valueOfName;
             ValueOfComponent = valueOfComponent;
@@ -59,20 +59,19 @@ namespace ServiceDesktop.Models.ComponentsAbstraction
 
         #region Public Methods
 
-        public bool Validate()
+        public override bool Validate()
         {
-            var componentsValidator = new ComponentsValidator();
             switch (ValueOfName)
             {
                 case "InputVoltageConstAmperage":
                 {
-                    return componentsValidator.Validate(ValueOfComponent, VoltsDictionary["V"].First(),
+                    return Validate(ValueOfComponent, VoltsDictionary["V"].First(),
                         VoltsDictionary["V"].Last());
                 }
 
                 case "InputMaxAmperageConsumption":
                 {
-                    return componentsValidator.Validate(ValueOfComponent, AmperageDictionary["A"].First(),
+                    return Validate(ValueOfComponent, AmperageDictionary["A"].First(),
                         AmperageDictionary["A"].Last());
                 }
 

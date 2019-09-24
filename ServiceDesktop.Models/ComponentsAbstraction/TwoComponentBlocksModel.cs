@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ServiceDesktop.Models.ComponentsAbstraction
 {
-    public class TwoComponentBlocksModel : IComponentModel
+    public class TwoAComponentBlocksModel : AComponentModel
     {
         #region Private Member Variables
 
@@ -110,7 +110,7 @@ namespace ServiceDesktop.Models.ComponentsAbstraction
         /// <param name="valueOfName">Value of field name</param>
         /// <param name="currentValue">Value of component</param>
         /// <param name="valueOfSelector">Value of selector component</param>
-        public TwoComponentBlocksModel(string valueOfName, string currentValue, string valueOfSelector)
+        public TwoAComponentBlocksModel(string valueOfName, string currentValue, string valueOfSelector)
         {
             ValueOfName = valueOfName;
             ValueOfCurrent = currentValue;
@@ -118,47 +118,46 @@ namespace ServiceDesktop.Models.ComponentsAbstraction
         }
 
         #endregion
-
+        
         #region Public Methods
 
-        public bool Validate()
+        public override bool Validate()
         {
-            var componentsValidator = new ComponentsValidator();
             switch (ValueOfName)
             {
                 case "InputFrequency":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _frequencyDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _frequencyDictionary[ValueOfSelector].First(),
                         _frequencyDictionary[ValueOfSelector].Last());
                 }
 
                 case "InputPow":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _powDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _powDictionary[ValueOfSelector].First(),
                         _powDictionary[ValueOfSelector].Last());
                 }
 
                 case "InputPulseWidth":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _pulseWidthDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _pulseWidthDictionary[ValueOfSelector].First(),
                         _pulseWidthDictionary[ValueOfSelector].Last());
                 }
 
                 case "InputPulsePeriod":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _pulsePeriodDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _pulsePeriodDictionary[ValueOfSelector].First(),
                         _pulsePeriodDictionary[ValueOfSelector].Last());
                 }
 
                 case "InputDeviation":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _deviationDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _deviationDictionary[ValueOfSelector].First(),
                         _deviationDictionary[ValueOfSelector].Last());
                 }
 
                 case "InputPulseDelay":
                 {
-                    return componentsValidator.Validate(ValueOfCurrent, _pulseDelayDictionary[ValueOfSelector].First(),
+                    return Validate(ValueOfCurrent, _pulseDelayDictionary[ValueOfSelector].First(),
                         _pulseDelayDictionary[ValueOfSelector].Last());
                 }
 
