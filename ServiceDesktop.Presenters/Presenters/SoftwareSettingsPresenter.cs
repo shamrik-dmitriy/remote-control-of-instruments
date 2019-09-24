@@ -75,10 +75,10 @@ namespace ServiceDesktop.Presenter.Presenters
             View.GetDevicesData += ViewOnGetDevicesData;
             View.GeLogLevels += ViewOnGeLogLevels;
 
-            View.ShowingForm += ViewOnShowingForm;
-            View.ChangeDevice += ViewOnChangeDevice;
-            View.ChangeLogLevel += ViewOnChangeLogLevel;
-            View.SaveSetting += ViewOnSaveDeviceSetting;
+            View.ShowingForm -= ViewOnShowingForm;
+            View.ChangeDevice -= ViewOnChangeDevice;
+            View.ChangeLogLevel -= ViewOnChangeLogLevel;
+            View.SaveSetting -= ViewOnSaveDeviceSetting;
         }
 
         #endregion
