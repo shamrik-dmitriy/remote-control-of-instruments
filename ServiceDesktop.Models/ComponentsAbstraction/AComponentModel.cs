@@ -20,7 +20,7 @@
         /// <param name="upper">Upper boundary</param>
         /// <param name="bottom">Bottom boundary</param>
         /// <returns></returns>
-        protected bool Validate(string valueOfCurrent, double upper, double bottom)
+        protected bool Validate(string valueOfCurrent, double bottom, double upper)
         {
             var componentsValidator = new ComponentsValidator();
             if (componentsValidator.Validate(valueOfCurrent, bottom, upper)) return true;
