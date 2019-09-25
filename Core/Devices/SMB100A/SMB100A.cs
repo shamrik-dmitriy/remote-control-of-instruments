@@ -110,10 +110,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Initializing LAN Signal Generator exchange");
-
                 _deviceExchanger = new DeviceExchanger(ipAddress, ipPort);
-                ApplicationModel.Logger.Debug("LAN exchange with Signal Generator initialized");
             }
             catch (Exception smb100AException)
             {
@@ -140,7 +137,6 @@ namespace Core.Devices.SMB100A
             }
             catch (Smb100AException smb100AException)
             {
-                ApplicationModel.Logger.Error(": " + smb100AException.Message);
                 throw new Smb100AException(": " + smb100AException.Message);
             }
         }
@@ -168,9 +164,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Reset signal generator");
                 _deviceExchanger.SendDataWithOutReturn("*RST;");
-                ApplicationModel.Logger.Debug("Signal generator reset");
             }
             catch (Smb100AException smb100AException)
             {
@@ -186,7 +180,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Signal Generator Test");
                 return _deviceExchanger.SendRequestDataString("*TST?;");
             }
             catch (Smb100AException smb100AException)
@@ -203,9 +196,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn on signal modulation");
                 _deviceExchanger.SendDataWithOutReturn(":SOUR:MOD:ALL:STAT ON;");
-                ApplicationModel.Logger.Debug("Signal Modulation Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -220,9 +211,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off signal modulation");
                 _deviceExchanger.SendDataWithOutReturn(":SOUR:MOD:ALL:STAT OFF;");
-                ApplicationModel.Logger.Debug("Signal Modulation Off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -237,9 +226,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn on RF output");
                 _deviceExchanger.SendDataWithOutReturn(":OUTPut:STAT ON;");
-                ApplicationModel.Logger.Debug("RF output enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -254,9 +241,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off RF output");
                 _deviceExchanger.SendDataWithOutReturn(":OUTPut:STAT OFF;");
-                ApplicationModel.Logger.Debug("Signal RF output Off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -272,7 +257,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Checking the current modulation state");
                 return _deviceExchanger.SendRequestDataInt(":MOD:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -289,7 +273,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Check RF output state");
                 return _deviceExchanger.SendRequestDataInt(":OUTPut:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -313,9 +296,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the signal frequency to " + freq + " " + type);
                 _deviceExchanger.SendDataWithOutReturn(":FREQ " + Convert.ToString(freq) + " " + type + ";");
-                ApplicationModel.Logger.Debug("Signal frequency value is set to " + freq + " " + type);
             }
             catch (Smb100AException smb100AException)
             {
@@ -333,11 +314,9 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting signal pow to " + level + " " + type);
                 _deviceExchanger.SendDataWithOutReturn(
                     ":POW " + Convert.ToString(level, CultureInfo.InvariantCulture).Replace(',', '.') + " " + type +
                     ";");
-                ApplicationModel.Logger.Debug("Signal pow value is set to " + level + " " + type);
             }
             catch (Smb100AException smb100AException)
             {
@@ -357,10 +336,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the polarity of the modulated signal");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:POL NORM");
-                ApplicationModel.Logger.Debug(
-                    "Modulated signal polarity set");
             }
             catch (Smb100AException smb100AException)
             {
@@ -376,9 +352,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Select trigger mode for pulse modulation");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:TRIG:MODE EXT");
-                ApplicationModel.Logger.Debug("Pulse modulation trigger mode selected");
             }
             catch (Smb100AException smb100AException)
             {
@@ -394,9 +368,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Impedance selection for external pulse trigger");
                 _deviceExchanger.SendDataWithOutReturn("SOUR:PULM:TRIG:EXT:IMP G10K");
-                ApplicationModel.Logger.Debug("Impedance selected for external pulse trigger");
             }
             catch (Smb100AException smb100AException)
             {
@@ -412,9 +384,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Output polarity selection");
                 _deviceExchanger.SendDataWithOutReturn("PULM:TRIG:EXT:GATE:POL NORM");
-                ApplicationModel.Logger.Debug("Output polarity selected");
             }
             catch (Smb100AException smb100AException)
             {
@@ -430,9 +400,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Установка полярности активного среза в Positive");
                 _deviceExchanger.SendDataWithOutReturn("PULM:TRIG:EXT:SLOP POS");
-                ApplicationModel.Logger.Debug("The polarity of the active slice is set to Positive");
             }
             catch (Smb100AException smb100AException)
             {
@@ -448,9 +416,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn on pulse modulation");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:STAT ON;");
-                ApplicationModel.Logger.Debug("Pulse Modulation Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -466,9 +432,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off pulse modulation");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:STAT OFF;");
-                ApplicationModel.Logger.Debug("Pulse modulation off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -485,7 +449,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for the current state of pulse modulation of a signal");
                 return _deviceExchanger.SendRequestDataInt(":PULM:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -501,21 +464,11 @@ namespace Core.Devices.SMB100A
         /// <param name="internalOrExternal">True - to select the internal source, false - for the external</param>
         public void PulseModulationSelectInternalSource(bool internalOrExternal = true)
         {
-            Tuple<string, string> intOrExtString;
-            if (internalOrExternal)
-            {
-                intOrExtString = new Tuple<string, string>("internal", "INT");
-            }
-            else
-            {
-                intOrExtString = new Tuple<string, string>("external", "EXT");
-            }
+            var intOrExtString = internalOrExternal ? new Tuple<string, string>("internal", "INT") : new Tuple<string, string>("external", "EXT");
 
             try
             {
-                ApplicationModel.Logger.Debug("Selection " + intOrExtString.Item1 + " signal modulation source");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:SOUR " + intOrExtString.Item2 + ";");
-                ApplicationModel.Logger.Debug("Selection" + intOrExtString.Item2 + " source completed");
             }
             catch (Smb100AException smb100AException)
             {
@@ -532,9 +485,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Sets the pulse generator mode");
                 _deviceExchanger.SendDataWithOutReturn(":PULM:MODE SING;");
-                ApplicationModel.Logger.Debug("Pulse generator mode set");
             }
             catch (Smb100AException smb100AException)
             {
@@ -552,11 +503,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug(
-                    "Setting the pulse width of the signal to " + width + " " + timeType);
                 _deviceExchanger.SendDataWithOutReturn(":PULM:WIDT " + width + " " + timeType + ";");
-                ApplicationModel.Logger.Debug("The value of the pulse duration of the signal is set to " + width + " " +
-                                              timeType);
             }
             catch (Smb100AException smb100AException)
             {
@@ -575,9 +522,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the delay between pulses in " + delay + " " + timeType);
                 _deviceExchanger.SendDataWithOutReturn(":PULM:DEL " + delay + " " + timeType + ";");
-                ApplicationModel.Logger.Debug("The delay between pulses is set to " + delay + " " + timeType);
             }
             catch (Smb100AException smb100AException)
             {
@@ -597,9 +542,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the number of repetitions in " + num);
                 _deviceExchanger.SendDataWithOutReturn(":PULM:TRA:REP " + Convert.ToString(num) + ";");
-                ApplicationModel.Logger.Debug("The number of repetitions is set to " + num);
             }
             catch (Smb100AException smb100AException)
             {
@@ -617,10 +560,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the pulse generation period to " + period + " " + timeType);
                 _deviceExchanger.SendDataWithOutReturn(":PULM:PER " + period + " " + timeType + ";");
-                ApplicationModel.Logger.Debug("The frequency of the pulse generation period is set to " + period + " " +
-                                              timeType);
             }
             catch (Smb100AException smb100AException)
             {
@@ -641,9 +581,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn on frequency modulation");
                 _deviceExchanger.SendDataWithOutReturn(":FM:STAT ON;");
-                ApplicationModel.Logger.Debug("Frequency Modulation Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -658,9 +596,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off frequency modulation");
                 _deviceExchanger.SendDataWithOutReturn(":FM:STAT OFF;");
-                ApplicationModel.Logger.Debug("Frequency Modulation Off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -676,15 +612,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request the current state of frequency modulation");
-                if (_deviceExchanger.SendRequestDataInt(":FM:STAT?;") == 1)
-                {
-                    ApplicationModel.Logger.Debug("Frequency Modulation Enabled");
-                    return true;
-                }
-
-                ApplicationModel.Logger.Debug("Frequency Modulation Disabled");
-                return false;
+                return _deviceExchanger.SendRequestDataInt(":FM:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
             {
@@ -701,9 +629,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Installation as a source of frequency modulation of the LF generator");
                 _deviceExchanger.SendDataWithOutReturn(":FM:SOUR INT;");
-                ApplicationModel.Logger.Debug("LF generator installed as a frequency modulation source");
             }
             catch (Smb100AException smb100AException)
             {
@@ -720,9 +646,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting Normal mode in frequency modulation");
                 _deviceExchanger.SendDataWithOutReturn(":FM:MODE NORM;");
-                ApplicationModel.Logger.Debug("The value of Normal mode in the frequency modulation is set");
             }
             catch (Smb100AException smb100AException)
             {
@@ -738,9 +662,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting High Deviation in Frequency Modulation");
                 _deviceExchanger.SendDataWithOutReturn(":FM:MODE HIDEV");
-                ApplicationModel.Logger.Debug("Frequency Modulation High Deviation Set");
             }
             catch (Smb100AException smb100AException)
             {
@@ -757,9 +679,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the signal deviation value to" + dev + " mHz");
                 _deviceExchanger.SendDataWithOutReturn(":FM:DEV " + dev + " mHz;");
-                ApplicationModel.Logger.Debug("Signal deviation value is set to" + dev + " mHz");
             }
             catch (Smb100AException smb100AException)
             {
@@ -778,11 +698,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug(
-                    "Setting the signal deviation value to " + deviation + " " + typeHz);
                 _deviceExchanger.SendRequestDataString(":FM:DEV " + deviation + " " + typeHz + ";");
-                ApplicationModel.Logger.Debug("Signal deviation value is set to " + deviation + " " +
-                                              typeHz);
             }
             catch (Smb100AException smb100AException)
             {
@@ -800,9 +716,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the signal deviation value to" + mode);
                 _deviceExchanger.SendRequestDataDouble(":FM:MODE " + mode + ";");
-                ApplicationModel.Logger.Debug("Signal deviation set to" + mode);
             }
             catch (Smb100AException smb100AException)
             {
@@ -818,9 +732,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Enable LF Output");
                 _deviceExchanger.SendDataWithOutReturn(":LFO ON;");
-                ApplicationModel.Logger.Debug("LF output on");
             }
             catch (Smb100AException smb100AException)
             {
@@ -835,9 +747,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Disable LF Output");
                 _deviceExchanger.SendDataWithOutReturn(":LFO OFF;");
-                ApplicationModel.Logger.Debug("LF output off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -853,9 +763,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the output voltage value at the LF output to " + volt);
                 _deviceExchanger.SendDataWithOutReturn(":LFO:VOLT " + volt + " V;");
-                ApplicationModel.Logger.Debug("The output voltage value at the LF output is set to " + volt);
             }
             catch (Smb100AException smb100AException)
             {
@@ -873,9 +781,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the frequency of the LFO1 generator to " + hz);
                 _deviceExchanger.SendDataWithOutReturn(":LFO1:FREQ " + hz + " hz;");
-                ApplicationModel.Logger.Debug("The frequency of the LFO1 generator is set to" + hz);
             }
             catch (Smb100AException smb100AException)
             {
@@ -893,7 +799,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("LFO Status Request");
                 return _deviceExchanger.SendRequestDataInt(":LFO:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -910,9 +815,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Enabled LFO");
                 _deviceExchanger.SendDataWithOutReturn(":LFO ON;");
-                ApplicationModel.Logger.Debug("LFO Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -927,9 +830,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Disabled LFO");
                 _deviceExchanger.SendDataWithOutReturn(":LFO OFF;");
-                ApplicationModel.Logger.Debug("LFO Disabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -949,7 +850,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for receiving phase modulation state of a signal");
                 return _deviceExchanger.SendRequestDataInt(":PM:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -967,9 +867,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off phase modulation");
                 _deviceExchanger.SendDataWithOutReturn(":PM:STAT OFF;");
-                ApplicationModel.Logger.Debug("Signal phase modulation off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -985,9 +883,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Enabling Phase Modulation");
                 _deviceExchanger.SendDataWithOutReturn(":PM:STAT ON;");
-                ApplicationModel.Logger.Debug("Signal Phase Modulation Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -1008,7 +904,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for amplitude modulation state");
                 return _deviceExchanger.SendRequestDataInt(":AM:STAT?;") == 1;
             }
             catch (Smb100AException smb100AException)
@@ -1026,9 +921,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn on amplitude modulation");
                 _deviceExchanger.SendDataWithOutReturn(":AM:STAT ON;");
-                ApplicationModel.Logger.Debug("Amplitude Modulation Enabled");
             }
             catch (Smb100AException smb100AException)
             {
@@ -1044,9 +937,7 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turn off amplitude modulation");
                 _deviceExchanger.SendRequestDataString(":AM:STAT OFF;");
-                ApplicationModel.Logger.Debug("Amplitude Modulation Off");
             }
             catch (Smb100AException smb100AException)
             {
@@ -1069,7 +960,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for radiation power value");
                 return _deviceExchanger.SendRequestDataDouble(":POW?;");
             }
             catch (Smb100AException smb100AException)
@@ -1087,7 +977,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for frequency value");
                 return _deviceExchanger.SendRequestDataDouble(":FREQ?;");
             }
             catch (Smb100AException smb100AException)
@@ -1106,7 +995,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for Pulse Width");
                 return _deviceExchanger.SendRequestDataDouble(":PULM:WIDT?;");
             }
             catch (Smb100AException smb100AException)
@@ -1124,7 +1012,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for the value of the pulse generation period");
                 return _deviceExchanger.SendRequestDataDouble(":PULM:PER?;");
             }
             catch (Smb100AException smb100AException)
@@ -1143,7 +1030,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for deviation value");
                 return _deviceExchanger.SendRequestDataDouble(":FM:DEV?;");
             }
             catch (Smb100AException smb100AException)
@@ -1162,7 +1048,6 @@ namespace Core.Devices.SMB100A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request the delay value between pulses");
                 return _deviceExchanger.SendRequestDataDouble(":PULM:DEL?;");
             }
             catch (Smb100AException smb100AException)
