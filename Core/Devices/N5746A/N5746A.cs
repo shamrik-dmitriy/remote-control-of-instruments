@@ -33,9 +33,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Initializing LAN Power Supply exchange");
                 _deviceExchanger = new DeviceExchanger(ipAddress, ipPort);
-                ApplicationModel.Logger.Debug("LAN exchange with power supply initialized");
             }
             catch (Exception n5746AException)
             {
@@ -62,7 +60,6 @@ namespace Core.Devices.N5746A
             }
             catch (N5746AException n5746AException)
             {
-                ApplicationModel.Logger.Error(": " + n5746AException.Message);
                 throw new N5746AException(": " + n5746AException.Message);
             }
         }
@@ -91,9 +88,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Reset power supply");
                 _deviceExchanger.SendRequestDataString("RST;");
-                ApplicationModel.Logger.Debug("Power supply reset");
             }
             catch (N5746AException n5746AException)
             {
@@ -110,7 +105,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Checking the status of the power supply output");
                 return _deviceExchanger.SendRequestDataInt(":OUTP:STAT?;") == 1;
             }
             catch (N5746AException n5746AException)
@@ -127,9 +121,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turning on the power supply output");
                 _deviceExchanger.SendRequestDataString("OUTP:STAT ON;");
-                ApplicationModel.Logger.Debug("Power supply output is on");
             }
             catch (N5746AException n5746AException)
             {
@@ -145,9 +137,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Turning off the power supply output");
                 _deviceExchanger.SendRequestDataString("OUTP:STAT OFF;");
-                ApplicationModel.Logger.Debug("Power supply output is off");
             }
             catch (N5746AException n5746AException)
             {
@@ -164,7 +154,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Power Supply Testing");
                 return _deviceExchanger.SendRequestDataString("*TST?;");
             }
             catch (N5746AException n5746AException)
@@ -186,9 +175,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the supply voltage " + voltage + "V");
                 _deviceExchanger.SendRequestDataString("VOLT " + voltage.Replace(",", ".") + ";");
-                ApplicationModel.Logger.Debug("Supply voltage " + voltage + "V is set");
             }
             catch (N5746AException n5746AException)
             {
@@ -205,12 +192,9 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the supply voltage " + voltage + "V");
-
                 _deviceExchanger.SendDataWithOutReturn(
                     "VOLT " + Convert.ToString(voltage, CultureInfo.CurrentCulture).Replace(",", ".") +
                     ";");
-                ApplicationModel.Logger.Debug("Supply voltage " + voltage + "V is set");
             }
             catch (N5746AException n5746AException)
             {
@@ -227,9 +211,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the level of protection against overload " + lvl);
                 _deviceExchanger.SendRequestDataString("VOLT:PROT:LEV " + lvl + ";");
-                ApplicationModel.Logger.Debug("Overload protection level set to " + lvl);
             }
             catch (N5746AException n5746AException)
             {
@@ -246,9 +228,7 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the maximum current consumption to " + limit + "А");
                 _deviceExchanger.SendRequestDataString("CURR:LEV " + limit.Replace(",", ".") + ";");
-                ApplicationModel.Logger.Debug("The maximum current consumption is set to " + limit + "А");
             }
             catch (N5746AException n5746AException)
             {
@@ -266,11 +246,9 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Setting the maximum current consumption to " + limit + "А");
                 _deviceExchanger.SendRequestDataString("CURR:LEV " +
                                                        Convert.ToString(limit, CultureInfo.CurrentCulture)
                                                            .Replace(",", ".") + ";");
-                ApplicationModel.Logger.Debug("The maximum current consumption is set to " + limit + "А");
             }
             catch (N5746AException n5746AException)
             {
@@ -292,8 +270,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Power Supply Availability Request");
-
                 return _deviceExchanger.SendRequestDataInt("*OPC?;") == 1;
             }
             catch (N5746AException n5746AException)
@@ -310,7 +286,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for current measured value of current consumption");
                 return _deviceExchanger.SendRequestDataDouble("MEAS:CURR?;");
             }
             catch (N5746AException n5746AException)
@@ -329,7 +304,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for the current measured voltage value");
                 return _deviceExchanger.SendRequestDataDouble("MEAS:VOLTage?;");
             }
             catch (N5746AException n5746AException)
@@ -348,7 +322,6 @@ namespace Core.Devices.N5746A
         {
             try
             {
-                ApplicationModel.Logger.Debug("Request for current current limit");
                 return _deviceExchanger.SendRequestDataDouble("CURR:LEV?;");
             }
             catch (N5746AException n5746AException)
