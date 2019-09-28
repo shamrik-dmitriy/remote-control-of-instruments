@@ -4,14 +4,9 @@
 
 
 Remote software with power supply (Agilent N5746A) and signal generator (R&S SMB100A).
-Organized output and installation of the following device parameters:
-  - signal frequency;
-  - signal power;
-  - signal deviation;
-  - pulse width;
-  - pulse delay;
-  - current amperage;
-  - voltage;
-  - maximum amperage;
 
+The structure of the repository branches is as follows:
+1. Branches starting with ioc-<text> refer to a branch feature/ioc in which the project in which the technology is applied IoC-Container (LightInject). 
+2. Branches in which there is no word ioc belong to the master branch in which the project is located without using IoC-Container
 
+Also, a common code for the first and second branches is placed in the master branch, for example, a code for interacting with devices.
