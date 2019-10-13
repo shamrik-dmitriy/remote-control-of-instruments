@@ -14,7 +14,7 @@ using ServiceDesktop.Presenter.Views;
 
 namespace ServiceDesktop.Views.SoftwareSettingsView
 {
-    public partial class SoftwareSettings : Form, ISoftwareSettingsView
+    public partial class SoftwareSettingsView : Form, ISoftwareSettingsView
     {
         #region Public Events, Properties
 
@@ -31,7 +31,7 @@ namespace ServiceDesktop.Views.SoftwareSettingsView
 
         #region Constructor
 
-        public SoftwareSettings()
+        public SoftwareSettingsView()
         {
             InitializeComponent();
             Text = "Settings";

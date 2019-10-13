@@ -1,6 +1,6 @@
 ﻿namespace ServiceDesktop.Views.SoftwareSettingsView
 {
-    partial class SoftwareSettings
+    partial class SoftwareSettingsView
     {
         /// <summary>
         /// Required designer variable.

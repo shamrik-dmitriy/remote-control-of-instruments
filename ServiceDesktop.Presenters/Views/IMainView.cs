@@ -4,7 +4,7 @@ using ServiceDesktop.Presenter.Common.Interfaces.BaseInterfaces;
 
 namespace ServiceDesktop.Presenter.Views
 {
-    public interface IServiceDesktopView : IView
+    public interface IMainView : IView
     {
         /// <summary>
         ///     Override show event form

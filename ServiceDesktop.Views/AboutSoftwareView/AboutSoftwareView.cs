@@ -11,9 +11,9 @@ using ServiceDesktop.Presenter.Views;
 
 namespace ServiceDesktop.Views.AboutSoftwareView
 {
-    public partial class AboutSoftware : Form, IAboutSoftwareView
+    public partial class AboutSoftwareView : Form, IAboutSoftwareView
     {
-        public AboutSoftware()
+        public AboutSoftwareView()
         {
             InitializeComponent();
         }

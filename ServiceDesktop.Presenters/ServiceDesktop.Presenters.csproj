@@ -73,7 +73,7 @@
     <Compile Include="Presenters\SoftwareSettingsPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IAboutSoftwareView.cs" />
-    <Compile Include="Views\IServiceDesktopView.cs" />
+    <Compile Include="Views\IMainView.cs" />
     <Compile Include="Views\ISoftwareSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>

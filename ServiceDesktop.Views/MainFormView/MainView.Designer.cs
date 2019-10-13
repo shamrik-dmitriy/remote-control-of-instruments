@@ -1,6 +1,6 @@
 ﻿namespace ServiceDesktop.Views.MainFormView
 {
-    partial class MainForm
+    partial class MainView
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.buttonSetPulsePeriod = new System.Windows.Forms.Button();
             this.comboBoxPulsePeriodValue = new System.Windows.Forms.ComboBox();

@@ -56,9 +56,9 @@ namespace ServiceDesktop.Views
             ApplicationModel.Logger = ApplicationModel.GetApplicationModel.CreateLoggingConfiguration();
 
             var applicationController = new ApplicationController(new LightInjectAdapter())
-                .RegisterView<IServiceDesktopView, MainForm>()
-                .RegisterView<IAboutSoftwareView, AboutSoftware>()
-                .RegisterView<ISoftwareSettingsView, SoftwareSettings>()
+                .RegisterView<IMainView, MainView>()
+                .RegisterView<IAboutSoftwareView, AboutSoftwareView.AboutSoftwareView>()
+                .RegisterView<ISoftwareSettingsView, SoftwareSettingsView.SoftwareSettingsView>()
                 .RegisterService<IServiceDesktopModel, ServiceDesktopModel>()
                 .RegisterService<IMessageService, MessageService>();
 

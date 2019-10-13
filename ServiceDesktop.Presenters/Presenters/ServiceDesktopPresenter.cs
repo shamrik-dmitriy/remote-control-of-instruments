@@ -10,7 +10,7 @@ using ServiceDesktop.Services.MessageServices;
 
 namespace ServiceDesktop.Presenter.Presenters
 {
-    public class ServiceDesktopPresenter : BasePresenter<IServiceDesktopView>
+    public class ServiceDesktopPresenter : BasePresenter<IMainView>
     {
         #region Private Properties
 
@@ -32,12 +32,12 @@ namespace ServiceDesktop.Presenter.Presenters
         ///     Presenter of main form
         /// </summary>
         /// <param name="applicationController"></param>
-        /// <param name="serviceDesktopMainForm">Instance of interface main form</param>
+        /// <param name="mainMainForm">Instance of interface main form</param>
         /// <param name="serviceDesktopModel">Instance of interface model</param>
         /// <param name="messageService">Instance of interface message services</param>
         public ServiceDesktopPresenter(IApplicationController applicationController,
-            IServiceDesktopView serviceDesktopMainForm, IServiceDesktopModel serviceDesktopModel,
-            IMessageService messageService) : base(applicationController, serviceDesktopMainForm)
+            IMainView mainMainForm, IServiceDesktopModel serviceDesktopModel,
+            IMessageService messageService) : base(applicationController, mainMainForm)
         {
             ServiceDesktopModel = serviceDesktopModel;
             MessageService = messageService;
