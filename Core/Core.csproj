@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationModel.cs" />
+    <Compile Include="Devices\IDevices.cs" />
     <Compile Include="Devices\N5746A\N5746A.cs" />
     <Compile Include="Devices\N5746A\N5746AException.cs" />
     <Compile Include="Devices\SMB100A\SMB100A.cs" />

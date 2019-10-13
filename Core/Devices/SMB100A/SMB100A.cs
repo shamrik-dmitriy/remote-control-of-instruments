@@ -7,7 +7,7 @@ namespace Core.Devices.SMB100A
     /// <summary>
     ///     R&S SMB100A Signal Generator Class
     /// </summary>
-    public sealed class Smb100A
+    public sealed class Smb100A : IDevices
     {
         #region Private Members Variable
 

@@ -11,7 +11,7 @@ namespace Core.Devices.N5746A
     /// <summary>
     ///     Agilent N5746A Power Supply Class
     /// </summary>
-    public sealed class N5746A
+    public sealed class N5746A : IDevices
     {
         #region Private Member Variables
 
