@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
 using Core.Properties;
-using NLog;
 
 namespace Core
 {

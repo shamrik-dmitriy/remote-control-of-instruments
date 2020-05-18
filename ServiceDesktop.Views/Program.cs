@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core;
-using ServiceDesktop.Models.ApplicationModels.MainForm;
+using RCLD.Models.ApplicationModels.MainForm;
 using ServiceDesktop.Presenter.Presenters;
-using ServiceDesktop.Views.MainFormView;
 using Services.MessagesServices.MessageBoxServices;
 
-namespace ServiceDesktop.Views
+namespace RCLD.Views
 {
     static class Program
     {

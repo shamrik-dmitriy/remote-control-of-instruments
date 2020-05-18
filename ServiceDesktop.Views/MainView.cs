@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Core.Devices.SMB100A;
 using ServiceDesktop.Presenter.Views;
 
-namespace ServiceDesktop.Views.MainFormView
+namespace RCLD.Views
 {
     public partial class MainView : Form, IMainView
     {

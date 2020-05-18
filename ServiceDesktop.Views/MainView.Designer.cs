@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Views.MainFormView
+﻿namespace RCLD.Views
 {
     partial class MainView
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Core.Devices.SMB100A;
 
-namespace ServiceDesktop.Models.ApplicationModels.MainForm
+namespace RCLD.Models.ApplicationModels.MainForm
 {
     public interface IMainModel
     {

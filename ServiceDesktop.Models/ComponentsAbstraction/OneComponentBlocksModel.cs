@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ServiceDesktop.Models.ComponentsAbstraction
+namespace RCLD.Models.ComponentsAbstraction
 {
     public class OneComponentBlocksModel : IComponentModel
     {

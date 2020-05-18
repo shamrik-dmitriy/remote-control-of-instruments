@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Views.AboutSoftware
+﻿namespace RCLD.Views
 {
     partial class AboutSoftwareView
     {

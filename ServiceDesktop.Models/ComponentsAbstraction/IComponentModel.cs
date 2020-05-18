@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Models.ComponentsAbstraction
+﻿namespace RCLD.Models.ComponentsAbstraction
 {
     public interface IComponentModel
     {

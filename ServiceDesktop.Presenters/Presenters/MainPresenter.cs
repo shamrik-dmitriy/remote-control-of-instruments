@@ -1,7 +1,7 @@
 ﻿using System;
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
-using ServiceDesktop.Models.ApplicationModels.MainForm;
+using RCLD.Models.ApplicationModels.MainForm;
 using ServiceDesktop.Presenter.Common;
 using ServiceDesktop.Presenter.Views;
 using Services.MessagesServices.MessageBoxServices;
@@ -256,7 +256,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -275,7 +275,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -294,7 +294,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -313,7 +313,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -332,7 +332,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -351,7 +351,7 @@ namespace ServiceDesktop.Presenter.Presenters
             if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
             {
                 ServiceDesktopModel.SendToDevice(
-                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
+                    MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
@@ -477,7 +477,7 @@ namespace ServiceDesktop.Presenter.Presenters
         {
             if (ServiceDesktopModel.Validate(nameField, valueField))
             {
-                ServiceDesktopModel.SendToDevice(Models.ApplicationModels.MainForm.MainModel.DeviceList
+                ServiceDesktopModel.SendToDevice(MainModel.DeviceList
                     .PowerSupply);
             }
             else
@@ -495,7 +495,7 @@ namespace ServiceDesktop.Presenter.Presenters
         {
             if (ServiceDesktopModel.Validate(nameField, valueField))
             {
-                ServiceDesktopModel.SendToDevice(Models.ApplicationModels.MainForm.MainModel.DeviceList
+                ServiceDesktopModel.SendToDevice(MainModel.DeviceList
                     .PowerSupply);
             }
             else

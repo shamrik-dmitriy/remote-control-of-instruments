@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ServiceDesktop.Models.ComponentsAbstraction
+namespace RCLD.Models.ComponentsAbstraction
 {
     /// <summary>
     ///     Validator Components Class

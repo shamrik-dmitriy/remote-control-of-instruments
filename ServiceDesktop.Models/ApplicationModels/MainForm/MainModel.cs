@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Core;
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
 using Core.Properties;
-using ServiceDesktop.Models.ComponentsAbstraction;
+using RCLD.Models.ComponentsAbstraction;
 
-namespace ServiceDesktop.Models.ApplicationModels.MainForm
+namespace RCLD.Models.ApplicationModels.MainForm
 {
     public class MainModel : IMainModel
     {
