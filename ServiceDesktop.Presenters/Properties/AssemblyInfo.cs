@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("ServiceDesktop.Presenter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("RCLD.Presenter")]
+[assembly: AssemblyDescription("Remote control for laboratory devices, Presenters (Model-View-Presenter pattern)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ServiceDesktop.Presenter")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("Shamrik Dmitriy Leonidovich")]
+[assembly: AssemblyProduct("Remote control for laboratory devices")]
+[assembly: AssemblyCopyright("Copyright ©  2019 - 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

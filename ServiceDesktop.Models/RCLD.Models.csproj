@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D720C38-8B1D-4CC9-A312-2B78A843A76A}</ProjectGuid>
+    <ProjectGuid>{D6829AF9-62C5-491B-8301-29A8636FABFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceDesktop.Presenter</RootNamespace>
-    <AssemblyName>ServiceDesktop.Presenter</AssemblyName>
+    <RootNamespace>RCLD.Models</RootNamespace>
+    <AssemblyName>RCLD.Models</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LightInject, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.6.1.0\lib\net46\LightInject.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.6.7\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -48,7 +51,6 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,23 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IMainPresenter.cs" />
-    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="ApplicationModels\MainForm\IMainModel.cs" />
+    <Compile Include="ApplicationModels\MainForm\MainModel.cs" />
+    <Compile Include="ComponentsAbstraction\ComponentsValidator.cs" />
+    <Compile Include="ComponentsAbstraction\TwoComponentBlocksModel.cs" />
+    <Compile Include="ComponentsAbstraction\IComponentModel.cs" />
+    <Compile Include="ComponentsAbstraction\OneComponentBlocksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\IMainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{f96aeda9-cae9-4676-a922-8e11014427b4}</Project>
+      <Project>{F96AEDA9-CAE9-4676-A922-8E11014427B4}</Project>
       <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceDesktop.Models\ServiceDesktop.Models.csproj">
-      <Project>{d6829af9-62c5-491b-8301-29a8636fabfa}</Project>
-      <Name>ServiceDesktop.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Project>{CB15D329-2EBD-4BF7-97D6-080956CA7777}</Project>
-      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

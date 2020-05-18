@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{40735420-A731-4ECE-A2A5-A7FC91DE7510}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ServiceDesktop.Views</RootNamespace>
-    <AssemblyName>ServiceDesktop.Views</AssemblyName>
+    <RootNamespace>RCLD.Views</RootNamespace>
+    <AssemblyName>RCLD.Views</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -116,13 +116,13 @@
       <Project>{f96aeda9-cae9-4676-a922-8e11014427b4}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceDesktop.Models\ServiceDesktop.Models.csproj">
+    <ProjectReference Include="..\ServiceDesktop.Models\RCLD.Models.csproj">
       <Project>{d6829af9-62c5-491b-8301-29a8636fabfa}</Project>
-      <Name>ServiceDesktop.Models</Name>
+      <Name>RCLD.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceDesktop.Presenters\ServiceDesktop.Presenters.csproj">
+    <ProjectReference Include="..\ServiceDesktop.Presenters\RCLD.Presenters.csproj">
       <Project>{9d720c38-8b1d-4cc9-a312-2b78a843a76a}</Project>
-      <Name>ServiceDesktop.Presenters</Name>
+      <Name>RCLD.Presenters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{CB15D329-2EBD-4BF7-97D6-080956CA7777}</Project>

@@ -52,7 +52,7 @@ namespace ServiceDesktop.Views
             ApplicationModel.Logger = ApplicationModel.GetApplicationModel.CreateLoggingConfiguration();
 
             var presenter =
-                new ServiceDesktopPresenter(new MainView(), new ServiceDesktopModel(), new MessageBoxService());
+                new MainPresenter(new MainView(), new MainModel(), new MessageBoxService());
             presenter.Run();
         }
 
