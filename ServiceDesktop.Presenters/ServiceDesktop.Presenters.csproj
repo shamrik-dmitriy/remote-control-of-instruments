@@ -74,9 +74,9 @@
       <Project>{d6829af9-62c5-491b-8301-29a8636fabfa}</Project>
       <Name>ServiceDesktop.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceDesktop.Services\ServiceDesktop.Services.csproj">
-      <Project>{cb15d329-2ebd-4bf7-97d6-080956ca7777}</Project>
-      <Name>ServiceDesktop.Services</Name>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{CB15D329-2EBD-4BF7-97D6-080956CA7777}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

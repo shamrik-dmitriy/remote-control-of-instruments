@@ -7,8 +7,8 @@ using System.Windows.Forms;
 using Core;
 using ServiceDesktop.Models.ApplicationModels.MainForm;
 using ServiceDesktop.Presenter.Presenters;
-using ServiceDesktop.Services.MessageServices;
 using ServiceDesktop.Views.MainFormView;
+using Services.MessagesServices.MessageBoxServices;
 
 namespace ServiceDesktop.Views
 {
@@ -52,7 +52,7 @@ namespace ServiceDesktop.Views
             ApplicationModel.Logger = ApplicationModel.GetApplicationModel.CreateLoggingConfiguration();
 
             var presenter =
-                new ServiceDesktopPresenter(new MainForm(), new ServiceDesktopModel(), new MessageService());
+                new ServiceDesktopPresenter(new MainForm(), new ServiceDesktopModel(), new MessageBoxService());
             presenter.Run();
         }
 

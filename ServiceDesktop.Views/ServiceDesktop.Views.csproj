@@ -125,9 +125,9 @@
       <Project>{9d720c38-8b1d-4cc9-a312-2b78a843a76a}</Project>
       <Name>ServiceDesktop.Presenters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceDesktop.Services\ServiceDesktop.Services.csproj">
-      <Project>{cb15d329-2ebd-4bf7-97d6-080956ca7777}</Project>
-      <Name>ServiceDesktop.Services</Name>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{CB15D329-2EBD-4BF7-97D6-080956CA7777}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

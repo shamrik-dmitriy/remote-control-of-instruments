@@ -4,7 +4,7 @@ using Core.Devices.SMB100A;
 using ServiceDesktop.Models.ApplicationModels.MainForm;
 using ServiceDesktop.Presenter.Common;
 using ServiceDesktop.Presenter.Views;
-using ServiceDesktop.Services.MessageServices;
+using Services.MessagesServices.MessageBoxServices;
 
 namespace ServiceDesktop.Presenter.Presenters
 {
@@ -25,7 +25,7 @@ namespace ServiceDesktop.Presenter.Presenters
         /// <summary>
         ///     Instance of interface message services
         /// </summary>
-        private IMessageService MessageService { get; set; }
+        private IMessageBoxService MessageBoxService { get; set; }
 
         #endregion
 
@@ -36,13 +36,13 @@ namespace ServiceDesktop.Presenter.Presenters
         /// </summary>
         /// <param name="serviceDesktopMainForm">Instance of interface main form</param>
         /// <param name="serviceDesktopModel">Instance of interface model</param>
-        /// <param name="messageService">Instance of interface message services</param>
+        /// <param name="messageBoxService">Instance of interface message services</param>
         public ServiceDesktopPresenter(IServiceDesktopMainForm serviceDesktopMainForm,
-            IServiceDesktopModel serviceDesktopModel, IMessageService messageService)
+            IServiceDesktopModel serviceDesktopModel, IMessageBoxService messageBoxService)
         {
             ServiceDesktopMainForm = serviceDesktopMainForm;
             ServiceDesktopModel = serviceDesktopModel;
-            MessageService = messageService;
+            MessageBoxService = messageBoxService;
 
             SubscribeEvents();
         }
@@ -179,7 +179,7 @@ namespace ServiceDesktop.Presenter.Presenters
                 }
                 catch (Smb100AException smb100AException)
                 {
-                    MessageService.ShowError(smb100AException.Message,
+                    MessageBoxService.ShowError(smb100AException.Message,
                         "Error to finalization work with signal generator");
                 }
 
@@ -189,13 +189,13 @@ namespace ServiceDesktop.Presenter.Presenters
                 }
                 catch (N5746AException n5746AException)
                 {
-                    MessageService.ShowError(n5746AException.Message,
+                    MessageBoxService.ShowError(n5746AException.Message,
                         "Error to finalization work power supply");
                 }
             }
             catch (Exception exception)
             {
-                MessageService.ShowError(exception.Message);
+                MessageBoxService.ShowError(exception.Message);
             }
         }
 
@@ -215,7 +215,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             catch (Exception exception)
             {
-                MessageService.ShowError(exception.Message);
+                MessageBoxService.ShowError(exception.Message);
             }
         }
 
@@ -562,7 +562,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             catch (Smb100AException smb100AException)
             {
-                MessageService.ShowError(smb100AException.Message,
+                MessageBoxService.ShowError(smb100AException.Message,
                     "Error to work with signal generator");
             }
         }
@@ -590,7 +590,7 @@ namespace ServiceDesktop.Presenter.Presenters
             }
             catch (N5746AException n5746AException)
             {
-                MessageService.ShowError(n5746AException.Message,
+                MessageBoxService.ShowError(n5746AException.Message,
                     "Error to work with power supply");
             }
         }
