@@ -1,4 +1,4 @@
-﻿namespace ServiceDesktop.Presenter.Common
+﻿namespace RCLD.Presenter.Common
 {
     public interface IMainPresenter
     {

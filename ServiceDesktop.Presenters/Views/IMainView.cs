@@ -1,7 +1,7 @@
 ﻿using System;
 using Core.Devices.SMB100A;
 
-namespace ServiceDesktop.Presenter.Views
+namespace RCLD.Presenter.Views
 {
     public interface IMainView
     {

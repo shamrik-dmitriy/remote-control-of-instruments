@@ -7,8 +7,8 @@
     <ProjectGuid>{9D720C38-8B1D-4CC9-A312-2B78A843A76A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceDesktop.Presenter</RootNamespace>
-    <AssemblyName>ServiceDesktop.Presenter</AssemblyName>
+    <RootNamespace>RCLD.Presenter</RootNamespace>
+    <AssemblyName>RCLD.Presenter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

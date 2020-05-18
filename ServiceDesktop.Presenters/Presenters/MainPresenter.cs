@@ -2,11 +2,11 @@
 using Core.Devices.N5746A;
 using Core.Devices.SMB100A;
 using RCLD.Models.ApplicationModels.MainForm;
-using ServiceDesktop.Presenter.Common;
-using ServiceDesktop.Presenter.Views;
+using RCLD.Presenter.Common;
+using RCLD.Presenter.Views;
 using Services.MessagesServices.MessageBoxServices;
 
-namespace ServiceDesktop.Presenter.Presenters
+namespace RCLD.Presenter.Presenters
 {
     public class MainPresenter : IMainPresenter
     {
