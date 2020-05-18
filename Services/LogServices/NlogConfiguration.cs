@@ -46,30 +46,30 @@ namespace Services.LogServices
             {
                 case LogLevel.All:
                 {
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Trace, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Trace, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
                     break;
                 }
 
                 case LogLevel.Main:
                 {
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
                     break;
                 }
 
                 case LogLevel.Error:
                 {
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Debug, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
-                        LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Info, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Debug, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Warn, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Error, Target);
+                    LoggingConfiguration.AddRuleForOneLevel(NLog.LogLevel.Fatal, Target);
                     break;
                 }
 

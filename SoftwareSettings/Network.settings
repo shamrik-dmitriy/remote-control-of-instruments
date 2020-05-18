@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SoftwareSettings" GeneratedClassName="Network">
+  <Profiles />
+  <Settings>
+    <Setting Name="IP_ADDRESS_POWER_SUPPLY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.0</Value>
+    </Setting>
+    <Setting Name="PORT_POWER_SUPPLY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5025</Value>
+    </Setting>
+    <Setting Name="IP_ADDRESS_SOURCE_SIGNAL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.1</Value>
+    </Setting>
+    <Setting Name="PORT_SOURCE_SIGNAL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5025</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
