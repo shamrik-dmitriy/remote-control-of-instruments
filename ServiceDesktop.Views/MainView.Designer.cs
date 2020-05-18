@@ -403,7 +403,7 @@
             this.ToolStripBottomPowerSupply.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripCheckConnectionPowerSupply});
             this.ToolStripBottomPowerSupply.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripBottomPowerSupply.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control_1;
+            this.ToolStripBottomPowerSupply.Image = global::RCLD.Views.Properties.Resources.volume_control_1;
             this.ToolStripBottomPowerSupply.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripBottomPowerSupply.Name = "ToolStripBottomPowerSupply";
             this.ToolStripBottomPowerSupply.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -414,7 +414,7 @@
             // ToolStripCheckConnectionPowerSupply
             // 
             this.ToolStripCheckConnectionPowerSupply.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripCheckConnectionPowerSupply.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.ToolStripCheckConnectionPowerSupply.Image = global::RCLD.Views.Properties.Resources.share_2;
             this.ToolStripCheckConnectionPowerSupply.Name = "ToolStripCheckConnectionPowerSupply";
             this.ToolStripCheckConnectionPowerSupply.Size = new System.Drawing.Size(262, 24);
             this.ToolStripCheckConnectionPowerSupply.Text = "Проверка подключения";
@@ -432,7 +432,7 @@
             this.ToolStripBottomSignalGenerator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripCheckConnectionSignalGenerator});
             this.ToolStripBottomSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripBottomSignalGenerator.Image = global::ServiceDesktop.Views.Properties.Resources.volume_control;
+            this.ToolStripBottomSignalGenerator.Image = global::RCLD.Views.Properties.Resources.volume_control;
             this.ToolStripBottomSignalGenerator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripBottomSignalGenerator.Name = "ToolStripBottomSignalGenerator";
             this.ToolStripBottomSignalGenerator.Size = new System.Drawing.Size(192, 24);
@@ -442,7 +442,7 @@
             // ToolStripCheckConnectionSignalGenerator
             // 
             this.ToolStripCheckConnectionSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripCheckConnectionSignalGenerator.Image = global::ServiceDesktop.Views.Properties.Resources.share_2;
+            this.ToolStripCheckConnectionSignalGenerator.Image = global::RCLD.Views.Properties.Resources.share_2;
             this.ToolStripCheckConnectionSignalGenerator.Name = "ToolStripCheckConnectionSignalGenerator";
             this.ToolStripCheckConnectionSignalGenerator.Size = new System.Drawing.Size(262, 24);
             this.ToolStripCheckConnectionSignalGenerator.Text = "Проверка подключения";
@@ -466,7 +466,7 @@
             this.настройкиToolStripMenuItem,
             this.AboutSoftwareToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.Image = global::ServiceDesktop.Views.Properties.Resources.app;
+            this.toolStripMenuItem1.Image = global::RCLD.Views.Properties.Resources.app;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(93, 24);
             this.toolStripMenuItem1.Text = "Сервис";
@@ -474,7 +474,7 @@
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.настройкиToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.settings;
+            this.настройкиToolStripMenuItem.Image = global::RCLD.Views.Properties.Resources.settings;
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.настройкиToolStripMenuItem.Text = "Настройки";
@@ -482,7 +482,7 @@
             // AboutSoftwareToolStripMenuItem
             // 
             this.AboutSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutSoftwareToolStripMenuItem.Image = global::ServiceDesktop.Views.Properties.Resources.info;
+            this.AboutSoftwareToolStripMenuItem.Image = global::RCLD.Views.Properties.Resources.info;
             this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
             this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.AboutSoftwareToolStripMenuItem.Text = "О программе";

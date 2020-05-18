@@ -82,7 +82,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::ServiceDesktop.Views.Properties.Resources.monitor__;
+            this.pictureBox1.Image = global::RCLD.Views.Properties.Resources.monitor__;
             this.pictureBox1.Location = new System.Drawing.Point(22, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 110);
@@ -114,7 +114,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Image = global::ServiceDesktop.Views.Properties.Resources.GitHub_Mark_32px;
+            this.pictureBox2.Image = global::RCLD.Views.Properties.Resources.GitHub_Mark_32px;
             this.pictureBox2.Location = new System.Drawing.Point(156, 85);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 36);
