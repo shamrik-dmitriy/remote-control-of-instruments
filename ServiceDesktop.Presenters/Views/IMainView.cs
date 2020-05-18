@@ -3,7 +3,7 @@ using Core.Devices.SMB100A;
 
 namespace ServiceDesktop.Presenter.Views
 {
-    public interface IServiceDesktopMainForm
+    public interface IMainView
     {
         /// <summary>
         ///     Override show event form

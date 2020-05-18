@@ -59,8 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationModels\MainForm\IServiceDesktopModel.cs" />
-    <Compile Include="ApplicationModels\MainForm\ServiceDesktopModel.cs" />
+    <Compile Include="ApplicationModels\MainForm\IMainModel.cs" />
+    <Compile Include="ApplicationModels\MainForm\MainModel.cs" />
     <Compile Include="ComponentsAbstraction\ComponentsValidator.cs" />
     <Compile Include="ComponentsAbstraction\TwoComponentBlocksModel.cs" />
     <Compile Include="ComponentsAbstraction\IComponentModel.cs" />

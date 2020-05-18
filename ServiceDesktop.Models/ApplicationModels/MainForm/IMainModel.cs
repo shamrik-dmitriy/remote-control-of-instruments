@@ -3,7 +3,7 @@ using Core.Devices.SMB100A;
 
 namespace ServiceDesktop.Models.ApplicationModels.MainForm
 {
-    public interface IServiceDesktopModel
+    public interface IMainModel
     {
         #region Signal Generator
 
@@ -214,6 +214,6 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
         /// </summary>
         /// <param name="device">Device</param>
         /// <param name="valueSelector">Value of selector</param>
-        void SendToDevice(ServiceDesktopModel.DeviceList device, string valueSelector = null);
+        void SendToDevice(MainModel.DeviceList device, string valueSelector = null);
     }
 }

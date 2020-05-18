@@ -11,7 +11,7 @@ using ServiceDesktop.Models.ComponentsAbstraction;
 
 namespace ServiceDesktop.Models.ApplicationModels.MainForm
 {
-    public class ServiceDesktopModel : IServiceDesktopModel
+    public class MainModel : IMainModel
     {
         #region Public Enums, Events and Properties
 
@@ -301,7 +301,7 @@ namespace ServiceDesktop.Models.ApplicationModels.MainForm
 
         #region Constructor
 
-        public ServiceDesktopModel()
+        public MainModel()
         {
         }
 

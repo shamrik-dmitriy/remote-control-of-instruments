@@ -1,6 +1,6 @@
 ﻿namespace ServiceDesktop.Presenter.Common
 {
-    public interface IServiceDesktopPresenter
+    public interface IMainPresenter
     {
         void Run();
     }
