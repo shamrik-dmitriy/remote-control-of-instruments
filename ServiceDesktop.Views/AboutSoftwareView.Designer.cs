@@ -1,6 +1,6 @@
 ﻿namespace ServiceDesktop.Views.AboutSoftware
 {
-    partial class AboutSoftware
+    partial class AboutSoftwareView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutSoftware));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutSoftwareView));
             this.SoftwareName = new System.Windows.Forms.RichTextBox();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();

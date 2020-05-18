@@ -10,7 +10,7 @@ using ServiceDesktop.Presenter.Views;
 
 namespace ServiceDesktop.Views.MainFormView
 {
-    public partial class MainForm : Form, IServiceDesktopMainForm
+    public partial class MainView : Form, IServiceDesktopMainForm
     {
         #region Private Properties
 
@@ -319,7 +319,7 @@ namespace ServiceDesktop.Views.MainFormView
         /// <summary>
         ///     Initialization parameters for main form
         /// </summary>
-        public MainForm()
+        public MainView()
         {
             try
             {

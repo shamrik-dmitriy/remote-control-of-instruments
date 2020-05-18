@@ -36,9 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LightInject, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LightInject.6.1.0\lib\net46\LightInject.dll</HintPath>
-    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.6.7\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -67,25 +64,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutSoftware\AboutSoftware.cs">
+    <Compile Include="AboutSoftwareView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutSoftware\AboutSoftware.Designer.cs">
-      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    <Compile Include="AboutSoftwareView.Designer.cs">
+      <DependentUpon>AboutSoftwareView.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainFormView\MainForm.cs">
+    <Compile Include="MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFormView\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutSoftware\AboutSoftware.resx">
-      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    <EmbeddedResource Include="AboutSoftwareView.resx">
+      <DependentUpon>AboutSoftwareView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFormView\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,7 +104,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\GOST 2.304-81 type B_0.ttf" />
+    <None Include="Resources\GOST 2.304-81 type B_0.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ServiceDesktop.Views.AboutSoftware
 {
-    public partial class AboutSoftware : Form
+    public partial class AboutSoftwareView : Form
     {
-        public AboutSoftware()
+        public AboutSoftwareView()
         {
             InitializeComponent();
         }
