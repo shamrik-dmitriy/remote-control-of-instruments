@@ -1,4 +1,6 @@
-﻿namespace Core.Devices.SCPIDevices.PowerSupply
+﻿using Services.ExchangeServices;
+
+namespace Core.Devices.SCPIDevices.PowerSupply
 {
     /// <summary>
     ///     Предоставляет программное управление источником питания

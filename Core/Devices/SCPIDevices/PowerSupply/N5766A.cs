@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using Core.Devices.SCPIDevices.SCPIData;
+using Services.ExchangeServices;
 
 namespace Core.Devices.SCPIDevices.PowerSupply
 {
