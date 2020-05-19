@@ -56,6 +56,9 @@
   <ItemGroup>
     <Compile Include="AttributesServices\EnumDescriptionAttributes\EnumDescriptionAttribute.cs" />
     <Compile Include="AttributesServices\EnumDescriptionAttributes\EnumDescriptionAttributeHelper.cs" />
+    <Compile Include="ExchangeServices\ExchangeServiceException.cs" />
+    <Compile Include="ExchangeServices\IExchangeService.cs" />
+    <Compile Include="ExchangeServices\SocketExchangeServices\SocketExchangeService.cs" />
     <Compile Include="LogServices\ILogService.cs" />
     <Compile Include="LogServices\ILogSettings.cs" />
     <Compile Include="LogServices\LogLevel.cs" />
