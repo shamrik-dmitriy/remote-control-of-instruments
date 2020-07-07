@@ -75,7 +75,6 @@
             this.buttonSetVoltage = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.InputVoltageConstAmperage = new System.Windows.Forms.TextBox();
-            this.InputDeviation = new System.Windows.Forms.TextBox();
             this.ControlSignalGeneratorReset = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.buttonSetPulseDelay = new System.Windows.Forms.Button();
@@ -83,10 +82,6 @@
             this.OutputPulseDelay = new System.Windows.Forms.TextBox();
             this.InputPulseDelay = new System.Windows.Forms.TextBox();
             this.ControlSignalGeneratorModulationOut = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.buttonSetPulseDeviation = new System.Windows.Forms.Button();
-            this.comboBoxDeviationValue = new System.Windows.Forms.ComboBox();
-            this.OutputDeviation = new System.Windows.Forms.TextBox();
             this.groupBoxSignalGenerator = new System.Windows.Forms.GroupBox();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -99,7 +94,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.groupBoxSignalGenerator.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -389,7 +383,7 @@
             this.ToolStripBottomPowerSupply,
             this.toolStripStatusLabel1,
             this.ToolStripBottomSignalGenerator});
-            this.statusStrip.Location = new System.Drawing.Point(0, 579);
+            this.statusStrip.Location = new System.Drawing.Point(0, 535);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStrip.Size = new System.Drawing.Size(571, 26);
@@ -676,23 +670,13 @@
             this.InputVoltageConstAmperage.TabIndex = 144;
             this.InputVoltageConstAmperage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // InputDeviation
-            // 
-            this.InputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InputDeviation.Location = new System.Drawing.Point(135, 18);
-            this.InputDeviation.Name = "InputDeviation";
-            this.InputDeviation.Size = new System.Drawing.Size(100, 29);
-            this.InputDeviation.TabIndex = 144;
-            this.InputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ControlSignalGeneratorReset
             // 
             this.ControlSignalGeneratorReset.BackColor = System.Drawing.Color.Transparent;
             this.ControlSignalGeneratorReset.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlSignalGeneratorReset.Location = new System.Drawing.Point(436, 241);
             this.ControlSignalGeneratorReset.Name = "ControlSignalGeneratorReset";
-            this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(110, 110);
+            this.ControlSignalGeneratorReset.Size = new System.Drawing.Size(110, 61);
             this.ControlSignalGeneratorReset.TabIndex = 152;
             this.ControlSignalGeneratorReset.Text = "Сброс параметров";
             this.ControlSignalGeneratorReset.UseVisualStyleBackColor = false;
@@ -705,7 +689,7 @@
             this.groupBox9.Controls.Add(this.OutputPulseDelay);
             this.groupBox9.Controls.Add(this.InputPulseDelay);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(6, 296);
+            this.groupBox9.Location = new System.Drawing.Point(6, 247);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(424, 55);
             this.groupBox9.TabIndex = 150;
@@ -776,68 +760,11 @@
             this.ControlSignalGeneratorModulationOut.UseVisualStyleBackColor = true;
             this.ControlSignalGeneratorModulationOut.Click += new System.EventHandler(this.buttonControlSignalGeneratorModulation_Click);
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.buttonSetPulseDeviation);
-            this.groupBox8.Controls.Add(this.comboBoxDeviationValue);
-            this.groupBox8.Controls.Add(this.OutputDeviation);
-            this.groupBox8.Controls.Add(this.InputDeviation);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(6, 241);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(424, 55);
-            this.groupBox8.TabIndex = 149;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Девиация сигнала";
-            // 
-            // buttonSetPulseDeviation
-            // 
-            this.buttonSetPulseDeviation.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetPulseDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSetPulseDeviation.Location = new System.Drawing.Point(318, 18);
-            this.buttonSetPulseDeviation.Name = "buttonSetPulseDeviation";
-            this.buttonSetPulseDeviation.Size = new System.Drawing.Size(96, 30);
-            this.buttonSetPulseDeviation.TabIndex = 151;
-            this.buttonSetPulseDeviation.Text = "Задать";
-            this.buttonSetPulseDeviation.UseVisualStyleBackColor = false;
-            this.buttonSetPulseDeviation.Click += new System.EventHandler(this.buttonSetPulseDeviation_Click);
-            // 
-            // comboBoxDeviationValue
-            // 
-            this.comboBoxDeviationValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDeviationValue.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDeviationValue.FormattingEnabled = true;
-            this.comboBoxDeviationValue.Items.AddRange(new object[] {
-            "Гц",
-            "кГц",
-            "мГц"});
-            this.comboBoxDeviationValue.Location = new System.Drawing.Point(241, 18);
-            this.comboBoxDeviationValue.Name = "comboBoxDeviationValue";
-            this.comboBoxDeviationValue.Size = new System.Drawing.Size(65, 28);
-            this.comboBoxDeviationValue.TabIndex = 145;
-            this.comboBoxDeviationValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeviationValue_SelectedIndexChanged);
-            // 
-            // OutputDeviation
-            // 
-            this.OutputDeviation.BackColor = System.Drawing.Color.Black;
-            this.OutputDeviation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutputDeviation.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutputDeviation.ForeColor = System.Drawing.Color.Lime;
-            this.OutputDeviation.Location = new System.Drawing.Point(10, 21);
-            this.OutputDeviation.Name = "OutputDeviation";
-            this.OutputDeviation.ReadOnly = true;
-            this.OutputDeviation.Size = new System.Drawing.Size(119, 22);
-            this.OutputDeviation.TabIndex = 24;
-            this.OutputDeviation.TabStop = false;
-            this.OutputDeviation.Text = "0";
-            this.OutputDeviation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBoxSignalGenerator
             // 
             this.groupBoxSignalGenerator.Controls.Add(this.ControlSignalGeneratorReset);
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox9);
             this.groupBoxSignalGenerator.Controls.Add(this.ControlSignalGeneratorModulationOut);
-            this.groupBoxSignalGenerator.Controls.Add(this.groupBox8);
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox7);
             this.groupBoxSignalGenerator.Controls.Add(this.ControlSignalGeneratorRfOut);
             this.groupBoxSignalGenerator.Controls.Add(this.groupBox6);
@@ -847,24 +774,24 @@
             this.groupBoxSignalGenerator.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSignalGenerator.Location = new System.Drawing.Point(9, 219);
             this.groupBoxSignalGenerator.Name = "groupBoxSignalGenerator";
-            this.groupBoxSignalGenerator.Size = new System.Drawing.Size(552, 359);
+            this.groupBoxSignalGenerator.Size = new System.Drawing.Size(552, 313);
             this.groupBoxSignalGenerator.TabIndex = 103;
             this.groupBoxSignalGenerator.TabStop = false;
             this.groupBoxSignalGenerator.Text = "Генератор сигналов";
             // 
-            // MainForm
+            // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(571, 605);
+            this.ClientSize = new System.Drawing.Size(571, 561);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxPowerSupply);
             this.Controls.Add(this.groupBoxSignalGenerator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MainForm";
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Удалённое управление генератором сигналов и источникм питания";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -890,8 +817,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBoxSignalGenerator.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -946,7 +871,6 @@
         private System.Windows.Forms.Button buttonSetVoltage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox InputVoltageConstAmperage;
-        private System.Windows.Forms.TextBox InputDeviation;
         private System.Windows.Forms.Button ControlSignalGeneratorReset;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button buttonSetPulseDelay;
@@ -954,10 +878,6 @@
         private System.Windows.Forms.TextBox OutputPulseDelay;
         private System.Windows.Forms.TextBox InputPulseDelay;
         private System.Windows.Forms.Button ControlSignalGeneratorModulationOut;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button buttonSetPulseDeviation;
-        private System.Windows.Forms.ComboBox comboBoxDeviationValue;
-        private System.Windows.Forms.TextBox OutputDeviation;
         private System.Windows.Forms.GroupBox groupBoxSignalGenerator;
     }
 }

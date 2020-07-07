@@ -1,5 +1,4 @@
 ﻿using System;
-using Core.Devices.SMB100A;
 
 namespace RCLD.Models.ApplicationModels.MainForm
 {

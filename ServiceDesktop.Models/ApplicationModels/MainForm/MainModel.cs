@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Core.Devices.N5746A;
-using Core.Devices.SMB100A;
+using Core.Devices.SCPIDevices.PowerSupplyDevice;
 using Core.Properties;
 using RCLD.Models.ComponentsAbstraction;
+using Services.ExchangeServices.SocketExchangeServices;
 
 namespace RCLD.Models.ApplicationModels.MainForm
 {
@@ -130,7 +130,7 @@ namespace RCLD.Models.ApplicationModels.MainForm
         /// <summary>
         ///     Instance of power supply
         /// </summary>
-        private N5746A PowerSupply { get; set; }
+        private IPowerSupply PowerSupply { get; set; }
 
         /// <summary>
         ///     Interface component
@@ -317,7 +317,7 @@ namespace RCLD.Models.ApplicationModels.MainForm
 
         public void CreateInstancePowerSupply()
         {
-            PowerSupply = new N5746A(Device.Default.IP_ADDR_POWER_SUP, Device.Default.PORT_POWER_SUP);
+            PowerSupply = new PowerSupply(new SocketExchangeServiceService());
         }
 
         public void DestroyOutputThreadPowerSupply()
@@ -334,14 +334,7 @@ namespace RCLD.Models.ApplicationModels.MainForm
 
         public void SetPowerSupplyPowerControl(bool state)
         {
-            if (!state)
-            {
-                PowerSupply.OutputStateOn();
-            }
-            else
-            {
-                PowerSupply.OutputStateOff();
-            }
+            PowerSupply.SetOutputState(state);
         }
 
         #endregion
@@ -451,13 +444,13 @@ namespace RCLD.Models.ApplicationModels.MainForm
                     {
                         case "InputVoltageConstAmperage":
                         {
-                            PowerSupply.SetSupplyVoltage(Convert.ToDouble(InputVoltageConstAmperage));
+                            PowerSupply.SetVoltage(Convert.ToDouble(InputVoltageConstAmperage));
                             break;
                         }
 
                         case "InputMaxAmperageConsumption":
                         {
-                            PowerSupply.SetLowVoltageLim(Convert.ToDouble(InputMaxAmperageConsumption));
+                            PowerSupply.SetAmperageLimit(Convert.ToDouble(InputMaxAmperageConsumption));
                             break;
                         }
                     }
@@ -575,9 +568,7 @@ namespace RCLD.Models.ApplicationModels.MainForm
         /// <param name="token">Cancel token</param>
         private void ThreadMethodPowerSupply(CancellationToken token)
         {
-            var powerSupply = new N5746A(
-                Core.Properties.Device.Default.IP_ADDR_POWER_SUP,
-                Core.Properties.Device.Default.PORT_POWER_SUP);
+            var powerSupply = new PowerSupply(new SocketExchangeServiceService());
 
             while (true)
             {
@@ -586,8 +577,8 @@ namespace RCLD.Models.ApplicationModels.MainForm
                     token.ThrowIfCancellationRequested();
 
                     OutputVoltage = powerSupply.GetVoltage();
-                    OutputAmperage = powerSupply.GetCurrent();
-                    OutputMaxAmperage = powerSupply.GetCurrentLimit();
+                    OutputAmperage = powerSupply.GetAmperage();
+                    OutputMaxAmperage = powerSupply.GetAmperageLimit();
                     OutputOutState = powerSupply.GetOutputState();
 
                     GetDataPowerSupplyComplete?.Invoke();

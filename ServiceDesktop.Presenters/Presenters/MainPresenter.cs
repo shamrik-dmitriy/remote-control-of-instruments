@@ -1,6 +1,5 @@
 ﻿using System;
 using Core.Devices.N5746A;
-using Core.Devices.SMB100A;
 using RCLD.Models.ApplicationModels.MainForm;
 using RCLD.Presenter.Common;
 using RCLD.Presenter.Views;
@@ -15,33 +14,33 @@ namespace RCLD.Presenter.Presenters
         /// <summary>
         ///     Instance of interface main form
         /// </summary>
-        private IMainView ServiceDesktopMainForm { get; set; }
+        private IMainView MainView { get; }
 
         /// <summary>
         ///     Instance of interface model
         /// </summary>
-        private IMainModel ServiceDesktopModel { get; set; }
+        private IMainModel MainModel { get; }
 
         /// <summary>
         ///     Instance of interface message services
         /// </summary>
-        private IMessageBoxService MessageBoxService { get; set; }
+        private IMessageBoxService MessageBoxService { get; }
 
         #endregion
 
         #region Constructor
 
         /// <summary>
-        ///     Presenter of main form
+        ///     Presenter of main form, subscribe events
         /// </summary>
-        /// <param name="serviceDesktopMainForm">Instance of interface main form</param>
-        /// <param name="serviceDesktopModel">Instance of interface model</param>
+        /// <param name="mainView">Instance of interface main form</param>
+        /// <param name="mainModel">Instance of interface model</param>
         /// <param name="messageBoxService">Instance of interface message services</param>
-        public MainPresenter(IMainView serviceDesktopMainForm,
-            IMainModel serviceDesktopModel, IMessageBoxService messageBoxService)
+        public MainPresenter(IMainView mainView,
+            IMainModel mainModel, IMessageBoxService messageBoxService)
         {
-            ServiceDesktopMainForm = serviceDesktopMainForm;
-            ServiceDesktopModel = serviceDesktopModel;
+            MainView = mainView;
+            MainModel = mainModel;
             MessageBoxService = messageBoxService;
 
             SubscribeEvents();
@@ -58,43 +57,43 @@ namespace RCLD.Presenter.Presenters
         /// </summary>
         private void SubscribeEvents()
         {
-            ServiceDesktopMainForm.ShowingForm += ServiceDesktopMainForm_ShowingForm;
-            ServiceDesktopMainForm.ClosingForm += ServiceDesktopMainFormOnClosingForm;
+            MainView.ShowingForm += ServiceDesktopMainForm_ShowingForm;
+            MainView.ClosingForm += ServiceDesktopMainFormOnClosingForm;
 
-            ServiceDesktopMainForm.GetVoltage += ServiceDesktopMainFormOnGetVoltage;
-            ServiceDesktopMainForm.GetAmperage += ServiceDesktopMainFormOnGetAmperage;
-            ServiceDesktopMainForm.GetFrequency += ServiceDesktopMainFormOnGetFrequency;
-            ServiceDesktopMainForm.GetPow += ServiceDesktopMainFormOnGetPow;
-            ServiceDesktopMainForm.GetPulseWidth += ServiceDesktopMainFormOnGetPulseWidth;
-            ServiceDesktopMainForm.GetPulsePeriod += ServiceDesktopMainFormOnGetPulsePeriod;
-            ServiceDesktopMainForm.GetDeviation += ServiceDesktopMainFormOnGetDeviation;
-            ServiceDesktopMainForm.GetPulseDelay += ServiceDesktopMainFormOnGetPulseDelay;
+            MainView.GetVoltage += ServiceDesktopMainFormOnGetVoltage;
+            MainView.GetAmperage += ServiceDesktopMainFormOnGetAmperage;
+            MainView.GetFrequency += ServiceDesktopMainFormOnGetFrequency;
+            MainView.GetPow += ServiceDesktopMainFormOnGetPow;
+            MainView.GetPulseWidth += ServiceDesktopMainFormOnGetPulseWidth;
+            MainView.GetPulsePeriod += ServiceDesktopMainFormOnGetPulsePeriod;
+            MainView.GetDeviation += ServiceDesktopMainFormOnGetDeviation;
+            MainView.GetPulseDelay += ServiceDesktopMainFormOnGetPulseDelay;
 
-            ServiceDesktopMainForm.SelectFrequencySignalGenerator +=
+            MainView.SelectFrequencySignalGenerator +=
                 ServiceDesktopMainFormOnSelectFrequencySignalGenerator;
-            ServiceDesktopMainForm.SelectPowSignalGenerator += ServiceDesktopMainFormOnSelectPowSignalGenerator;
-            ServiceDesktopMainForm.SelectPulseWidthSignalGenerator +=
+            MainView.SelectPowSignalGenerator += ServiceDesktopMainFormOnSelectPowSignalGenerator;
+            MainView.SelectPulseWidthSignalGenerator +=
                 ServiceDesktopMainFormOnSelectPulseWidthSignalGenerator;
-            ServiceDesktopMainForm.SelectPulsePeriodSignalGenerator +=
+            MainView.SelectPulsePeriodSignalGenerator +=
                 ServiceDesktopMainFormOnSelectPulsePeriodSignalGenerator;
-            ServiceDesktopMainForm.SelectDeviationSignalGenerator +=
+            MainView.SelectDeviationSignalGenerator +=
                 ServiceDesktopMainFormOnSelectDeviationSignalGenerator;
-            ServiceDesktopMainForm.SelectPulseDelaySignalGenerator +=
+            MainView.SelectPulseDelaySignalGenerator +=
                 ServiceDesktopMainFormOnSelectPulseDelaySignalGenerator;
 
-            ServiceDesktopMainForm.GetPowerSupplyPowerControl += ServiceDesktopMainFormOnGetPowerSupplyPowerControl;
-            ServiceDesktopMainForm.GetSignalGeneratorRfControl += ServiceDesktopMainFormOnGetSignalGeneratorRfControl;
-            ServiceDesktopMainForm.GetSignalGeneratorModulationControl +=
+            MainView.GetPowerSupplyPowerControl += ServiceDesktopMainFormOnGetPowerSupplyPowerControl;
+            MainView.GetSignalGeneratorRfControl += ServiceDesktopMainFormOnGetSignalGeneratorRfControl;
+            MainView.GetSignalGeneratorModulationControl +=
                 ServiceDesktopMainFormOnGetSignalGeneratorModulationControl;
 
-            ServiceDesktopModel.GetDataPowerSupplyComplete += ServiceDesktopModelOnGetDataPowerSupplyComplete;
-            ServiceDesktopModel.GetDataSignalGeneratorComplete += ServiceDesktopModelOnGetDataSignalGeneratorComplete;
-            ServiceDesktopModel.GetStateConnectionSignalGenerator +=
+            MainModel.GetDataPowerSupplyComplete += ServiceDesktopModelOnGetDataPowerSupplyComplete;
+            MainModel.GetDataSignalGeneratorComplete += ServiceDesktopModelOnGetDataSignalGeneratorComplete;
+            MainModel.GetStateConnectionSignalGenerator +=
                 ServiceDesktopModelOnGetStateConnectionSignalGenerator;
-            ServiceDesktopModel.GetStateConnectionPowerSupply += ServiceDesktopModelOnGetStateConnectionPowerSupply;
+            MainModel.GetStateConnectionPowerSupply += ServiceDesktopModelOnGetStateConnectionPowerSupply;
 
-            ServiceDesktopMainForm.CheckConnectionPowerSupply += ServiceDesktopMainFormOnCheckConnectionPowerSupply;
-            ServiceDesktopMainForm.CheckConnectionSignalGenerator +=
+            MainView.CheckConnectionPowerSupply += ServiceDesktopMainFormOnCheckConnectionPowerSupply;
+            MainView.CheckConnectionSignalGenerator +=
                 ServiceDesktopMainFormOnCheckConnectionSignalGenerator;
         }
 
@@ -127,37 +126,37 @@ namespace RCLD.Presenter.Presenters
         /// </summary>
         private void UnSubscribeEvents()
         {
-            ServiceDesktopMainForm.ShowingForm -= ServiceDesktopMainForm_ShowingForm;
-            ServiceDesktopMainForm.ClosingForm -= ServiceDesktopMainFormOnClosingForm;
+            MainView.ShowingForm -= ServiceDesktopMainForm_ShowingForm;
+            MainView.ClosingForm -= ServiceDesktopMainFormOnClosingForm;
 
-            ServiceDesktopMainForm.GetVoltage -= ServiceDesktopMainFormOnGetVoltage;
-            ServiceDesktopMainForm.GetAmperage -= ServiceDesktopMainFormOnGetAmperage;
-            ServiceDesktopMainForm.GetFrequency -= ServiceDesktopMainFormOnGetFrequency;
-            ServiceDesktopMainForm.GetPow -= ServiceDesktopMainFormOnGetPow;
-            ServiceDesktopMainForm.GetPulseWidth -= ServiceDesktopMainFormOnGetPulseWidth;
-            ServiceDesktopMainForm.GetPulsePeriod -= ServiceDesktopMainFormOnGetPulsePeriod;
-            ServiceDesktopMainForm.GetDeviation -= ServiceDesktopMainFormOnGetDeviation;
-            ServiceDesktopMainForm.GetPulseDelay -= ServiceDesktopMainFormOnGetPulseDelay;
+            MainView.GetVoltage -= ServiceDesktopMainFormOnGetVoltage;
+            MainView.GetAmperage -= ServiceDesktopMainFormOnGetAmperage;
+            MainView.GetFrequency -= ServiceDesktopMainFormOnGetFrequency;
+            MainView.GetPow -= ServiceDesktopMainFormOnGetPow;
+            MainView.GetPulseWidth -= ServiceDesktopMainFormOnGetPulseWidth;
+            MainView.GetPulsePeriod -= ServiceDesktopMainFormOnGetPulsePeriod;
+            MainView.GetDeviation -= ServiceDesktopMainFormOnGetDeviation;
+            MainView.GetPulseDelay -= ServiceDesktopMainFormOnGetPulseDelay;
 
-            ServiceDesktopMainForm.SelectFrequencySignalGenerator -=
+            MainView.SelectFrequencySignalGenerator -=
                 ServiceDesktopMainFormOnSelectFrequencySignalGenerator;
-            ServiceDesktopMainForm.SelectPowSignalGenerator -= ServiceDesktopMainFormOnSelectPowSignalGenerator;
-            ServiceDesktopMainForm.SelectPulseWidthSignalGenerator -=
+            MainView.SelectPowSignalGenerator -= ServiceDesktopMainFormOnSelectPowSignalGenerator;
+            MainView.SelectPulseWidthSignalGenerator -=
                 ServiceDesktopMainFormOnSelectPulseWidthSignalGenerator;
-            ServiceDesktopMainForm.SelectPulsePeriodSignalGenerator -=
+            MainView.SelectPulsePeriodSignalGenerator -=
                 ServiceDesktopMainFormOnSelectPulsePeriodSignalGenerator;
-            ServiceDesktopMainForm.SelectDeviationSignalGenerator -=
+            MainView.SelectDeviationSignalGenerator -=
                 ServiceDesktopMainFormOnSelectDeviationSignalGenerator;
-            ServiceDesktopMainForm.SelectPulseDelaySignalGenerator -=
+            MainView.SelectPulseDelaySignalGenerator -=
                 ServiceDesktopMainFormOnSelectPulseDelaySignalGenerator;
 
-            ServiceDesktopMainForm.GetPowerSupplyPowerControl -= ServiceDesktopMainFormOnGetPowerSupplyPowerControl;
-            ServiceDesktopMainForm.GetSignalGeneratorRfControl -= ServiceDesktopMainFormOnGetSignalGeneratorRfControl;
-            ServiceDesktopMainForm.GetSignalGeneratorModulationControl -=
+            MainView.GetPowerSupplyPowerControl -= ServiceDesktopMainFormOnGetPowerSupplyPowerControl;
+            MainView.GetSignalGeneratorRfControl -= ServiceDesktopMainFormOnGetSignalGeneratorRfControl;
+            MainView.GetSignalGeneratorModulationControl -=
                 ServiceDesktopMainFormOnGetSignalGeneratorModulationControl;
 
-            ServiceDesktopModel.GetDataPowerSupplyComplete -= ServiceDesktopModelOnGetDataPowerSupplyComplete;
-            ServiceDesktopModel.GetDataSignalGeneratorComplete -= ServiceDesktopModelOnGetDataSignalGeneratorComplete;
+            MainModel.GetDataPowerSupplyComplete -= ServiceDesktopModelOnGetDataPowerSupplyComplete;
+            MainModel.GetDataSignalGeneratorComplete -= ServiceDesktopModelOnGetDataSignalGeneratorComplete;
         }
 
         #endregion
@@ -175,7 +174,7 @@ namespace RCLD.Presenter.Presenters
             {
                 try
                 {
-                    ServiceDesktopModel.DestroyOutputThreadSignalGenerator();
+                    MainModel.DestroyOutputThreadSignalGenerator();
                 }
                 catch (Smb100AException smb100AException)
                 {
@@ -185,7 +184,7 @@ namespace RCLD.Presenter.Presenters
 
                 try
                 {
-                    ServiceDesktopModel.DestroyOutputThreadPowerSupply();
+                    MainModel.DestroyOutputThreadPowerSupply();
                 }
                 catch (N5746AException n5746AException)
                 {
@@ -206,12 +205,12 @@ namespace RCLD.Presenter.Presenters
         /// <param name="e">EventArgs</param>
         private void ServiceDesktopMainForm_ShowingForm(object sender, System.EventArgs e)
         {
-            ServiceDesktopMainForm.SetAllCombobox(0);
+            MainView.SetAllCombobox(0);
             try
             {
-                SetUiSignalGenerator(ServiceDesktopModel.GetStateSignalGenerator());
+                SetUiSignalGenerator(MainModel.GetStateSignalGenerator());
 
-                SetUiPowerSupply(ServiceDesktopModel.GetStatePowerSupply());
+                SetUiPowerSupply(MainModel.GetStatePowerSupply());
             }
             catch (Exception exception)
             {
@@ -233,7 +232,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="state">True - Turn on (Turned off), False - Turn off (turned on)</param>
         private void ServiceDesktopMainFormOnGetSignalGeneratorRfControl(bool state)
         {
-            ServiceDesktopModel.SetSignalGeneratorRfControl(state);
+            MainModel.SetSignalGeneratorRfControl(state);
         }
 
         /// <summary>
@@ -242,7 +241,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="state">True - Turn on (Turned off), False - Turn off (turned on)</param>
         private void ServiceDesktopMainFormOnGetSignalGeneratorModulationControl(bool state)
         {
-            ServiceDesktopModel.SetSignalGeneratorModulationControl(state);
+            MainModel.SetSignalGeneratorModulationControl(state);
         }
 
         /// <summary>
@@ -253,14 +252,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetFrequency(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //     ServiceDesktopMainForm.SetErrorField(nameField);
+                //     MainView.SetErrorField(nameField);
             }
         }
 
@@ -272,14 +271,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetPow(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -291,14 +290,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetPulseWidth(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -310,14 +309,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetPulsePeriod(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -329,14 +328,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetDeviation(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -348,14 +347,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueSelector">Value of selector</param>
         private void ServiceDesktopMainFormOnGetPulseDelay(string nameField, string valueField, string valueSelector)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField, valueSelector))
+            if (MainModel.Validate(nameField, valueField, valueSelector))
             {
-                ServiceDesktopModel.SendToDevice(
-                    MainModel.DeviceList.SignalGenerator, valueSelector);
+                MainModel.SendToDevice(
+                    Models.ApplicationModels.MainForm.MainModel.DeviceList.SignalGenerator, valueSelector);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -377,7 +376,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectFrequencySignalGenerator(Smb100A.Frequency selector)
         {
-            ServiceDesktopModel.FrequencySelector = selector;
+            MainModel.FrequencySelector = selector;
         }
 
         /// <summary>
@@ -386,7 +385,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectPowSignalGenerator(Smb100A.Pow selector)
         {
-            ServiceDesktopModel.PowSelector = selector;
+            MainModel.PowSelector = selector;
         }
 
         /// <summary>
@@ -395,7 +394,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectPulseWidthSignalGenerator(Smb100A.PulseWidth selector)
         {
-            ServiceDesktopModel.PulseWidthSelector = selector;
+            MainModel.PulseWidthSelector = selector;
         }
 
         /// <summary>
@@ -404,7 +403,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectPulseDelaySignalGenerator(Smb100A.PulseDelay selector)
         {
-            ServiceDesktopModel.PulseDelaySelector = selector;
+            MainModel.PulseDelaySelector = selector;
         }
 
         /// <summary>
@@ -413,7 +412,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectDeviationSignalGenerator(Smb100A.Deviation selector)
         {
-            ServiceDesktopModel.DeviationSelector = selector;
+            MainModel.DeviationSelector = selector;
         }
 
         /// <summary>
@@ -422,7 +421,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="selector">Value of selector</param>
         private void ServiceDesktopMainFormOnSelectPulsePeriodSignalGenerator(Smb100A.PulsePeriod selector)
         {
-            ServiceDesktopModel.PulsePeriodSelector = selector;
+            MainModel.PulsePeriodSelector = selector;
         }
 
         #endregion
@@ -436,17 +435,17 @@ namespace RCLD.Presenter.Presenters
         /// </summary>
         private void ServiceDesktopModelOnGetDataSignalGeneratorComplete()
         {
-            ServiceDesktopMainForm.SetOutputData("FrequencyOutput", ServiceDesktopModel.OutputFrequency.ToString());
-            ServiceDesktopMainForm.SetOutputData("PowOutput", ServiceDesktopModel.OutputPow.ToString());
-            ServiceDesktopMainForm.SetOutputData("PulseWidthOutput", ServiceDesktopModel.OutputPulseWidth.ToString());
-            ServiceDesktopMainForm.SetOutputData("PulsePeriodOutput", ServiceDesktopModel.OutputPulsePeriod.ToString());
-            ServiceDesktopMainForm.SetOutputData("DeviationOutput",
-                ServiceDesktopModel.OutputPulseDeviation.ToString());
-            ServiceDesktopMainForm.SetOutputData("PulseDelayOutput", ServiceDesktopModel.OutputPulseDelay.ToString());
+            MainView.SetOutputData("FrequencyOutput", MainModel.OutputFrequency.ToString());
+            MainView.SetOutputData("PowOutput", MainModel.OutputPow.ToString());
+            MainView.SetOutputData("PulseWidthOutput", MainModel.OutputPulseWidth.ToString());
+            MainView.SetOutputData("PulsePeriodOutput", MainModel.OutputPulsePeriod.ToString());
+            MainView.SetOutputData("DeviationOutput",
+                MainModel.OutputPulseDeviation.ToString());
+            MainView.SetOutputData("PulseDelayOutput", MainModel.OutputPulseDelay.ToString());
 
-            ServiceDesktopMainForm.SetOutputData("OutControlSignalGeneratorRf", ServiceDesktopModel.OutputRfState);
-            ServiceDesktopMainForm.SetOutputData("OutControlSignalGeneratorModulation",
-                ServiceDesktopModel.OutputModulationState);
+            MainView.SetOutputData("OutControlSignalGeneratorRf", MainModel.OutputRfState);
+            MainView.SetOutputData("OutControlSignalGeneratorModulation",
+                MainModel.OutputModulationState);
         }
 
         #endregion
@@ -465,7 +464,7 @@ namespace RCLD.Presenter.Presenters
         /// <param name="state">True - Turn on (Turned off), False - Turn off (Turned on)</param>
         private void ServiceDesktopMainFormOnGetPowerSupplyPowerControl(bool state)
         {
-            ServiceDesktopModel.SetPowerSupplyPowerControl(state);
+            MainModel.SetPowerSupplyPowerControl(state);
         }
 
         /// <summary>
@@ -475,14 +474,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueField">Value of field</param>
         private void ServiceDesktopMainFormOnGetAmperage(string nameField, string valueField)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField))
+            if (MainModel.Validate(nameField, valueField))
             {
-                ServiceDesktopModel.SendToDevice(MainModel.DeviceList
+                MainModel.SendToDevice(Models.ApplicationModels.MainForm.MainModel.DeviceList
                     .PowerSupply);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -493,14 +492,14 @@ namespace RCLD.Presenter.Presenters
         /// <param name="valueField">Value of field</param>
         private void ServiceDesktopMainFormOnGetVoltage(string nameField, string valueField)
         {
-            if (ServiceDesktopModel.Validate(nameField, valueField))
+            if (MainModel.Validate(nameField, valueField))
             {
-                ServiceDesktopModel.SendToDevice(MainModel.DeviceList
+                MainModel.SendToDevice(Models.ApplicationModels.MainForm.MainModel.DeviceList
                     .PowerSupply);
             }
             else
             {
-                //        ServiceDesktopMainForm.SetErrorField(nameField);
+                //        MainView.SetErrorField(nameField);
             }
         }
 
@@ -523,13 +522,13 @@ namespace RCLD.Presenter.Presenters
         /// </summary>
         private void ServiceDesktopModelOnGetDataPowerSupplyComplete()
         {
-            ServiceDesktopMainForm.SetOutputData("VoltageConstAmperageOutput",
-                ServiceDesktopModel.OutputVoltage.ToString());
-            ServiceDesktopMainForm.SetOutputData("AmperageOutput", ServiceDesktopModel.OutputAmperage.ToString());
-            ServiceDesktopMainForm.SetOutputData("MaxAmperageConsumptionOutput",
-                ServiceDesktopModel.OutputMaxAmperage.ToString());
-            ServiceDesktopMainForm.SetOutputData("OutControlPowerSupply",
-                ServiceDesktopModel.OutputOutState);
+            MainView.SetOutputData("VoltageConstAmperageOutput",
+                MainModel.OutputVoltage.ToString());
+            MainView.SetOutputData("AmperageOutput", MainModel.OutputAmperage.ToString());
+            MainView.SetOutputData("MaxAmperageConsumptionOutput",
+                MainModel.OutputMaxAmperage.ToString());
+            MainView.SetOutputData("OutControlPowerSupply",
+                MainModel.OutputOutState);
         }
 
         #endregion
@@ -549,15 +548,15 @@ namespace RCLD.Presenter.Presenters
             {
                 if (stateSignalGenerator)
                 {
-                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(false);
-                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(true);
-                    ServiceDesktopModel.CreateInstanceSignalGenerator();
-                    ServiceDesktopModel.CreateOutputThreadSignalGenerator();
+                    MainView.SetEnabledGroupBoxSignalGenerator(false);
+                    MainView.SetEnabledGroupBoxSignalGenerator(true);
+                    MainModel.CreateInstanceSignalGenerator();
+                    MainModel.CreateOutputThreadSignalGenerator();
                 }
                 else
                 {
-                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(true);
-                    ServiceDesktopMainForm.SetEnabledGroupBoxSignalGenerator(false);
+                    MainView.SetEnabledGroupBoxSignalGenerator(true);
+                    MainView.SetEnabledGroupBoxSignalGenerator(false);
                 }
             }
             catch (Smb100AException smb100AException)
@@ -577,15 +576,15 @@ namespace RCLD.Presenter.Presenters
             {
                 if (statePowerSupply)
                 {
-                    ServiceDesktopMainForm.SetStateButtonCheckPowerSupply(false);
-                    ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(true);
-                    ServiceDesktopModel.CreateInstancePowerSupply();
-                    ServiceDesktopModel.CreateOutputThreadPowerSupply();
+                    MainView.SetStateButtonCheckPowerSupply(false);
+                    MainView.SetEnabledGroupBoxPowerSupply(true);
+                    MainModel.CreateInstancePowerSupply();
+                    MainModel.CreateOutputThreadPowerSupply();
                 }
                 else
                 {
-                    ServiceDesktopMainForm.SetStateButtonCheckPowerSupply(true);
-                    ServiceDesktopMainForm.SetEnabledGroupBoxPowerSupply(false);
+                    MainView.SetStateButtonCheckPowerSupply(true);
+                    MainView.SetEnabledGroupBoxPowerSupply(false);
                 }
             }
             catch (N5746AException n5746AException)
@@ -606,7 +605,7 @@ namespace RCLD.Presenter.Presenters
         /// </summary>
         public void Run()
         {
-            ServiceDesktopMainForm.Show();
+            MainView.Show();
         }
 
         #endregion

@@ -72,6 +72,10 @@
       <Project>{F96AEDA9-CAE9-4676-A922-8E11014427B4}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{CB15D329-2EBD-4BF7-97D6-080956CA7777}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

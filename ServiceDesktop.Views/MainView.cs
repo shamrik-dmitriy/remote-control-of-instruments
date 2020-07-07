@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using Core.Devices.SMB100A;
 using RCLD.Presenter.Views;
 
 namespace RCLD.Views
@@ -65,17 +64,7 @@ namespace RCLD.Views
         ///     Input pulse period type value
         /// </summary>
         private string PulsePeriodType => comboBoxPulsePeriodValue.Text;
-
-        /// <summary>
-        ///     Input deviation value
-        /// </summary>
-        private TextBox DeviationInput => InputDeviation;
-
-        /// <summary>
-        ///     Input deviation type value
-        /// </summary>
-        private string DeviationType => comboBoxDeviationValue.Text;
-
+        
         /// <summary>
         ///     Input pulse delay value
         /// </summary>
@@ -171,18 +160,6 @@ namespace RCLD.Views
             {
                 OutputPulsePeriod.BeginInvoke(
                     (Action) (() => { OutputPulsePeriod.Text = value; }));
-            }
-        }
-
-        /// <summary>
-        ///     Field "Deviation"
-        /// </summary>
-        private string DeviationOutput
-        {
-            set
-            {
-                OutputDeviation.BeginInvoke(
-                    (Action) (() => { OutputDeviation.Text = value; }));
             }
         }
 
@@ -345,7 +322,6 @@ namespace RCLD.Views
             comboBoxPowValue.SelectedIndex = number;
             comboBoxPulseWidthValue.SelectedIndex = number;
             comboBoxPulsePeriodValue.SelectedIndex = number;
-            comboBoxDeviationValue.SelectedIndex = number;
             comboBoxPulseDelayValue.SelectedIndex = number;
         }
 
@@ -498,11 +474,6 @@ namespace RCLD.Views
             GetPulsePeriod?.Invoke(PulsePeriodInput.Name, PulsePeriodInput.Text, PulsePeriodType);
         }
 
-        private void buttonSetPulseDeviation_Click(object sender, EventArgs e)
-        {
-            GetDeviation?.Invoke(DeviationInput.Name, DeviationInput.Text, DeviationType);
-        }
-
         private void buttonSetPulseDelay_Click(object sender, EventArgs e)
         {
             GetPulseDelay?.Invoke(PulseDelayInput.Name, PulseDelayInput.Text, PulseDelayType);
@@ -576,11 +547,6 @@ namespace RCLD.Views
         private void comboBoxRepeatFrequencyValue_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectPulsePeriodSignalGenerator?.Invoke((Smb100A.PulsePeriod) comboBoxPulsePeriodValue.SelectedIndex);
-        }
-
-        private void comboBoxDeviationValue_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SelectDeviationSignalGenerator?.Invoke((Smb100A.Deviation) comboBoxDeviationValue.SelectedIndex);
         }
 
         private void comboBoxPulseDelayValue_SelectedIndexChanged(object sender, EventArgs e)
