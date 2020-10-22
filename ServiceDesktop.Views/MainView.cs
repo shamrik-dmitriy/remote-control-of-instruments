@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+using RCLD.Models.ApplicationModels.MainForm;
 using RCLD.Presenter.Views;
 
 namespace RCLD.Views
@@ -64,7 +65,7 @@ namespace RCLD.Views
         ///     Input pulse period type value
         /// </summary>
         private string PulsePeriodType => comboBoxPulsePeriodValue.Text;
-        
+
         /// <summary>
         ///     Input pulse delay value
         /// </summary>
@@ -261,8 +262,19 @@ namespace RCLD.Views
 
         #region Public Events
 
-        public event EventHandler ShowingForm;
-        public event EventHandler ClosingForm;
+        #region Form events
+
+        public event Action ShowingForm;
+        public event Action ClosingForm;
+
+        #endregion
+
+        #region Power Supply Events
+
+        public event Action SetOutputState;
+
+        #endregion
+
 
         public event Action<string, string> GetVoltage;
         public event Action<string, string> GetAmperage;
@@ -425,13 +437,13 @@ namespace RCLD.Views
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            this.Update();
-            ShowingForm?.Invoke(sender, e);
+            Update();
+            ShowingForm?.Invoke();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ClosingForm?.Invoke(sender, e);
+            ClosingForm?.Invoke();
         }
 
         private void AboutSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -446,73 +458,59 @@ namespace RCLD.Views
 
         private void buttonSetVoltage_Click(object sender, EventArgs e)
         {
-            GetVoltage?.Invoke(VoltageInput.Name, VoltageInput.Text);
+            SetVoltage?.Invoke(VoltageInput.Name, VoltageInput.Text);
         }
 
         private void buttonSetAmperage_Click(object sender, EventArgs e)
         {
-            GetAmperage?.Invoke(AmperageInput.Name, AmperageInput.Text);
+            SetAmperage?.Invoke(AmperageInput.Name, AmperageInput.Text);
         }
 
         private void buttonSetFrequency_Click(object sender, EventArgs e)
         {
-            GetFrequency?.Invoke(FrequencyInput.Name, FrequencyInput.Text, FrequencyType);
+            SetFrequency?.Invoke(FrequencyInput.Name, FrequencyInput.Text, FrequencyType);
         }
 
         private void buttonSetPow_Click(object sender, EventArgs e)
         {
-            GetPow?.Invoke(PowInput.Name, PowInput.Text, PowType);
+            SetPow?.Invoke(PowInput.Name, PowInput.Text, PowType);
         }
 
         private void buttonSetPulseWidth_Click(object sender, EventArgs e)
         {
-            GetPulseWidth?.Invoke(PulseWidthInput.Name, PulseWidthInput.Text, PulseWidthType);
+            SetPulseWidth?.Invoke(PulseWidthInput.Name, PulseWidthInput.Text, PulseWidthType);
         }
 
         private void buttonSetPulsePeriod_Click(object sender, EventArgs e)
         {
-            GetPulsePeriod?.Invoke(PulsePeriodInput.Name, PulsePeriodInput.Text, PulsePeriodType);
+            SetPulsePeriod?.Invoke(PulsePeriodInput.Name, PulsePeriodInput.Text, PulsePeriodType);
         }
 
         private void buttonSetPulseDelay_Click(object sender, EventArgs e)
         {
-            GetPulseDelay?.Invoke(PulseDelayInput.Name, PulseDelayInput.Text, PulseDelayType);
+            SetPulseDelay?.Invoke(PulseDelayInput.Name, PulseDelayInput.Text, PulseDelayType);
         }
 
-        private bool GetStatePowerOutcontrol()
-        {
-            return ControlPowerSupplyOut.BackColor == Color.Lime;
-        }
-
-        private bool GetStateRfControl()
-        {
-            return ControlSignalGeneratorRfOut.BackColor == Color.Lime;
-        }
-
-        private bool GetStateModulationControl()
-        {
-            return ControlSignalGeneratorModulationOut.BackColor == Color.Lime;
-        }
 
         private void buttonControlPowerSupplyOut_Click(object sender, EventArgs e)
         {
-            GetPowerSupplyPowerControl?.Invoke(GetStatePowerOutcontrol());
+            SetOutputState?.Invoke();
         }
 
         private void buttonControlSignalGeneratorRFOut_Click(object sender, EventArgs e)
         {
-            GetSignalGeneratorRfControl?.Invoke(GetStateRfControl());
+            SetRfControl?.Invoke(GetStateRfControl());
         }
 
 
         private void buttonControlSignalGeneratorModulation_Click(object sender, EventArgs e)
         {
-            GetSignalGeneratorModulationControl?.Invoke(GetStateModulationControl());
+            SetModulationControl?.Invoke(GetStateModulationControl());
         }
 
         private void buttonControlSignalGeneratorReset_Click(object sender, EventArgs e)
         {
-            //   GetSignalGeneratorReset?.Invoke(sender, e);
+            Reset?.Invoke(sender, e);
         }
 
         private void ToolStripCheckConnectionPowerSupply_Click(object sender, EventArgs e)
