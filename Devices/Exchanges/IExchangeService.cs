@@ -18,6 +18,16 @@
 
         #endregion
 
+        #region State Connection
+
+        /// <summary>
+        ///     Возвращает состояние соединения
+        /// </summary>
+        /// <returns>True - соединение активно, False - соединение не активно</returns>
+        bool GetStateConnection();
+
+        #endregion
+
         #region Write Data
 
         /// <summary>

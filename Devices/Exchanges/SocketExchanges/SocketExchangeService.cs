@@ -166,6 +166,26 @@ namespace Shamrik.Dmitriy.Devices.Exchanges.SocketExchanges
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
+        /// <returns></returns>
+        public bool GetStateConnection()
+        {
+            lock (_lockObject)
+            {
+                try
+                {
+                    PingExecute();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public void Send(byte[] data)
         {
             try
