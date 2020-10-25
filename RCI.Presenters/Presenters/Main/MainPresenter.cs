@@ -9,24 +9,42 @@ using RCI.Presenters.Interfaces.Views.Main;
 
 namespace RCI.Presenters.Presenters.Main
 {
+    /// <summary>
+    ///     Презентер главной формы
+    /// </summary>
     public class MainPresenter : IRichTextBoxView
     {
         #region Private Properties
 
+        /// <summary>
+        ///     Экземпляр формы
+        /// </summary>
         private IMainView MainView { get; set; }
 
+        /// <summary>
+        ///     Экземпляр модели
+        /// </summary>
         private IMainModel MainModel { get; set; }
 
-        private Task TaskOfConnection { get; }
-
+        /// <summary>
+        ///     Источник токена отмены
+        /// </summary>
         private static CancellationTokenSource CancellationTokenSource { get; } = new CancellationTokenSource();
 
+        /// <summary>
+        ///     Токен отмены
+        /// </summary>
         private CancellationToken CancellationToken { get; }
 
         #endregion
 
         #region Constructor
 
+        /// <summary>
+        ///     Конструктор презентера главной формы
+        /// </summary>
+        /// <param name="mainView">Экземпляр формы, реализующий соответствующий интерфейс</param>
+        /// <param name="mainModel">Экземпляр модели, реализующий соответствующий интерфейс</param>
         public MainPresenter(IMainView mainView, IMainModel mainModel)
         {
             MainView = mainView;
@@ -52,6 +70,9 @@ namespace RCI.Presenters.Presenters.Main
 
         #region Messages
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public void ClearInfoBlock()
         {
             MainView.ClearInfoBlock();

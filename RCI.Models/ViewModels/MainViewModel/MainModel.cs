@@ -7,6 +7,9 @@ using RCI.Models.ViewModels.Interfaces.Main;
 
 namespace RCI.Models.ViewModels.MainViewModel
 {
+    /// <summary>
+    ///     Модель главной формы
+    /// </summary>
     public class MainModel : IMainModel
     {
         public void ConnectOfSignalGenerator()

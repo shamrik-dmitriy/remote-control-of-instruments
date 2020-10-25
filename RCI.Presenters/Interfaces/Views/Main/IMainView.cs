@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RCI.Presenters.Interfaces.Views.Main
 {
+    /// <summary>
+    ///     Интерфейс для главной формы
+    /// </summary>
     public interface IMainView : IRichTextBoxView
     {
         #region Events

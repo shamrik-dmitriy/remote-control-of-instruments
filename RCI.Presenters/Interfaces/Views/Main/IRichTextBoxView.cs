@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RCI.Presenters.Interfaces.Views.Main
 {
+    /// <summary>
+    ///     Интерфейс для вывода информации в RichTextBox
+    /// </summary>
     public interface IRichTextBoxView
     {
         /// <summary>

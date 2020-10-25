@@ -15,6 +15,9 @@ namespace RCI.Views
     {
         #region Private Properties
 
+        /// <summary>
+        ///     Поле вывода информации на форму
+        /// </summary>
         private RichTextBox OutputInformationArea => richTextBoxLogInformation;
 
         #endregion
@@ -44,6 +47,11 @@ namespace RCI.Views
 
         #region Public Methods
 
+        #region Form Methods
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public new void Show()
         {
             try
@@ -58,13 +66,65 @@ namespace RCI.Views
 
         #endregion
 
+        #region RichTextBox Action
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public void ClearInfoBlock()
+        {
+            OutputInformationArea.BeginInvoke((Action) (() => { OutputInformationArea.Clear(); }));
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public void SetContextRegularMessage(string message)
+        {
+            SetViewRichTextBox(message, Color.Black, FontStyle.Regular, HorizontalAlignment.Left, 10);
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public void SetContextFailMessage(string message)
+        {
+            SetViewRichTextBox(message, Color.DarkRed, FontStyle.Regular, HorizontalAlignment.Left, 10);
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public void SetContextAttentionMessage(string message)
+        {
+            SetViewRichTextBox(message, Color.DarkOrange, FontStyle.Regular, HorizontalAlignment.Left, 10);
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public void SetContextPassedMessage(string message)
+        {
+            SetViewRichTextBox(message, Color.DarkGreen, FontStyle.Regular, HorizontalAlignment.Left, 10);
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        ///     Обработчик события показа формы
+        /// </summary>
+        /// <param name="sender">Объект отсыла</param>
+        /// <param name="e">Аргумент события</param>
         private void MainView_Shown(object sender, EventArgs e)
         {
             Update();
             ShowForm?.Invoke();
         }
 
-        #region RichTextBox
 
         /// <summary>
         ///     Set View to RichTextBox
@@ -93,30 +153,5 @@ namespace RCI.Views
         }
 
         #endregion
-
-        public void ClearInfoBlock()
-        {
-            OutputInformationArea.BeginInvoke((Action) (() => { OutputInformationArea.Clear(); }));
-        }
-
-        public void SetContextRegularMessage(string message)
-        {
-            SetViewRichTextBox(message, Color.Black, FontStyle.Regular, HorizontalAlignment.Left, 10);
-        }
-
-        public void SetContextFailMessage(string message)
-        {
-            SetViewRichTextBox(message, Color.DarkRed, FontStyle.Regular, HorizontalAlignment.Left, 10);
-        }
-
-        public void SetContextAttentionMessage(string message)
-        {
-            SetViewRichTextBox(message, Color.DarkOrange, FontStyle.Regular, HorizontalAlignment.Left, 10);
-        }
-
-        public void SetContextPassedMessage(string message)
-        {
-            SetViewRichTextBox(message, Color.DarkGreen, FontStyle.Regular, HorizontalAlignment.Left, 10);
-        }
     }
 }
