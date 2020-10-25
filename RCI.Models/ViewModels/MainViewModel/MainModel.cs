@@ -9,5 +9,34 @@ namespace RCI.Models.ViewModels.MainViewModel
 {
     public class MainModel : IMainModel
     {
+        public void ConnectOfSignalGenerator()
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void ConnectOfPowerSupply()
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void DisconnectOfSignalGenerator()
+        {
+            // throw new NotImplementedException();
+        }
+
+        public void DisconnectOfPowerSupply()
+        {
+            // throw new NotImplementedException();
+        }
+
+        public bool GetStateConnectionOfSignalGenerator()
+        {
+            return true;
+        }
+
+        public bool GetStateConnectionOfPowerSupply()
+        {
+            return true;
+        }
     }
 }

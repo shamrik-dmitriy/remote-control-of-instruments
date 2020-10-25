@@ -8,5 +8,15 @@ namespace RCI.Models.ViewModels.Interfaces.Main
 {
     public interface IMainModel
     {
+        void ConnectOfSignalGenerator();
+        void ConnectOfPowerSupply();
+
+        void DisconnectOfSignalGenerator();
+
+        void DisconnectOfPowerSupply();
+
+        bool GetStateConnectionOfSignalGenerator();
+
+        bool GetStateConnectionOfPowerSupply();
     }
 }

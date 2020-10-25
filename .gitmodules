@@ -1,0 +1,3 @@
+[submodule "SCPI-Devices-Library"]
+	path = SCPI-Devices-Library
+	url = https://github.com/shamrik-dmitriy/SCPI-Devices-Library.git

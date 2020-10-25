@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace RCI.Presenters.Interfaces.Views.Main
 {
-    public interface IMainView
+    public interface IMainView : IRichTextBoxView
     {
+        #region Events
+
+        /// <summary>
+        ///     Событие показа формы
+        /// </summary>
+        event Action ShowForm;
+
+        /// <summary>
+        ///     Событие закрытия формы
+        /// </summary>
+        event Action CloseForm;
+
+        #endregion
+
         #region Methods
 
         #region Forms

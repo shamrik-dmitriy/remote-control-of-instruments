@@ -117,6 +117,7 @@
             this.richTextBoxLogInformation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBoxLogInformation.Location = new System.Drawing.Point(3, 23);
             this.richTextBoxLogInformation.Name = "richTextBoxLogInformation";
+            this.richTextBoxLogInformation.ReadOnly = true;
             this.richTextBoxLogInformation.Size = new System.Drawing.Size(546, 114);
             this.richTextBoxLogInformation.TabIndex = 0;
             this.richTextBoxLogInformation.Text = "";
@@ -125,14 +126,14 @@
             // 
             this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // AboutSoftwareToolStripMenuItem
             // 
             this.AboutSoftwareToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AboutSoftwareToolStripMenuItem.Name = "AboutSoftwareToolStripMenuItem";
-            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.AboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.AboutSoftwareToolStripMenuItem.Text = "О программе";
             // 
             // OutputVoltageConstAmperage
@@ -777,7 +778,7 @@
             this.groupBoxOfPowerSupply.TabStop = false;
             this.groupBoxOfPowerSupply.Text = "Источник питания";
             // 
-            // Form1
+            // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -792,9 +793,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.MainView_Shown);
             this.groupBoxOfLogInformation.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
@@ -826,7 +828,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxOfLogInformation;
-        private System.Windows.Forms.RichTextBox richTextBoxLogInformation;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutSoftwareToolStripMenuItem;
         private System.Windows.Forms.TextBox OutputVoltageConstAmperage;
@@ -881,6 +882,7 @@
         private System.Windows.Forms.TextBox OutputFrequency;
         private System.Windows.Forms.TextBox InputFrequency;
         private System.Windows.Forms.GroupBox groupBoxOfPowerSupply;
+        private System.Windows.Forms.RichTextBox richTextBoxLogInformation;
     }
 }
 
