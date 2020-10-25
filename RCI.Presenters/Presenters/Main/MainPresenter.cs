@@ -33,7 +33,6 @@ namespace RCI.Presenters.Presenters.Main
             MainModel = mainModel;
 
             CancellationToken = CancellationTokenSource.Token;
-            //TaskOfConnection = new Task<bool>(() => ConnectionStateTask(CancellationToken));
 
             MainView.ShowForm += MainViewOnShowForm;
             MainView.CloseForm += MainViewOnCloseForm;
@@ -43,6 +42,9 @@ namespace RCI.Presenters.Presenters.Main
 
         #region Public Methods
 
+        /// <summary>
+        ///     Запускает показ формы
+        /// </summary>
         public void Run()
         {
             MainView.Show();
@@ -52,7 +54,7 @@ namespace RCI.Presenters.Presenters.Main
 
         public void ClearInfoBlock()
         {
-            //throw new NotImplementedException();
+            MainView.ClearInfoBlock();
         }
 
         /// <summary>
@@ -95,11 +97,17 @@ namespace RCI.Presenters.Presenters.Main
 
         #region Form
 
+        /// <summary>
+        ///     Событие закрытия формы, отменяет поток проверки соединения с устройствами
+        /// </summary>
         private void MainViewOnCloseForm()
         {
             CancellationTokenSource.Cancel();
         }
 
+        /// <summary>
+        ///     Событие показа формы, запускает поток проверки соединения с устройствами
+        /// </summary>
         private async void MainViewOnShowForm()
         {
             await Task.Run(() => ConnectionStateTask(CancellationToken));
@@ -109,6 +117,11 @@ namespace RCI.Presenters.Presenters.Main
 
         #region Task
 
+        /// <summary>
+        ///     Поток проверки соединения с устройствами
+        /// </summary>
+        /// <param name="cancellationToken">Токен отмены</param>
+        /// <returns>Нет необходимости в анализе возвращаемого значения. Сделано для использования Task.Run</returns>
         private Task<bool> ConnectionStateTask(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
@@ -145,7 +158,7 @@ namespace RCI.Presenters.Presenters.Main
             MainModel.DisconnectOfSignalGenerator();
             MainModel.DisconnectOfPowerSupply();
 
-            return Task.FromResult<bool>(false);
+            return Task.FromResult(false);
         }
 
         #endregion
