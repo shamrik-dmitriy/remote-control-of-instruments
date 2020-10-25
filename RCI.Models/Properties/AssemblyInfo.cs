@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("RCI.Views")]
-[assembly: AssemblyDescription("Remote control of instruments, Views (Model-View-Presenter pattern)")]
+[assembly: AssemblyTitle("RCI.Models")]
+[assembly: AssemblyDescription("Remote control of instruments, Models (Model-View-Presenter pattern)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Shamrik Dmitriy Leonidovich")]
-[assembly: AssemblyProduct("Remote control of instruments")]
+[assembly: AssemblyProduct("RCI.Models")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("a8e38ba3-24d3-41d3-a8f6-b8066a58b6a4")]
+[assembly: Guid("be33a966-5056-46ac-8681-356edd8ee3c0")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
