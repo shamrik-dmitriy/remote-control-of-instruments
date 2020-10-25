@@ -41,7 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Views\Main\IMainView.cs" />
+    <Compile Include="Interfaces\Views\Main\IRichTextBoxView.cs" />
+    <Compile Include="Presenters\Main\MainPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RCI.Models\RCI.Models.csproj">
+      <Project>{be33a966-5056-46ac-8681-356edd8ee3c0}</Project>
+      <Name>RCI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
